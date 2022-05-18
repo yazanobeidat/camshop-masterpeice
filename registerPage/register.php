@@ -88,6 +88,7 @@ if ($conn->query($sql) === TRUE) {
 }
 $conn->close();
 
+header("location:../registerpage/register.php")
 }
 else
 {
