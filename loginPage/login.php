@@ -1,8 +1,45 @@
 <?php
 
+include_once '../connection.php';
+session_start();
+
+if(isset($_POST['submit'])){
+    $loginEmail=$_POST['loginEmail'];
+    $loginPass=$_POST['loginPassword'];
+
+    $stat = "SELECT * FROM  user;";
+    $result = mysqli_query($conn,$stat);
+    $resultcheck = mysqli_num_rows($result);
+ 
+    if($resultcheck > 0)
+    {
+    while($row = mysqli_fetch_assoc($result))
+    {
+        
+        if($row['user_email'] == $loginEmail &&  $row['user_password'] == $loginPass){
+            $_SESSION["userEmail"]= $row['user_email'];
+           
+           
+            if($row["is_admin"] == '1'){
+                header("Location: ./admin.html");
+            }else{
+                header ("location: ../home.html");
+            }
+        }else{if($row['user_email'] !== $loginEmail ||  $row['user_password'] !== $loginPass){
+         
+                $ERROR= "<span style='color: red;'> The Email or password is wrong </span>";
+          
+        }
+    }
+    }
+}
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ?>
+
+
 
 
 
@@ -28,13 +65,15 @@
 
 <label for="loginEmail">Email</label>
 <br>
-<input type="text" name='loginEmail' placeholder= 'Email@...' >
-<br><br>
+<input type="text" name='loginEmail' placeholder= 'Email@...' ><br>
+
+<br>
 <label for="loginPassword">Password</label>
 <br>
-<input type="password" name='loginPassword' placeholder='Passwprd'>
+<input type="password" name='loginPassword' placeholder='Passwprd'><br>
+<?php if(isset($ERROR)){echo $ERROR;}?>
 <br><br>
-<input type="submit" name='loginSubmit'>
+<input type="submit" name='submit' value='submit'>
 
 </form>
 
