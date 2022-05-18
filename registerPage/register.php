@@ -1,5 +1,101 @@
 <?php
+include_once "../connection.php";
 
+
+$name_regex="/^([a-zA-Z' ]+)$/";
+// $email_regex="/^[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/";
+$password_regex = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"; 
+$phoneNumber_regex="/^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})?[-.\\s]?([0-9]{4})$/";
+
+if(isset($_POST['submit']))
+{
+   $first_name=$_POST['firstName'];
+   $last_name=$_POST['lastName'];
+   $email=$_POST['email'];
+   $phonenumber=$_POST['phoneNum'];
+   $password=$_POST['passWord'];
+   $confirm_password=$_POST['CpassWord'];
+   $age=$_POST['age'];
+   $gender=$_POST['gender'];
+   ///firstname
+   if(preg_match($name_regex,$first_name))
+   {
+       $firstname_correct= true;
+   }
+   else
+   {
+
+       echo "wrong1";
+    $firstname_correct= false;
+   }
+   //////lastname
+   if(preg_match($name_regex,$last_name))
+   {
+       $lastname_correct= true;
+   }
+   else
+   {
+    echo "wrong2";
+    $lastname_correct= false;
+   }
+   ///////email
+   if(filter_var($email,FILTER_VALIDATE_EMAIL))
+   {
+       $email_correct= true;
+   }
+   else
+   {
+    echo "wrong3";
+    $email_correct= false;
+   }
+   if(preg_match($phoneNumber_regex,$phonenumber))
+   {
+       $phonenum_correct= true;
+   }
+   else
+   {
+    echo "wrong4";
+    $phonenum_correct= false;
+   }
+   if(preg_match($password_regex,$password))
+   {
+       $password_correct= true;
+   }
+   else
+   {
+    echo "wrong5";
+    $password_correct= false;
+   }
+   if($password === $confirm_password)
+   {
+       $confirm_password_correct= true;
+   }
+   else
+   {
+    echo "wrong6";
+    $confirm_password_correct= false;
+   }
+
+if($firstname_correct && $lastname_correct && $email_correct && $phonenum_correct && $password_correct && $confirm_password_correct)
+{
+$sql = "INSERT INTO user (user_first_name, user_last_name, user_email,phone_num,user_password,age,gender)
+VALUES ('$first_name', '$last_name', '$email','$phonenumber','$password','$age','$gender');";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+
+}
+else
+{
+    echo "somethings is wrong";
+}
+   
+   
+}
 ?>
 
 
@@ -17,7 +113,15 @@
 
 <!-- fontawesome link  -->
 <script src="https://kit.fontawesome.com/41d0e79cb4.js" crossorigin="anonymous"></script>
-
+<style>
+    body
+    {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+    }
+    </style>
 
 
 </head>
@@ -64,7 +168,7 @@
 
 <!-- **********************Extra********************************** -->
 
-<!-- 
+
 <label for="age">Age</label>
 <br>
 <input type="number" name='age' placeholder="Your Age">
@@ -76,9 +180,10 @@
 <label for="Male">Male</label>
 <input type="radio" name="gender" value="Female">
 <label for="Female">Female</label>
-<span>)</span> -->
+<span>)</span>
 
-
+<br>
+<br>
 <input type="submit" name='submit'>
 
 
