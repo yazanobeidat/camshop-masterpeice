@@ -175,7 +175,7 @@ else
 
 <br><br>
 
-<span>Gender(</span>
+<span>Gender</span>
 <input type="radio" name="gender" value="Male">
 <label for="Male">Male</label>
 <input type="radio" name="gender" value="Female">
