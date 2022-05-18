@@ -26,8 +26,8 @@ if ($result_check > 0) {
         //TO add user information
         while($row2=mysqli_fetch_assoc($result2)){
         $user_id=$row2['user_id'];
-        $first_name=$row2['user_id'];
-        $last_name=$row2['last_name'];
+        $first_name=$row2['user_first_name'];
+        $last_name=$row2['user_last_name'];
         }
     }
 }
