@@ -11,7 +11,7 @@
   <br>
   <a href="product_dashboard.php">products</a>
   <br>
-  <a href=""></a>
+  <a href="category_dashboard.php">categorys</a>
   <br>
 </body>
 </html>

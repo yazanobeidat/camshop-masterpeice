@@ -47,9 +47,9 @@ include "../connection.php";
         <th scope='row'>$product[product_id]</th>
         <td>$product[product_name]</td>
         <td>$product[product_category]</td>
-        <td>$product[Product_price]</td>
-        <td>$product[Product_color]</td>
-        <td>$product[Product_size]</td>
+        <td>$product[product_price]</td>
+        <td>$product[product_color]</td>
+        <td>$product[product_size]</td>
         <td>$product[product_description]</td>
         <td>$product[product_image]</td>
         
