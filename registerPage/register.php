@@ -17,6 +17,31 @@ if(isset($_POST['submit']))
    $confirm_password=$_POST['CpassWord'];
    $age=$_POST['age'];
    $gender=$_POST['gender'];
+
+   ////////////////////////////////////////////////////
+
+
+   $stat = "SELECT * FROM  user;";
+   $result = mysqli_query($conn,$stat);
+   $resultcheck = mysqli_num_rows($result);
+
+   if($resultcheck > 0)
+   {
+   while($row = mysqli_fetch_assoc($result))
+   {
+       if($email == $row['user_email']) {
+
+        $emailERR2="<span style=' color:red'>The Email is already exist</span>";
+        $email_correct2= false;
+
+       }else{
+        $email_correct2= true;
+       }
+
+
+   }}
+
+
    ///firstname
    if(preg_match($name_regex,$first_name))
    {
@@ -24,8 +49,7 @@ if(isset($_POST['submit']))
    }
    else
    {
-
-       echo "wrong1";
+    $fnameERR="<span style=' color:red'>Required only characters</span>";
     $firstname_correct= false;
    }
    //////lastname
@@ -35,7 +59,7 @@ if(isset($_POST['submit']))
    }
    else
    {
-    echo "wrong2";
+    $lnameERR="<span style=' color:red'>Required only characters</span>";
     $lastname_correct= false;
    }
    ///////email
@@ -45,38 +69,42 @@ if(isset($_POST['submit']))
    }
    else
    {
-    echo "wrong3";
+    
+    $emailERR="<span style=' color:red'>Invalid email</span>";
     $email_correct= false;
    }
+   ///////phone number
    if(preg_match($phoneNumber_regex,$phonenumber))
    {
        $phonenum_correct= true;
    }
    else
    {
-    echo "wrong4";
+    $phoneERR="<span style=' color:red'>Should be 14 digits</span>";
     $phonenum_correct= false;
    }
+   ////////////// password
    if(preg_match($password_regex,$password))
    {
        $password_correct= true;
    }
    else
    {
-    echo "wrong5";
+    $passwordERR="<span style=' color:red; ' >The password should contain <br> uppercase and lowercase <br> letters, numbers,<br> and special characters </span>";
     $password_correct= false;
    }
+   ////////////// confirm password
    if($password === $confirm_password)
    {
        $confirm_password_correct= true;
    }
    else
    {
-    echo "wrong6";
+    $cpasswordERR="<span style=' color:red; '>Passwords don't match</span>";
     $confirm_password_correct= false;
    }
 
-if($firstname_correct && $lastname_correct && $email_correct && $phonenum_correct && $password_correct && $confirm_password_correct)
+if($firstname_correct && $lastname_correct && $email_correct && $phonenum_correct && $password_correct && $confirm_password_correct &&  $email_correct2)
 {
 $sql = "INSERT INTO user (user_first_name, user_last_name, user_email,phone_num,user_password,age,gender)
 VALUES ('$first_name', '$last_name', '$email','$phonenumber','$password','$age','$gender');";
@@ -87,13 +115,11 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
+header("location:../loginpage/login.php");
 
 header("location:../registerpage/register.php")
 }
-else
-{
-    echo "somethings is wrong";
-}
+
    
    
 }
@@ -133,37 +159,42 @@ else
 <!-- first name -->
  <label for="firstName">First Nmae</label> 
 <br>
-<input type="text" name="firstName" placeholder="First Name">
+<input type="text" name="firstName" placeholder="First Name"><br>
+<?php if(isset( $fnameERR)){echo  $fnameERR;}?>
 
 <br><br>
 <!-- last name  -->
 <label for="lastName">Last Name</label>
 <br>
-<input type="text" name='lastName' placeholder='Last Name'>
+<input type="text" name='lastName' placeholder='Last Name'><br>
+<?php if(isset(  $lnameERR)){echo  $lnameERR;}?>
 
 <br><br>
 <!-- email -->
 <label for="email">Email</label>
 <br>
-<input type="email" name='email' placeholder='Email@...'>
-
+<input type="email" name='email' placeholder='Email@...'><br>
+<?php if(isset( $emailERR)){echo  $emailERR;}?>
+<?php if(isset( $emailERR2)){echo  $emailERR2;}?>
 <br><br>
 <!-- phonenum  -->
 <label for="phoneNum">Phone Number</label>
 <br>
-<input type="text" name="phoneNum" placeholder="Phone Number">
-
+<input type="text" name="phoneNum" placeholder="Phone Number"><br>
+<?php if(isset( $phoneERR)){echo  $phoneERR;}?>
 <br><br>
 <!-- password  -->
 <label for="passWord">Password</label>
 <br>
-<input type="password" name="passWord" >
+<input type="password" name="passWord" ><br>
+<?php if(isset($passwordERR)){echo $passwordERR;}?>
 
 <br><br>
 <!-- Confirm Password -->
 <label for="CpassWord">Confirm Password</label>
 <br>
-<input type="password" name="CpassWord">
+<input type="password" name="CpassWord"><br>
+<?php if(isset($cpasswordERR)){echo $cpasswordERR;}?>
 <br><br>
 
 
