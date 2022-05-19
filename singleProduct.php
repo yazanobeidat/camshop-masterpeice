@@ -30,8 +30,8 @@ if ($result_check > 0) {
     }
 }
 //Comment
-if(isset($_POST['submit'])){
-$comment= $_POST['comment'];
+if(isset($_GET['submit'])){
+$comment= $_GET['comment'];
 $sql3="INSERT INTO comments (product_id, user_id, user_first_name, user_last_name, product_comment) VALUES ('$product_id','$user_id','$first_name','$last_name','$comment');";
 $result3= mysqli_query($conn , $sql3);
 $sql4="SELECT * FROM comments WHERE product_id='$product_id';";
@@ -44,9 +44,15 @@ $result_check4= mysqli_num_rows($result4);
             $commentShow=$comment;
         }
     }
+    
    
 }
-//product_quantity
+// if(isset($_post['submit'])){
+// $updated_quantity=$_POST['quantity'];
+//     $quantitySql="INSERT INTO cart (user_id, order_quantity) VALUES ('$user_id', '$updated_quantity');";
+//     $resultQuantity= mysqli_query($conn , $quantitySql);
+// //product_quantity
+// }
 
 
 
@@ -74,24 +80,29 @@ $result_check4= mysqli_num_rows($result4);
                 echo "<h3>". $product_name. "</h3>";
                 echo "<br>";
                 echo "<p>". $product_description. "</p>";
+                echo "<br>";
+                echo "<p>". $product_description. "</p>";
                 
                 ?>
                 <form method="post">
                     <input type='number' name='quantity' value='1'> Quantity
-                    <select value="s">
-                        <option value="s">S<option>
-                        <option value="m">M<option>
-                        <option value="l">L<option>
+                    <select name="size">
+                        <option value="S">S<option>
+                        <option value="M">M<option>
+                        <option value="L">L<option>
+                        <option value="XL">XL<option>
                     </seclect>
                     <br><br>
                     <input type="submit" name='submit' class="btn btn-primary btn-s" value="Add To Cart">
                     <?php
                      
-    $updated_quantity=$_POST['quantity'];
-    $quantitySql="INSERT INTO cart (user_id, order_quantity) VALUES ('$user_id', '$updated_quantity');";
+    if(isset($_POST['submit'])){
+        $updated_quantity=$_POST['quantity'];
+        $updated_size=$_POST['size'];
+    $quantitySql="INSERT INTO cart (user_id, product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id', '$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
     $resultQuantity= mysqli_query($conn , $quantitySql);
-    echo $resultQuantity;
-                    ?>
+     
+                 }             ?>
                 </form>
                 
             </div>
@@ -100,7 +111,7 @@ $result_check4= mysqli_num_rows($result4);
         <!--Comment Section-->
         <div class="row">
             <div class="col-lg-6">
-                <form method="post">
+                <form method="get">
                     <h2>Leave a Comment</h2>
                     <textarea placeholder="Leave a Comment" name="comment">
                     </textarea>
