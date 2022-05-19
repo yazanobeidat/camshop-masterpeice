@@ -7,6 +7,7 @@ if(isset($_POST['submit'])){
     $loginEmail=$_POST['loginEmail'];
     $loginPass=$_POST['loginPassword'];
 
+
     $stat = "SELECT * FROM  user;";
     $result = mysqli_query($conn,$stat);
     $resultcheck = mysqli_num_rows($result);
@@ -72,6 +73,7 @@ if(isset($_POST['submit'])){
 <br>
 <input type="password" name='loginPassword' placeholder='Passwprd'><br>
 <?php if(isset($ERROR)){echo $ERROR;}?>
+
 <br><br>
 <input type="submit" name='submit' value='submit'>
 
