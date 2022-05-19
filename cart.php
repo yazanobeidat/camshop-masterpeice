@@ -27,23 +27,19 @@ echo $_SESSION["userID"];
   </thead>
   <tbody>
       <?php
-       //$globalUserId=$_SESSION["userID"];
       $total=1;
       $sql="SELECT * FROM cart";
       $result=mysqli_query($conn,$sql);
       $result_check=mysqli_num_rows($result);
+
       
-      
-      
-     
-    //   $sql2="INSERT INTO cart (user_id, order_subtotal) VALUES ('$globalUserId','$total');";
-    // $result2=mysqli_query($conn,$sql2);
-       
-        
+    
       if($result_check > 0){
           while ($row= mysqli_fetch_assoc($result)) {
-            
             $total=$row['order_price']*$row['order_quantity'];
+            // $globalUserId=$_SESSION["userID"];
+            // $sql2="INSERT INTO cart (user_id, order_subtotal) VALUES ('$_SESSION["userID"]','$total');";
+            // $result2=mysqli_query($conn,$sql2);
              
               echo "<tr>";
             
