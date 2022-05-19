@@ -116,8 +116,6 @@ if ($conn->query($sql) === TRUE) {
 }
 $conn->close();
 header("location:../loginpage/login.php");
-
-header("location:../registerpage/register.php")
 }
 
    

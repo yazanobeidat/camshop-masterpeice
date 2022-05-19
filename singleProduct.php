@@ -1,5 +1,6 @@
 <?php
 include_once "./connection.php";
+session_start();
 $sql1="SELECT * from products;";
 $result= mysqli_query($conn , $sql1);
 $result_check= mysqli_num_rows($result);
