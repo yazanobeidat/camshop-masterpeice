@@ -115,7 +115,8 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
-header("location:../loginPage/login.php");
+
+header("location:../loginpage/login.php");
 
 }
 
