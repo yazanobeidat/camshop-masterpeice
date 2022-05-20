@@ -20,11 +20,11 @@ if(isset($_POST['submit'])){
         if($row['user_email'] == $loginEmail &&  $row['user_password'] == $loginPass){
             $_SESSION["userID"]= $row['user_id']; 
            
-           
+           echo  $_SESSION["userID"];
             if($row["is_admin"] == '1'){
                 header("Location: ./admin.html");
             }else{
-                header ("location: ../home.html");
+                header ("location: ../index.php");
             }
         }else{if($row['user_email'] !== $loginEmail ||  $row['user_password'] !== $loginPass){
          
