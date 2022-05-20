@@ -74,9 +74,9 @@ session_start();
             $category=$row['product_category'];
             $product_id=$row['product_id'];
 // product page buttom check
-            if(isset($_POST['submit'])){
-            $_SESSION["productID"]= $product_id;
-            }
+            // if(isset($_POST['submit'])){
+            // $_SESSION["productID"]= $product_id;
+            // }
 
          
    
@@ -100,9 +100,9 @@ session_start();
 <h5 style="color:red;"><?php echo $category ?></h5>
 
 <!-- product page button -->
-<form action="singleProduct.php" method="post">
+<!-- <form action="singleProduct.php" method="post">
 <input type="submit" name="submit" value="View Product">
-</form>
+</form> -->
 
 
 </div>
