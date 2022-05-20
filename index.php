@@ -1,3 +1,10 @@
+<?php
+include_once "./connection.php";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!-- fontawesome link  -->
     <script src="https://kit.fontawesome.com/41d0e79cb4.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
@@ -54,65 +62,71 @@
             </div>
           </nav>
           <nav>
-          <button type='button' class="btn btn-outline-secondary"><a href="./ProductsPage/Dress.php">Dress</a></button>
-          <button type='button' class="btn btn-outline-secondary"><a href="./ProductsPage/Accessories.php">Accessories</a></button>
-          <button type='button' class="btn btn-outline-secondary"><a href="./ProductsPage/Men_shoes.php">Men Shoes</a></button>
-          <button type='button' class="btn btn-outline-secondary"><a href="./ProductsPage/Suit.php">Suit</a></button>
-          <button type='button' class="btn btn-outline-secondary"><a href="./ProductsPage/Women_shoes.php">Wome nShoes</a></button>
+          <nav class="navbar navbar-expand-lg bg-ligth">
+
+          <ul class="nav-item">
+
+            <a class="nav-link active btn btn-outline-light" aria-current="page" href="./ProductsPage/Dress.php">Dress</a>
+
+            </ul>
+          <ul class="nav-item">
+
+            <a class="nav-link active btn btn-outline-light" aria-current="page" href="./ProductsPage/Accessories.php">Accessories</a>
+
+            </ul>
+          <ul class="nav-item">
+
+            <a class="nav-link active btn btn-outline-light" aria-current="page" href="./ProductsPage/Men_shoes.php">Men Shoes</a>
+
+            </ul>
+          <ul class="nav-item">
+
+            <a class="nav-link active btn btn-outline-light" aria-current="page" href="./ProductsPage/Suit.php">Suit</a>
+
+            </ul>
+          <ul class="nav-item">
+
+            <a class="nav-link active btn btn-outline-light" aria-current="page" href="./ProductsPage/Women_shoes.php">Women Shoes</a>
+
+            </ul>
           
           </nav>
         
     </header>
 <!-- ******************************************************************************** -->
 
-    <main>
+    <main > 
+      <!-- style=" margin-left: 41%" -->
+
+
+<!-- <div style="width:800px;height:200px;">
 
 
 
-
-        <!-- <div class="container">
-            <div class="row">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-                </div>
-            </div>
-        </div> -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg "style="width:800px;height:400px;" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg"style="width:800px;height:400px;" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg"style="width:800px;height:400px;" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div> -->
     </main>
+
 
 
 <!-- ******************************************************************************** -->
