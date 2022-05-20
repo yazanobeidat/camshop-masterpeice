@@ -178,9 +178,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 
 		
 
-					<hr class="mb-4">
-				
-					<button class="btn btn-primary bt-lg btn-block" type="submit" name="submit">Continue to Checkout</button>
+					
 			</form>
 		</div>
 
@@ -213,24 +211,27 @@ if ( $conn->query($sql5 ) === TRUE) {
 			
 			}}
 ///////////////////////total price/////////////////////////
-		// 	$summ="SELECT SUM(order_price)
-		// 	FROM  cart
-		// 	WHERE user_id={$_SESSION['userID']};";
-		// 	$result1= mysqli_query($conn , $summ);
-		// 	$result_check1= mysqli_num_rows($result1);
-			
-		// 	if ($result_check1 > 0) {
-		// 		while($row1=mysqli_fetch_assoc($result1)){
-	
+$total=0;
+$summ="SELECT (order_price)
+FROM  cart
+WHERE user_id={$_SESSION['userID']};";
+$result1= mysqli_query($conn , $summ);
+$result_check1= mysqli_num_rows($result1);
 
-			
-			
+if ($result_check1 > 0) {
+	while($row1=mysqli_fetch_assoc($result1)){
+
+$total=$total+$row1['order_price'];
+
+
+
 	
-				
-		// 		}
+	}
+
+
+}
 		
-		
-		// }?>
+		?>
         
     
 	

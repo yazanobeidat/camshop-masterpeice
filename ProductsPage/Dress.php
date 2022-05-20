@@ -2,6 +2,24 @@
 
 include_once "../connection.php";
 
+session_start();
+
+// if(isset($_POST['submit'])){
+
+//     $result3= mysqli_query($conn , $sql3);
+//     $result_check3= mysqli_num_rows($result3);
+//     if ($result_check3 > 0) {
+//     while ($row3=mysqli_fetch_assoc($result3)) {
+//      $_SESSION["ProductID"]= $row['product_id'];
+//     }
+// }
+
+
+// }
+
+
+
+
 ?>
 
 
@@ -30,6 +48,7 @@ include_once "../connection.php";
 <div class="container">
 <h2>Product</h2>
 <h4 style="color:black">Category</h4>
+
 <div class="row">
 
 
@@ -53,6 +72,14 @@ include_once "../connection.php";
             $productName=$row['product_name'];
             $price=$row['product_price'];
             $category=$row['product_category'];
+            $product_id=$row['product_id'];
+// product page buttom check
+            if(isset($_POST['submit'])){
+            $_SESSION["productID"]= $product_id;
+            }
+
+         
+   
 
             // check category
             if($category==='dress'){
@@ -72,6 +99,10 @@ include_once "../connection.php";
 <!-- category echo -->
 <h5 style="color:red;"><?php echo $category ?></h5>
 
+<!-- product page button -->
+<form action="singleProduct.php" method="post">
+<input type="submit" name="submit" value="View Product">
+</form>
 
 
 </div>
