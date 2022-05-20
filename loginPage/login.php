@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     {
         
         if($row['user_email'] == $loginEmail &&  $row['user_password'] == $loginPass){
-            $_SESSION["userID"]= $row['user_id'];
+            $_SESSION["userID"]= $row['user_id']; 
            
            echo  $_SESSION["userID"];
             if($row["is_admin"] == '1'){
@@ -39,9 +39,6 @@ if(isset($_POST['submit'])){
 
 
 ?>
-
-
-
 
 
 <!DOCTYPE html>
