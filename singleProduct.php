@@ -286,5 +286,46 @@ $result_check4= mysqli_num_rows($result4);
                 <!-- comment -->
             </div>
         </div>
+                </div>
+        
+        <div class="footer-clean">
+        <footer>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Our Team</h3>
+                        <ul>
+                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
+                            <li><a href="#"> <h6>Raghad</h6> </a></li>
+                            <li><a href="#"> <h6>Hadi</h6> </a></li>
+                            <li><a href="#"> <h6>Aya</h6> </a></li>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3 id="contact">Contact</h3>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
