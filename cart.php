@@ -2,6 +2,7 @@
 include_once "./connection.php";
 session_start();
 $sessionUserId=3;
+$arr1 = array();
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ $sessionUserId=3;
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
+    
 <table class="table">
   <thead>
     <tr>
@@ -40,33 +41,65 @@ $sessionUserId=3;
 
       if($result_check > 0){
       
-          while ($row= mysqli_fetch_assoc($result)) {
 
-            if (isset($_POST['submit'])){
+
+
+
+
+          while ($row= mysqli_fetch_assoc($result)) {
+            
+
+
+            if (isset($_POST["submit"])){
+              echo strval($row['order_number']);
+             echo gettype(strval($row['order_number']));
+              $ordernum= $row['order_number'];
+              $updateOrderQuantity=$_POST[$row['order_number']];
+
+
+             
+              // echo 'v'.$updateOrderQuantity;
               
-              $productId2= 1;
-              $updateOrderQuantity=$_POST[$row["product_id"]];
-              echo 'this is the updated value'.$updateOrderQuantity;
-              $update_data2 = "UPDATE cart SET order_quantity= '$updateOrderQuantity' WHERE product_id='$productId2';";
+
+              if(isset($updateOrderQuantity))
+              {
+              $update_data2 = "UPDATE cart SET order_quantity= '$updateOrderQuantity' WHERE order_number = $ordernum;";
               $updateDataQuery=mysqli_query($conn,$update_data2);
-              header("Refresh:0");
+              }
+              else
+          {
+            $OrderQuantity=$row['order_quantity'];
+            $ordernum = $row['order_number'];
+            $update_data2 = "UPDATE cart SET order_quantity= '$OrderQuantity' WHERE order_number = $ordernum;";
+              $updateDataQuery=mysqli_query($conn,$update_data2);
+
+
+          }
+              
+               header("Refresh:0");
           
           }
           
+          
               $total=$row['order_price']*$row['order_quantity'];
-            
+          
               echo "<tr>";
+              echo "<form method='post'>";
               echo "<td>". $row['order_number']. "</td>";
               //add image
               echo "<td>". $row['product_name']. "</td>";
               echo "<td>". $row['order_price']. "</td>";
               echo "<td>". $row['product_color']. "</td>";
-              echo "<td> <input type='number' name='".$row['product_id']."' value='".$row['order_quantity']."'>
-              
+              echo "<td> <input type='number' name='".$row['order_number']."' value='".$row['order_quantity']."'>
+              <a href='cart.php?id=".$row['order_number']."& qun=".$row['order_quantity']."'> <input type='submit' name='submit' value='update'></a>
               </td>";
-              echo $row['product_id'];
+              $arr1[$row['order_number']]=$row['order_quantity'];
+              
+              print_r ($arr1);
+              // echo $row['product_id'];
               echo "<td>". $total. "</td>";
               echo "</form>";
+               echo "</tr>";
               $productId=$row['product_id'];
               $orderNumber=$row['order_number'];
              $productQuantity= $row['order_quantity'];
@@ -80,7 +113,7 @@ $sessionUserId=3;
              
               
               
-         
+        
              
               if(isset($_POST['checkout']))
             {$totalInsert="INSERT INTO checkout (user_id,product_id,order_number,order_quantity,order_subtotal) VALUES ('$sessionUserId','$productId','$orderNumber','$productQuantity','$total');";
@@ -90,7 +123,7 @@ $sessionUserId=3;
           }
             
             // 
-              echo "</tr>";
+             
               // $finalTotal=
           
           }
@@ -100,11 +133,12 @@ $sessionUserId=3;
  
   </tbody>
 </table>
-<form method='post'>
-<input type='submit' name='submit' value='update'>
+<form method="post">
+
+
 <form action="" method="post">
 <button type="submit" name="checkout">Submit</button>
-    </form>
+    
     </form>
 </body>
 </html>
