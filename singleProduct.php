@@ -2,7 +2,7 @@
 include_once "./connection.php";
 //Bring the product id from database
 session_start();
-$_SESSION['product']=1; //DELETE LATER
+//DELETE LATER
 $productId=$_SESSION['product'];
 echo $productId;
 
@@ -53,15 +53,6 @@ $result_check4= mysqli_num_rows($result4);
     
    
 }
-
-
-// if(isset($_post['submit'])){
-// $updated_quantity=$_POST['quantity'];
-//     $quantitySql="INSERT INTO cart (user_id, order_quantity) VALUES ('$user_id', '$updated_quantity');";
-//     $resultQuantity= mysqli_query($conn , $quantitySql);
-// //product_quantity
-// }
-
 
 
 ?> 
@@ -161,6 +152,7 @@ $result_check4= mysqli_num_rows($result4);
                         echo '<br>';
                         $id++;
                     }
+                    unset($_SESSION['product']);
                      ?>
                      </div>
                 </form> 

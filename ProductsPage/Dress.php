@@ -82,7 +82,7 @@ while($row2=mysqli_fetch_assoc($result2)){
                 $userId=$_SESSION['userID'];
                 $_SESSION['product']=$product_id;
                 echo  $_SESSION['product'];
-            $inserId="INSERT INTO cart (product_id, user_id) VALUE (' $product_id','$userId');";
+            $inserId="INSERT INTO cart (product_id, user_id) VALUE ('$product_id','$userId');";
             $result3 = $conn->query($sql_query3);
             }}
 
