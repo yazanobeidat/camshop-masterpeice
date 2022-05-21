@@ -1,10 +1,18 @@
 <?php
 include "../connection.php";
 session_start();
+$get_id = $_GET['id'];
 $user_id= $_SESSION['userID'];
-$stmt = $conn->query("SELECT * FROM user Where user_id=$user_id");
+if(isset($_GET['id']))
+{
+    $stmt = $conn->query("SELECT * FROM user Where user_id=$get_id");
 $user = $stmt->fetch_assoc();
 
+}else
+{
+$stmt = $conn->query("SELECT * FROM user Where user_id=$user_id");
+$user = $stmt->fetch_assoc();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

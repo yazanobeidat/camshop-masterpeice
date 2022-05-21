@@ -49,9 +49,7 @@ setTimeout(() => {
       <div class="col-lg-8 col-xl-6">
         <div class="card rounded-3">
             
-          <img class="w-80 h-80"  src="https://www.asicentral.com/media/27173/new-employee-616.jpg"
-            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
-            alt="Sample photo">
+         
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Add category</h3>
 
