@@ -55,6 +55,7 @@ if($result_check4 > 0){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="./css/footer.css">
     <script src="https://kit.fontawesome.com/b4ff4e859b.js" crossorigin="anonymous"></script>
+    
 
 
 
@@ -416,9 +417,10 @@ if($result_check4 > 0){
                     <a href="./ProductsPage/Dress.php"><button class="btn1">
                         Click for more
                     </button></a>
-=======
+
   
     <!-- ================================================ -->
+
 
     <section class="about">
         <div class="container py-5">

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "../connection.php";
 
 ?>
@@ -138,9 +138,9 @@ include_once "../connection.php";
     $result = $conn->query($sql_query);
     $result_check4= mysqli_num_rows($result);
 
-    $sql_query2="SELECT product_id FROM cart ;";
-    $result2 = $conn->query($sql_query2);
-    $result_check4= mysqli_num_rows($result2);
+    // $sql_query2="SELECT product_id FROM cart ;";
+    // $result2 = $conn->query($sql_query2);
+    // $result_check4= mysqli_num_rows($result2);
     // check result
     if($result_check4 > 0){
 
@@ -152,15 +152,14 @@ include_once "../connection.php";
             $category=$row['product_category'];
 
             $product_id=$row['product_id'];
+            echo $product_id;
 // product page buttom check
-while($row2=mysqli_fetch_assoc($result2)){
-            if(isset($_POST['submit'])){
-                $userId=$_SESSION['userID'];
-                $_SESSION['product']=$product_id;
-                echo  $_SESSION['product'];
-            $inserId="INSERT INTO cart (product_id, user_id) VALUE ('$product_id','$userId');";
-            $result3 = $conn->query($sql_query3);
-            }}
+// while($row2=mysqli_fetch_assoc($result2)){
+            // if(isset($_POST[strval($row['product_id'])])){
+            //     $userId=$_SESSION['userID'];
+            //     $_SESSION['product']=$product_id;
+            //     echo  $_SESSION['product'];
+            // }
 
 
 
@@ -185,21 +184,23 @@ while($row2=mysqli_fetch_assoc($result2)){
 
 <!-- product page button -->
 
-<form action="../singleProduct.php" method="post">
+<!-- <form action="../singleProduct.php" method="post">
 <input type="submit" name="submit" value="View Product">
-</form>
+</form> -->
 
 
                 <!-- Button -->
-            <form action="../singleProduct.php" method="post">
+            <form action="" method="post">
 
-            <input type="submit" name="submit" value="View Product"class="add-to-cart" >
+            <a href='../singleProduct.php?id=<?php echo $row['product_id']?>' > <input type="button" name="view" value="View Product"class="add-to-cart" ></a>
 
             </form>
         </div>
     </div>
 </div>
             <?php 
+                        // echo "<input type='button' name='".$row['product_id']."'class='add-to-cart'>";
+
             }
         }
     }
