@@ -2,6 +2,7 @@
 include_once "./connection.php";
 //Bring the product id from database
 session_start();
+$_SESSION['product']=1; //DELETE LATER
 $productId=$_SESSION['product'];
 echo $productId;
 if(isset($_SESSION['userID'])){
@@ -73,58 +74,70 @@ $result_check4= mysqli_num_rows($result4);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/singleProduct.css">
+    <link rel="stylesheet" href="./css/bootstrap.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./css/singleProduct.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row singleProductDesc">
             <!--Product Image-->
-            <div class="col-lg-4">
-                <img src="<?php echo  $product_image;?>" alt="" height="200px" width="300px">
+            <div class="col-lg-6">
+                <img src="<?php echo  $product_image;?>" alt="" height="400px" width="400px" class="singleProductImage">
             </div>
             <!--Product Name & Description-->
-            <div class="col-lg-8">
+            <div class="col-lg-6 singleProductDesc">
                 <?php
                 echo "<h3>". $product_name. "</h3>";
                 echo "<br>";
                 echo "<p>". $product_description. "</p>";
                 echo "<br>";
-                echo "<p>". $product_description. "</p>";
+                echo "<p>". $product_color. "</p>";
                 
                 ?>
-                <form method="post">
-                    <input type='number' name='quantity' value='1'> Quantity
-                    <select name="size">
-                        <option value="S">S<option>
-                        <option value="M">M<option>
-                        <option value="L">L<option>
-                        <option value="XL">XL<option>
-                    </seclect>
-                    <br><br>
-                    <input type="submit" name='submit' class="btn btn-primary btn-s" value="Add To Cart">
-                    <?php
-                     
-    if(isset($_POST['submit'])){
-        if(!empty($_POST['quantity']) && !empty($_POST['size'])){
-            $updated_quantity=$_POST['quantity'];
-            $updated_size=$_POST['size'];
-        $quantitySql="INSERT INTO cart (user_id,product_id, product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id', '$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
-        $resultQuantity= mysqli_query($conn , $quantitySql);
-        }
-    
-    
-     
-                 }             ?>
-                </form>
-                
+                <div class="row singleProductDesc-divider">
+                    <form method="post" class="firstForm">
+                        <div class="col-lg-12">
+                        <label>Quantity</label> <input type='number' name='quantity' value='1' class="quantityInput text-center"> 
+                        
+                        
+                        <label>Size</label>
+                            <select name="size" class="text-center">
+                                <option value="S">S<option>
+                                <option value="M">M<option>
+                                <option value="L">L<option>
+                                <option value="XL">XL<option>
+                            </seclect>
+                            </div> 
+                        
+                        <div class="col-lg-12 btn">
+                            <input type="submit" name='submit' class="btn btn-primary btn-s addToCart" value="Add To Cart">
+                        </div>
+                        
+                        <?php
+                            if(isset($_POST['submit'])){
+                                if(!empty($_POST['quantity']) && !empty($_POST['size'])){
+                                    $updated_quantity=$_POST['quantity'];
+                                    $updated_size=$_POST['size'];
+                                $quantitySql="INSERT INTO cart (user_id,product_id, product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id', '$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
+                                $resultQuantity= mysqli_query($conn , $quantitySql);
+                                }
+                            }
+                        ?>
+                    </form>
+                </div>
+                <div class="col-lg-12 categories">
+                            <p><b>Categories</b>: <?php echo $product_category?></p>
+                        </div>
             </div>
         </div>
+    </div>
 
         <!--Comment Section-->
-        <div class="row">
-            <div class="col-lg-6">
+     <br>
+        <div class="container new">
+            
                 <form method="get">
+                <div class="col-lg-6">
                     <h2>Leave a Comment</h2>
                     <textarea placeholder="Leave a Comment" name="comment">
                     </textarea>
@@ -152,6 +165,6 @@ $result_check4= mysqli_num_rows($result4);
                 
             </div>
         </div>
-    </div>
+
 </body>
 </html>

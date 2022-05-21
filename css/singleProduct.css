@@ -1,0 +1,32 @@
+.container
+{
+    margin-top: 250px;
+
+}.singleProductImage{
+    border:10px double silver;
+   
+}
+.quantityInput{
+    width:50px
+}
+.addToCart{
+    width: 70%;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.firstForm{
+    /* border-bottom: 1px solid gray; */
+    padding-bottom: 20px;
+}
+.categories{
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+.categories p{
+    position: relative;
+    left: -15px;
+
+}
+.singleProductDesc-divider{
+    /* border-bottom: 1px solid gray */
+}
