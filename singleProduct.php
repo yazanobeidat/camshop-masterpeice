@@ -18,9 +18,10 @@ $result_check2= mysqli_num_rows($result2);
 if ($result_check > 0) {
     while ($row=mysqli_fetch_assoc($result) ) {
         $product_id=$row['product_id'];
-        $product_name= $row['product_image_name'];
+        
         $product_image= $row['product_image'];
-        $product_code= $row['product_code'];
+        $product_name = $row['product_name'];
+        
         $product_category=$row['product_category'];
         $product_price=$row['product_price'];
         $product_quantity=$row['product_quantity'];
@@ -95,10 +96,10 @@ $result_check4= mysqli_num_rows($result4);
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> About us</a>
+                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="#contact">
@@ -106,9 +107,7 @@ $result_check4= mysqli_num_rows($result4);
                         </a>
 
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#discount">Our discount</a>
-                    </li>
+                   
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             CATEGORIES
@@ -198,7 +197,7 @@ $result_check4= mysqli_num_rows($result4);
         <div class="row singleProductDesc">
             <!--Product Image-->
             <div class="col-lg-6">
-                <img src="<?php echo  $product_image;?>" alt="" height="400px" width="400px" class="singleProductImage">
+                <img src="<?php echo  $product_image;?>" alt="" height="auto" width="60%" class="singleProductImage">
             </div>
             <!--Product Name & Description-->
             <div class="col-lg-6 singleProductDesc">
@@ -235,7 +234,7 @@ $result_check4= mysqli_num_rows($result4);
                                 if(!empty($_POST['quantity']) && !empty($_POST['size'])){
                                     $updated_quantity=$_POST['quantity'];
                                     $updated_size=$_POST['size'];
-                                $quantitySql="INSERT INTO cart (user_id,product_id, product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id', '$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
+                                $quantitySql="INSERT INTO cart (user_id,product_id,product_image ,product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id','$product_image' ,'$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
                                 $resultQuantity= mysqli_query($conn , $quantitySql);
                                 }
                             }

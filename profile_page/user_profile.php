@@ -61,7 +61,7 @@ $user = $stmt->fetch_assoc();
                         <a class="nav-link" href="#"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
 
@@ -74,11 +74,11 @@ $user = $stmt->fetch_assoc();
                             CATEGORIES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
                          
                         </ul>
                       </li>
@@ -96,12 +96,12 @@ $user = $stmt->fetch_assoc();
                           if(isset($_SESSION["userID"])){
 
                                $profile_icon= '
-                               <a class="nav-link" href="./profile_page/user_profile.php">
+                               <a class="nav-link" href="../profile_page/user_profile.php">
                                    <i class="fa-solid fa-user"></i>
                                </a>';
 
                                $cart='
-                               <a class="nav-link" href="./cart.php">
+                               <a class="nav-link" href="../cart.php">
                                <i class="fa-solid fa-cart-shopping"></i>
                                  </a>'
                                

@@ -282,7 +282,7 @@ if (isset($_SESSION['userID'])){
     while($row=mysqli_fetch_assoc($result)){
 
            
-      $Fname= $row['firist_name'];
+      $Fname= $row['first_name'];
            
       $Lname= $row['last_name'];
           
@@ -365,7 +365,7 @@ if (isset($_SESSION['userID'])){
               <div ><p> <?php echo $Fname ?> <?php echo $Lname  ?> From: <?php echo $country?> / <?php echo $city?> / <?php echo $state?>   </p>
             
             </div>
-            <p>your phine is :  <?php echo $phone?> </p>
+            <p>your phone is :  <?php echo $phone?> </p>
            
 
                   <p>your order has been submitted</p> 
