@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+
+.navbar-toggler-icon{
+    color: black;
+}
 .navbar-brand{
 
     font-size: 2rem;
@@ -27,6 +31,11 @@
     color: black;
 }
 
+.mini{
+
+   flex-direction: column;
+}
+
 .main{
 
     background: url('https://immrfabulous.com/wp-content/uploads/2019/02/img_1119.jpg');
@@ -39,8 +48,158 @@
 .main h1 {
     font-size: 4rem;
     font-weight:700;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
+#img1{
+  height: 100px;
+  display: inline-block;
+  width: 10%;
+  
+    
+}
+
+.banner{
+    width: 100%;
+    /* margin-top: 15%; */
+}
+
+.banner_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 265px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.banner_category{
+    height: 50px;
+    background: #ffffff;
+    min-width: 180px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+.banner_category a{
+    display: block;
+    color: #1e1e27;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    width: 100%;
+}
+
+.banner_category a:hover{
+    color: #b5aec4;
+}
+
+
+
+.col-lg-2{
+ margin-left: 10px;
+ background-color:rgba(255, 255, 255, 0.323);
+ 
+
+}
+
+h1{
+
+  font-size: 700;  
+}
+
+.btn1 {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: #c20f1ecd;
+    color: white;
+    font-family: 700;
+    border-radius: 60px;
+}
+
+.btn1:hover {
+ 
+    background-color: #c20f1e95;
+  
+}
+
+.card:hover{
+    box-shadow: -2px 1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.5s;
+
+}
+
+
+.w-100 img{
+    height: 700px;
+
+
+}
+
+h3 i {
+    color:#c20f1e95;
+}
+
+.benefit {
+    margin-top: 10%;
+}
+
+.benefit_row{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.benefit_col{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.benefit_item {
+    height: 100px;
+    background: #f3f3f3;
+    border-right: solid 1px #ffffff;
+    padding-left:25px ;
+    padding-top: 30px;
+    margin-bottom: 10%;
+}
+
+.benefit_col:last-child .benefit_item{
+    border-right: none;
+}
+
+.benefit_icon i {
+    font-size: 30px;
+    color: #c20f1e95;
+
+}
+
+.benefit_content{
+    
+    padding-left: 22px;
+}
+
+.benefit_content h6 {
+
+    text-transform: uppercase;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+
+}
+
+.benefit_content p {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0px;
+    color: black;
+}
 

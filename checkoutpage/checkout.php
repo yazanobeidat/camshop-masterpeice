@@ -238,7 +238,7 @@ $total=$total+$row1['order_price'];
 		<hr>
 
         <div class="d-flex justify-content-between mt-2">
-          <span>Total </span> <span class="text-success">000</span>
+          <span>Total </span> <span class="text-success"><?php echo $total?></span>
         </div>
 		
 	
