@@ -91,7 +91,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 					Billing details
 			</h4>
 	
-			<form method="post" >
+			<form action="../billPage/billPage.php" method="post" >
 				<div class="form-row">
 					<div class="col-md-6 form-group">
 						<label for="firstname">First Name</label>
@@ -179,7 +179,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 		
 
 					
-			</form>
+			
 		</div>
 
 	
@@ -251,6 +251,7 @@ $total=$total+$row1['order_price'];
       </div>
     </div>
   </div>
+  </form>
 </div>
 </body>
 </html>
