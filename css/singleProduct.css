@@ -74,3 +74,12 @@ textarea{
         padding-top:0;
     }
 }
+@media(max-width:520px){
+    .commentsSection{
+        width: 100%;
+    }
+    .main-span,
+    .sub-span{
+        font-size:35px;
+    }
+}

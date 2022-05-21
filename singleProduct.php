@@ -5,7 +5,7 @@ session_start();
 $_SESSION['product']=1; //DELETE LATER
 $productId=$_SESSION['product'];
 echo $productId;
-if(isset($_SESSION['userID'])){
+
     $sql1="SELECT * from products WHERE product_id='$productId'"; //WHER product_id=$_POST['product_id'];";
 $result= mysqli_query($conn , $sql1);
 $result_check= mysqli_num_rows($result);
@@ -54,9 +54,7 @@ $result_check4= mysqli_num_rows($result4);
    
 }
 
-}else{
-    header("Location: ./loginPage/login.php");
-}
+
 // if(isset($_post['submit'])){
 // $updated_quantity=$_POST['quantity'];
 //     $quantitySql="INSERT INTO cart (user_id, order_quantity) VALUES ('$user_id', '$updated_quantity');";
@@ -115,6 +113,7 @@ $result_check4= mysqli_num_rows($result4);
                         
                         <?php
                             if(isset($_POST['submit'])){
+                                if(isset($_SESSION['userID'])){
                                 if(!empty($_POST['quantity']) && !empty($_POST['size'])){
                                     $updated_quantity=$_POST['quantity'];
                                     $updated_size=$_POST['size'];
@@ -122,6 +121,10 @@ $result_check4= mysqli_num_rows($result4);
                                 $resultQuantity= mysqli_query($conn , $quantitySql);
                                 }
                             }
+                            else{
+                                header("Location: ./loginPage/login.php");
+                            }
+                        }
                         ?>
                     </form>
                 </div>
