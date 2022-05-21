@@ -6,6 +6,18 @@ body {
     padding-left: 240px;
     }
     }
+    .dbcontainer
+    {
+        width:70%;
+        margin-left: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+
+
+
+
+    }
     
     /* Sidebar */
     .sidebar {
