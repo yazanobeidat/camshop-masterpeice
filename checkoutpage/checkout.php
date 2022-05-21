@@ -2,7 +2,7 @@
 include_once "../connection.php";
 session_start();
 $user_id=$_SESSION['userID'];
-
+echo $_SESSION['userID'];
 if(isset($_POST['submit']))
 {
 $first_name=$_POST['fname'];
@@ -16,18 +16,13 @@ $phone_number=$_POST['phonenumber'];
 $email_address=$_POST['emailaddress'];
 
 // $product_id="1";
-$checkoutData="SELECT product_id FROM checkout;";//WHERE
+$checkoutData="SELECT product_id FROM checkout;";
 $resultData=mysqli_query($conn,$checkoutData);
 while($row=mysqli_fetch_assoc($resultData)){
 	$product_id=$row['product_id'];
 }
 $sql5 = "INSERT INTO checkout (product_id,user_id, firist_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
 VALUES ( '$product_id','$user_id','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
-
-
-
-
-
 if ( $conn->query($sql5 ) === TRUE) {
 	
 	echo "New record created successfully";
@@ -36,10 +31,7 @@ if ( $conn->query($sql5 ) === TRUE) {
   }
   $conn->close();
 }
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -48,26 +40,18 @@ if ( $conn->query($sql5 ) === TRUE) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 </head>
-
 <body>
-			<!-- ////////////////////////////////////// -->
-			<div class="row">
-			
-		<!-- /////////////////////////////////////////// -->
+	<div class="row">
 		<div class="col-md-5 container bg-default">
 			<h1 class="my-4">
                 Checkout
-        </h1>
-        <hr style="background-color: rgba(3, 50, 239, 0.804); height:3px">
+        	</h1>
+        	<hr style="background-color: rgba(3, 50, 239, 0.804); height:3px">
 			<h4 class="my-4">
-					Billing details
+				Billing details
 			</h4>
-	
-
 			<form action="../billPage/billPage.php" method="post" >
-
 				<div class="form-row">
 					<div class="col-md-6 form-group">
 						<label for="firstname">First Name</label>
@@ -172,33 +156,17 @@ $result_check1= mysqli_num_rows($result1);
 if ($result_check1 > 0) {
 	while($row1=mysqli_fetch_assoc($result1)){
 
-
-
-
-
-	
 	}
-
-
 }
-		
-		?>
-        
-    
-	
+	?>
 		<hr>
-
         <div class="d-flex justify-content-between mt-2">
           <span>Total </span> <span class="text-success"><?php echo $_SESSION['total'].'$'?></span>
         </div>
-		
-	
 		<hr class="mb-4">
-
 		<h6 class="fw-bold">Cash on delivery</h6>
 		<p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-				
-					<button class="btn btn-primary bt-lg btn-block" type="submit" name="submitt">PLACE ORDER</button>
+		<button class="btn btn-primary bt-lg btn-block" type="submit" name="submitt">PLACE ORDER</button>
       </div>
     </div>
   </div>
