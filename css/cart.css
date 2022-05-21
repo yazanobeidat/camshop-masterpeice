@@ -1,0 +1,29 @@
+.table{
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid #d8d8d8;
+}
+
+.deleteInput{
+    background-color: white;
+    border: none;
+}
+.fa-xmark{
+    border: 1px solid #adacac;
+    padding: 7px;
+    border-radius: 50%;
+}
+.card{
+    width: 25%;
+    position: relative;
+    float: right;
+    margin-right: 50px;
+}
+@media (max-width:620px){
+    .card{
+        width:100%;
+        position: unset;
+    float: unset;
+    margin-right: unset;
+    }
+}
