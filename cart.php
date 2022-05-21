@@ -151,12 +151,14 @@ if(isset($_GET['order_num']))
 
 <h3><?php
    echo 'Total: '. $finalTotal;
+   
    ?></h3>
 
 <form action="" method="post">
 <button type="submit" name="checkout">Submit</button>
     
     </form>
-   
+   <!-- dlelete -->
 </body>
+
 </html>
