@@ -1,8 +1,22 @@
 <?php
 include_once "./connection.php";
 session_start();
-$sessionUserId=3;
+$sessionUserId = $_SESSION['userID'];
+
 $arr1 = array();
+$finalTotal=0;
+
+
+if(isset($_GET['order_num']))
+{
+  $sqlFkey="SET FOREIGN_KEY_CHECKS=0;"; 
+  // TO stop checking the forign key
+                $result5=mysqli_query($conn,$sqlFkey);
+                $dele = $_GET['order_num'];
+                $sqlDelete="DELETE FROM cart WHERE order_number=$dele";
+              $result3=mysqli_query($conn,$sqlDelete);
+              // header("Refresh:0");
+}
 
 ?>
 <!DOCTYPE html>
@@ -55,12 +69,6 @@ $arr1 = array();
              echo gettype(strval($row['order_number']));
               $ordernum= $row['order_number'];
               $updateOrderQuantity=$_POST[$row['order_number']];
-
-
-             
-              // echo 'v'.$updateOrderQuantity;
-              
-
               if(isset($updateOrderQuantity))
               {
               $update_data2 = "UPDATE cart SET order_quantity= '$updateOrderQuantity' WHERE order_number = $ordernum;";
@@ -72,13 +80,15 @@ $arr1 = array();
             $ordernum = $row['order_number'];
             $update_data2 = "UPDATE cart SET order_quantity= '$OrderQuantity' WHERE order_number = $ordernum;";
               $updateDataQuery=mysqli_query($conn,$update_data2);
-
-
-          }
-              
+          }            
                header("Refresh:0");
           
           }
+
+
+          // if (isset($_POST[strval($row['order_number'])])){
+          // 
+          // }
           
           
               $total=$row['order_price']*$row['order_quantity'];
@@ -91,13 +101,15 @@ $arr1 = array();
               echo "<td>". $row['order_price']. "</td>";
               echo "<td>". $row['product_color']. "</td>";
               echo "<td> <input type='number' name='".$row['order_number']."' value='".$row['order_quantity']."'>
-              <a href='cart.php?id=".$row['order_number']."& qun=".$row['order_quantity']."'> <input type='submit' name='submit' value='update'></a>
+               <input type='submit' name='submit' value='update'></a>
               </td>";
               $arr1[$row['order_number']]=$row['order_quantity'];
-              
-              print_r ($arr1);
+              // print_r ($arr1);
               // echo $row['product_id'];
               echo "<td>". $total. "</td>";
+              echo "<td>
+               <a href='cart.php?order_num=".$row['order_number']."'><input type='button' name='".$row['order_number']."' value='delete'></a>
+              </td>";
               echo "</form>";
                echo "</tr>";
               $productId=$row['product_id'];
@@ -107,16 +119,18 @@ $arr1 = array();
               // echo $sessionUserId;
               // echo $productQuantity;
            
-             
+              // 
             //  $update_data3 = "UPDATE checkout SET order_quantity= '$updateOrderQuantity' WHERE product_id='$productId2';";
             //  $updateDataQuery=mysqli_query($conn,$update_data3);
              
               
-              
+               
         
              
               if(isset($_POST['checkout']))
-            {$totalInsert="INSERT INTO checkout (user_id,product_id,order_number,order_quantity,order_subtotal) VALUES ('$sessionUserId','$productId','$orderNumber','$productQuantity','$total');";
+            {
+              
+              $totalInsert="INSERT INTO checkout (user_id,product_id,order_number,order_quantity,order_subtotal,total) VALUES ('$sessionUserId','$productId','$orderNumber','$productQuantity','$total','$finalTotal');";
             $result3=mysqli_query($conn,$totalInsert);
             echo $result3;
             header("Location: ./checkoutpage/checkout.php");
@@ -124,7 +138,7 @@ $arr1 = array();
             
             // 
              
-              // $finalTotal=
+           $finalTotal= $finalTotal +$total;
           
           }
       }
@@ -135,10 +149,14 @@ $arr1 = array();
 </table>
 <form method="post">
 
+<h3><?php
+   echo 'Total: '. $finalTotal;
+   ?></h3>
 
 <form action="" method="post">
 <button type="submit" name="checkout">Submit</button>
     
     </form>
+   
 </body>
 </html>
