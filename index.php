@@ -77,7 +77,7 @@ if(isset($_SESSION["userID"])){
                         
                           if(isset($_SESSION["userID"])){
                           
-                            echo '<a href="./profile.html"><button type="submit" name="submit" class="nav-link " > <i class="fa-solid fa-user"></i> </button></a>';
+                            echo '<a href="./profile_page/user_profile.php"><button type="submit" name="submit" class="nav-link " > <i class="fa-solid fa-user"></i> </button></a>';
                             echo '<a href="./loginPage/login.php"><button  class="nav-link " > Logout </button></a>';
                           }else{
                             echo '<a href="./loginPage/login.php"><button  class="nav-link " > Login </button></a>';
