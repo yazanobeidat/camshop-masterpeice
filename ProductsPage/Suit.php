@@ -28,7 +28,7 @@ include_once "../connection.php";
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!-- fontawesome link  -->
     <script src="https://kit.fontawesome.com/41d0e79cb4.js" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Grape+Nuts&family=Oleo+Script+Swash+Caps&family=Prompt&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/product.css">
 
@@ -37,7 +37,7 @@ include_once "../connection.php";
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-light sticky-xxl-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><i class="fa-solid fa-shirt"></i>Elegant</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,52 +74,61 @@ include_once "../connection.php";
               </div>  
             </div>
           </nav>
-          <nav>
-          <nav class="navbar navbar-expand-lg bg-ligth">
-
-          <ul class="nav-item">
-
-            <a class="nav-link active btn btn-outline-light" aria-current="page" href="../ProductsPage/Dress.php">Dress</a>
-
-            </ul>
-          <ul class="nav-item">
-
-            <a class="nav-link active btn btn-outline-light" aria-current="page" href="../ProductsPage/Accessories.php">Accessories</a>
-
-            </ul>
-          <ul class="nav-item">
-
-            <a class="nav-link active btn btn-outline-light" aria-current="page" href="../ProductsPage/Men_shoes.php">Men Shoes</a>
-
-            </ul>
-          <ul class="nav-item">
-
-            <a class="nav-link active btn btn-outline-light" aria-current="page" href="../ProductsPage/Suit.php">Suit</a>
-
-            </ul>
-          <ul class="nav-item">
-
-            <a class="nav-link active btn btn-outline-light" aria-current="page" href="../ProductsPage/Women_shoes.php">Women Shoes</a>
-
-            </ul>
           
-          </nav>
-        
+
+     
     </header>
 <!-- ********************************************************************************************************************* -->
 
 
 <!-- ********************************************************************************************************************* -->
 
+<main>
+<br><br><br>
+<div class="container bg-light sticky-xxl-top">
+<div class="wow">
+  <p>Suit</p> 
+</div >
+
+<!-- **************************************************Mini Nav******************************************************************* -->
+
+
+<br>
+<div id='mini'>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+
+    <ul class="nav-item">
+    <button type="button" class="btn btn-lg btn-outline-dark lg"><a class="nav-link active " href="../ProductsPage/Dress.php">Dress</a></button>
+
+</ul>
+<ul class="nav-item">
+<button type="button" class="btn btn-lg btn-outline-dark"><a class="nav-link active  " aria-current="page" href="../ProductsPage/Accessories.php">Accessories</a></button>
 
 
 
 
-<main >
+</ul>
+<ul class="nav-item">
+<button type="button" class="btn btn-lg btn-outline-dark"><a class="nav-link active " aria-current="page" href="../ProductsPage/Men_shoes.php">Men Shoes</a></button>
 
-<div class="container">
-<h2>Product</h2>
-<h4 style="color:black">Category:Suit </h4>
+</ul>
+<ul class="nav-item">
+<button type="button" class="btn btn-lg btn-outline-dark"><a class="nav-link active " aria-current="page" href="../ProductsPage/Suit.php">Suit</a>
+</button>
+
+
+</ul>
+<ul class="nav-item">
+<button type="button" class="btn btn-lg btn-outline-dark"><a class="nav-link active " aria-current="page" href="../ProductsPage/Women_shoes.php">Women Shoes</a> </button>
+
+
+
+
+</ul>
+  </div>
+</nav>
+</div>
 <div class="row">
 
     <?php
@@ -163,25 +172,30 @@ category echo
 
 
 </div> -->
-    <div class="col-md-3 ">
-        <div class="product-grid">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img src="<?php echo $img ?>"style="height:80% ; width:100% ;">
-                </a>
-                <ul class="product-links">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-random"></i></a></li>
-                </ul>
-                <a href="" class="add-to-cart"><?php echo $productDis ?></a>
-            </div>
-            <div class="product-content">
-                <h3 class="title"><a href="#"><?php  echo $productName ?></a></h3>
-                <div class="price"><?php echo $price ?></div>
-            </div>
+<div class="col-md-3 ">
+    <div class="product-grid">
+        <div class="product-image">
+            <a href="#" class="image">
+                <img class="pic-1" src="<?php echo $img ?> "style="height:80% ; width:100% ;">
+            </a>
+            
+
+        </div>
+        <div class="product-content">
+
+            <h3 class="title"><a href="#"><?php  echo $productName ?></a></h3>
+            <div class="price">$<?php echo $price ?></div>
+
+
+                <!-- Button -->
+            <form action="../singleProduct.php" method="post">
+
+            <input type="submit" name="submit" value="View Product"class="add-to-cart" >
+
+            </form>
         </div>
     </div>
+</div>
 
             <?php 
             }
@@ -201,21 +215,49 @@ category echo
 
 
 
-
 <!-- ********************************************************************************************************************* -->
 
-
-
-
-
-
-
-
-
-
-
-
-
+<div>
+<div class="footer-clean" style="margin-top: 70px;" >
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Our Team</h3>
+                        <ul>
+                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
+                            <li><a href="#"> <h6>Raghad</h6> </a></li>
+                            <li><a href="#"> <h6>Hadi</h6> </a></li>
+                            <li><a href="#"> <h6>Aya</h6> </a></li>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</div>
 
 
 
