@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "../connection.php";
 
 ?>
@@ -32,43 +32,125 @@ include_once "../connection.php";
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light sticky-xxl-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><i class="fa-solid fa-shirt"></i>Elegant</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Luxury</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon" style="color: black;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#contact">
+                            Contact us
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#discount">Our discount</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CATEGORIES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
+                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
+                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
+                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                         
+                        </ul>
+                      </li>
+                    
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                <form action="" method="post">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <!-- profile icon/login/register -->
+                    
+                <?php
+                //  if(isset($_POST['submit'])){
+                      
+                      
+                      // $profile_sql = "SELECT * FROM  user;";
+                      // $profile_result = mysqli_query($conn,$profile_sql);
+                      // $resultcheck = mysqli_num_rows( $profile_result);
+                   
+                      // if($resultcheck > 0)
+                      // ($row = mysqli_fetch_assoc( $profile_result));
+                      // {
+        
+                          $check=0;
+                        
+                          if(isset($_SESSION["userID"])){
+
+                               $profile_icon= '
+                               <a class="nav-link" href="./profile_page/user_profile.php">
+                                   <i class="fa-solid fa-user"></i>
+                               </a>';
+
+                               $cart='
+                               <a class="nav-link" href="./cart.php">
+                               <i class="fa-solid fa-cart-shopping"></i>
+                                 </a>'
+                               
+                               
+                               ?>
+                               <form action="" method='post'>
+                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
+                                </li>
+                                   </form>
+                                 
+                                  <?php if(isset($_POST['logout'])){
+                                   
+                                    session_destroy();
+                                    echo'<script>
+                                     setTimeout(() => {
+                                         window.location = "home.php";
+                                       })
+                                     
+                                     </script>';
+                               
+                                  }
+
+                          }else
+                           
+                           { echo '<li class="nav-item ">
+                            <a class="nav-link " href="./loginPage/login.php">
+                                Login </a> </li>';
+
+                            echo '<li class="nav-item ">
+                            <a class="nav-link " href="./registerPage/register.php">
+                                Register </a> </li>';
+                           }?>
+                       <!-- <li class="nav-item">
+                      
+
+                    </li> -->
+
+                       <li class="nav-item">
+                       <?php if(isset( $profile_icon)){echo $profile_icon;}?>
+
+                    </li>
+                  
+                    <li class="nav-item">
+                    <?php if(isset( $cart)){echo $cart;}?>
+
+                    </li>
+                </ul>
                 </form>
-            
-              </div>  
+
             </div>
-          </nav>
+        </div>
+    </nav>
           
 
      
@@ -82,7 +164,7 @@ include_once "../connection.php";
 <br><br><br>
 <div class="container bg-light sticky-xxl-top">
 <div class="wow">
-  <p>Dress</p> 
+  <p>Accessories</p> 
 </div >
 
 <!-- **************************************************Mini Nav******************************************************************* -->
@@ -124,8 +206,6 @@ include_once "../connection.php";
   </div>
 </nav>
 </div>
-
-
 <br><br>
 <div class="row">
 
@@ -140,6 +220,9 @@ include_once "../connection.php";
     $result = $conn->query($sql_query);
     $result_check4= mysqli_num_rows($result);
 
+    // $sql_query2="SELECT product_id FROM cart ;";
+    // $result2 = $conn->query($sql_query2);
+    // $result_check4= mysqli_num_rows($result2);
     // check result
     if($result_check4 > 0){
 
@@ -150,6 +233,17 @@ include_once "../connection.php";
             $price=$row['product_price'];
             $category=$row['product_category'];
 
+            $product_id=$row['product_id'];
+// product page buttom check
+// while($row2=mysqli_fetch_assoc($result2)){
+            // if(isset($_POST[strval($row['product_id'])])){
+            //     $userId=$_SESSION['userID'];
+            //     $_SESSION['product']=$product_id;
+            //     echo  $_SESSION['product'];
+            // }
+
+
+
             // check category
             if($category==='Accessories'){
 
@@ -158,27 +252,36 @@ include_once "../connection.php";
     <div class="product-grid">
         <div class="product-image">
             <a href="#" class="image">
-                <img class="pic-1" src="<?php echo $img ?> "style="height:80% ; width:100%  ; object-fit: cover;">
+                <img class="pic-1" src="<?php echo $img ?> "style="height:80% ; width:100% ;">
             </a>
             
 
         </div>
         <div class="product-content">
 
-            <h3 class="title"><a href="#"><?php  echo $productName ?></a></h3>
+            <h3 class="title" ><a href="#"  ><?php  echo $productName ?></a></h3>
             <div class="price">$<?php echo $price ?></div>
 
 
-                <!-- Button -->
-            <form action="../singleProduct.php" method="post">
+<!-- product page button -->
 
-            <input type="submit" name="submit" value="View Product"class="add-to-cart" >
+<!-- <form action="../singleProduct.php" method="post">
+<input type="submit" name="submit" value="View Product">
+</form> -->
+
+
+                <!-- Button -->
+            <form action="" method="post">
+
+            <a href='../singleProduct.php?id=<?php echo $row['product_id']?>' > <input type="button" name="view" value="View Product"class="add-to-cart" ></a>
 
             </form>
         </div>
     </div>
 </div>
             <?php 
+                        // echo "<input type='button' name='".$row['product_id']."'class='add-to-cart'>";
+
             }
         }
     }
@@ -190,7 +293,6 @@ include_once "../connection.php";
 
 </main>
 <!-- ********************************************************************************************************************* -->
-
 <div class="footer-clean" style="margin-top: 70px;" >
         <footer>
             <div class="container">

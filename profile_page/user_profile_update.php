@@ -204,7 +204,18 @@ if(isset($_POST['submit']))
           </div>
         </div>
     </div>
+
+    <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png" alt="">
     
+
+
+
+    </form>
+    
+ 
+ <a href="../index.php"><button>landing page</button></a>
+
+
 </body>
 </html>
 
