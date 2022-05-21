@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
    {
    while($row = mysqli_fetch_assoc($result))
    {
-       if($email === $row['user_email']) {
+       if($email == $row['user_email']) {
 
         $emailERR2="<span style=' color:red'>The Email is already exist</span>";
         $email_correct2= false;
@@ -70,7 +70,7 @@ if(isset($_POST['submit']))
    else
    {
     
-    $emailERR="<span style='color:red'>Invalid email</span>";
+    $emailERR="<span style=' color:red'>Invalid email</span>";
     $email_correct= false;
    }
    ///////phone number
@@ -115,8 +115,8 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
-
 header("location:../loginpage/login.php");
+
 
 }
 
