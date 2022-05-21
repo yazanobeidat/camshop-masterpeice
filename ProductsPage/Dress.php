@@ -103,9 +103,9 @@ session_start();
 
 <!-- product page button -->
 
-<form action="singleProduct.php" method="post">
+<!-- <form action="singleProduct.php" method="post">
 <input type="submit" name="submit" value="View Product">
-</form>
+</form> -->
 
 
 
