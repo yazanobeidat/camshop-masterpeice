@@ -54,7 +54,8 @@ if($result_check4 > 0){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="./css/footer.css">
-    <script src="https://kit.fontawesome.com/b4ff4e859b.js" crossorigin="anonymous"></script>
+   
+    <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
     
 
 
@@ -109,16 +110,7 @@ if($result_check4 > 0){
                     <!-- profile icon/login/register -->
                     
                 <?php
-                //  if(isset($_POST['submit'])){
-                      
-                      
-                      // $profile_sql = "SELECT * FROM  user;";
-                      // $profile_result = mysqli_query($conn,$profile_sql);
-                      // $resultcheck = mysqli_num_rows( $profile_result);
-                   
-                      // if($resultcheck > 0)
-                      // ($row = mysqli_fetch_assoc( $profile_result));
-                      // {
+                
         
                           $check=0;
                         
