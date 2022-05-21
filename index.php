@@ -79,7 +79,7 @@ if($result_check4 > 0){
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> About us</a>
+                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="#contact">
@@ -411,6 +411,7 @@ if($result_check4 > 0){
                     </button></a>
 
 
+
     </section>
 
 
@@ -418,6 +419,7 @@ if($result_check4 > 0){
   
 
     <!-- ================================================ -->
+
 
 
     <section class="about">
@@ -556,10 +558,13 @@ if($result_check4 > 0){
             </div> -->
         </div>
     </section>
+    
 
    
     <!-- ============================================ -->
+    <div class="clearfix">
     <div class="footer-clean">
+      
         <footer>
             <div class="container">
                 <div class="row justify-content-center">
@@ -596,9 +601,11 @@ if($result_check4 > 0){
             </div>
         </footer>
     </div>
+</div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
+    
 </body>
 
 </html>

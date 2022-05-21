@@ -90,7 +90,7 @@ if(isset($_POST['submit'])){
       <div class="col-lg-8 col-xl-6">
         <div class="card rounded-3">
           <img src="http://cdn.shopify.com/s/files/1/0267/3799/9943/collections/DRESS_1_1200x1200.png?v=1629960072"
-            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;    height: 300px;"
             alt="Sample photo">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login</h3>
