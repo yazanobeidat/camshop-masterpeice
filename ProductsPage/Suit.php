@@ -31,7 +31,7 @@ include_once "../connection.php";
 
 </head>
 <body>
-    <header>
+<header>
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
             <a class="navbar-brand" href="#">Luxury</a>
@@ -49,27 +49,9 @@ include_once "../connection.php";
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#discount">Our discount</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                         
-                        </ul>
-                      </li>
                     
                 </ul>
                 <form action="" method="post">
@@ -252,7 +234,7 @@ include_once "../connection.php";
     <div class="product-grid">
         <div class="product-image">
             <a href="#" class="image">
-                <img class="pic-1" src="<?php echo $img ?> "style="height:80% ; width:100% ;">
+                <img class="pic-1" src="../<?php echo $img ?> "style="height:80% ; width:100% ;">
             </a>
             
 
@@ -294,7 +276,7 @@ include_once "../connection.php";
 </main>
 <!-- ********************************************************************************************************************* -->
 <div class="footer-clean" style="margin-top: 70px;" >
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-4 col-md-3 item">
