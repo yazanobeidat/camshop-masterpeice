@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     
-<form action="" method="post">
+<!-- <form action="" method="post">
 
 <label for="loginEmail">Email</label>
 <br>
@@ -74,7 +74,74 @@ if(isset($_POST['submit'])){
 <br><br>
 <input type="submit" name='submit' value='submit'>
 
+</form> -->
+
+
+
+
+
+
+
+
+<form action="" method="post">
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="http://cdn.shopify.com/s/files/1/0267/3799/9943/collections/DRESS_1_1200x1200.png?v=1629960072"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login</h3>
+
+            <form class="px-md-2">
+
+              <div class="form-outline mb-4">
+          
+
+
+                
+
+<input type="text" name='loginEmail' placeholder= 'Email@...' class="form-control" >
+<label for="loginEmail" >Email</label>
+              </div>
+
+              <div class="row">
+                <div class="form-outline mb-4">
+
+
+                
+                  
+
+<input type="password" name='loginPassword' placeholder='Passwprd' class="form-control">
+<label for="loginPassword">Password</label>
+<?php if(isset($ERROR)){echo $ERROR;}?>
+
+
+                </div>
+
+                <input type="submit" name='submit' value='submit' class="btn btn-success btn-lg mb-1">
+              
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </form>
+
+
+
+
+
+
+
+
 
 
 

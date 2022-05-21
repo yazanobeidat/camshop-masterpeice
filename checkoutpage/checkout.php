@@ -91,7 +91,9 @@ if ( $conn->query($sql5 ) === TRUE) {
 					Billing details
 			</h4>
 	
-			<form action ="../billPage/billPage.php"method="post" >
+
+			<form action="../billPage/billPage.php" method="post" >
+
 				<div class="form-row">
 					<div class="col-md-6 form-group">
 						<label for="firstname">First Name</label>
