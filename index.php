@@ -76,17 +76,18 @@ if($result_check4 > 0){
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
 
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link " href="#discount">Our discount</a>
                     </li>
@@ -565,7 +566,7 @@ if($result_check4 > 0){
     <div class="clearfix">
     <div class="footer-clean">
       
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-4 col-md-3 item">
