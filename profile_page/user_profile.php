@@ -20,55 +20,65 @@ $user = $stmt->fetch_assoc();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user_profile.css?v=<?php echo time(); ?>">
-
-
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://kit.fontawesome.com/b4ff4e859b.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="bigdiv">
+    <div class="wrapper">
+        <div class="left">
+          
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>   <?php
+            echo $user['user_first_name'].' '. $user['user_last_name'];
+            ;
 
-   
-    <div class="div1">
-        <p class="name">
-            Full name
-            <?php
-            echo $user['user_first_name'];
-            echo $user['user_last_name'];
-
-            ?>
-        </p>
-        <p class="data">
-            email:
-        <?php
+            ?></h3>
+                <div class="info_data">
+                     <div class="data">
+                        <h4>Email</h4>
+                        <p>   <?php
             echo $user['user_email'];
 
-            ?>
-
-        </p>   
-        <p class="data">
-        phone number:
-        <?php
+            ?></p>
+                     </div>
+                     <div class="data">
+                       <h4>Phone</h4>
+                        <p> <?php
             echo $user['phone_num'];
 
-            ?>
-
-        </p>  
-        <p class="data">
-       age and gender:
-        <?php
-            echo $user['age'];
-            echo "   ";
-            echo $user['gender'];
-
-            ?>
-
-        </p>  
-
+            ?></p>
+                  </div>
+                </div>
+            </div>
+          
+          <div class="projects">
+               
+                <div class="projects_data">
+                     <div class="data">
+                        <h4>Age</h4>
+                        <p> <?php
+            echo $user['age'].' '.'Years old';?></p>
+                     </div>
+                     <div class="data">
+                       <h4>Gender</h4>
+                        <p><?php  echo $user['gender']; ?></p>
+                  </div>
+                </div>
+            </div>
+          
+            <div class="social_media">
+                <ul>
+                  <li><a href="../index.php"> Home page <i class="fa-solid fa-house"></i></a></li>
+                  <li><a href="./user_profile_update.php"> Edit Profile <i class="fa-solid fa-pen-to-square"></i></a></li>
+                 
+              </ul>
+          </div>
+        </div>
     </div>
-    <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png" alt="">
-    <a href="user_profile_update.php"><button>Update information</button></a>
- </div>
- <a href="employees.php"><button>landing page</button></a>
 </body>
 </html>
+

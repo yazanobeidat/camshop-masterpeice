@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 $user_id= $_SESSION['userID'];
@@ -23,48 +24,75 @@ if(isset($_POST['submit']))
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user_profile.css?v=<?php echo time(); ?>">
-
-
+    <link rel="stylesheet" href="../css/profile_edit.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://kit.fontawesome.com/b4ff4e859b.js" crossorigin="anonymous"></script>
+    
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post" class="bigdiv">
-    <div class="div1">
-    
-<label for="mail"><strong>first name</strong></label>
-<input type="text" placeholder="first name" name="first_name" value= <?php echo $user['user_first_name']; ?> >
-<label for="psw"><strong>last name</strong></label>
-        <input type="text" placeholder="last name" name="last_name" value=  <?php echo $user['user_last_name']; ?>>
-        <label for="psw"><strong>last name</strong></label>
-        <input type="text" placeholder="last name" name="email" value=  <?php echo $user['user_email']; ?>>
-        <label for="psw"><strong>phone number</strong></label>
-        <input type="text" placeholder="phone num" name="phonenum" value=  <?php echo $user['phone_num']; ?>>
-        <label for="psw"><strong>user password</strong></label>
-        <input type="text" placeholder="password" name="password" value=  <?php echo $user['user_password']; ?>>
-        <label for="psw"><strong>age</strong></label>
-        <input type="text" placeholder="age" name="age" value=  <?php echo $user['age']; ?>>
-        <label for="psw"><strong>gender</strong></label>
-        <input type="text" placeholder="gender" name="gender" value=  <?php echo $user['gender']; ?>>
-      
-   
-    <br>
-<input type="submit" name="submit" value="confirm information">
+    <a href="./user_profile.php"></a>
+    <div class="wrapper">
+        <div class="left">
+          
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>  User Data </h3>
+                <div class="info_data">
+                     <div class="data">
+                         
+                        <form action="" method="post" class="bigdiv">
+                            <div class="div1">
+                            
+                        <label for="mail"><strong>first name</strong></label>
+                        <input type="text" placeholder="first name" name="first_name" value= <?php echo $user['user_first_name']; ?> >
+                        <label for="psw"><strong>last name</strong></label>
+                                <input type="text" placeholder="last name" name="last_name" value=  <?php echo $user['user_last_name']; ?>>
+                                <label for="psw"><strong>last name</strong></label>
+                                <input type="text" placeholder="last name" name="email" value=  <?php echo $user['user_email']; ?>>
+                                <label for="psw"><strong>phone number</strong></label>
+                                <input type="text" placeholder="phone num" name="phonenum" value=  <?php echo $user['phone_num']; ?>>
+                                <label for="psw"><strong>user password</strong></label>
+                                <input type="text" placeholder="password" name="password" value=  <?php echo $user['user_password']; ?>>
+                                <label for="psw"><strong>age</strong></label>
+                                <input type="text" placeholder="age" name="age" value=  <?php echo $user['age']; ?>>
+                                <label for="psw"><strong>gender</strong></label>
+                                <input type="text" placeholder="gender" name="gender" value=  <?php echo $user['gender']; ?>>
+                              
+                           
+                            <br>
+                        <input type="submit" name="submit" value="confirm information">
+                            </div>
+                           
+                            
+                        
+                        
+                        
+                            </form>
+                        
+         
+
+            <!-- ============================================ -->
+
+            
+          
+            <div class="social_media">
+                <ul>
+                  <li><a href="../index.php"> Home page <i class="fa-solid fa-house"></i></a></li>
+                  <li><a href=" ./user_profile.php"> Back to Profile <i class="fa-solid fa-arrow-left"></i></a></li>
+                 
+              </ul>
+          </div>
+        </div>
     </div>
-    <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png" alt="">
-    
-
-
-
-    </form>
-    
- 
- <a href="employees.php"><button>landing page</button></a>
 </body>
 </html>
+

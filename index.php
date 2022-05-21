@@ -146,7 +146,7 @@ if($result_check4 > 0){
                                     session_destroy();
                                     echo'<script>
                                      setTimeout(() => {
-                                         window.location = "home.php";
+                                         window.location = "index.php";
                                        })
                                      
                                      </script>';
@@ -418,7 +418,13 @@ if($result_check4 > 0){
                         Click for more
                     </button></a>
 
+
+    </section>
+
+
+
   
+
     <!-- ================================================ -->
 
 

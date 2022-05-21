@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #d7d5d5;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  height: 75%;
+  display: flex;
+  box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+}
+
+.wrapper .left{
+  width: 60%;
+  background-image: url('../img/projectimg/prof\ 2.jpg');
+  background-size: cover;
+  padding: 30px 25px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+.wrapper .right{
+  width: 65%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects{
+  margin-bottom: 25px;
+  margin-top: 15%;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+
+
+
+
+
+
+
+
+.wrapper .social_media ul{
+  display: flex;
+  
+}
+
+.wrapper .social_media ul li{
+  width: 30%;
+  height: 5%;
+    background-color: #c20f1e95;
+ 
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 10%;
+
+}
+
+.wrapper .social_media ul li a{
+  color :#fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+
+
+/* ========================================== */
+
+@media  (min-width:940px) and (max-width: 1250px){
+
+    .wrapper .social_media ul li a{
+    
+        font-size: small;
+    
+      }
+      
+}
+
+
+@media  (min-width:800px) and (max-width: 939px){
+
+    .wrapper{
+       
+        height: 40%;
+     
+      }
+
+    .wrapper .social_media ul li a{
+   
+        font-size:x-small;
+   
+      }
+
+      .wrapper .social_media ul li{
+        width: 40%;
+       
+      
+      
+      }
+
+      .wrapper .left{
+       
+        background-position: center center;
+      
+      }
+      
+}
+
+
+@media  (min-width:500px) and (max-width: 799px){
+
+    .wrapper{
+       
+        height: 65%;
+        width: 90%;
+     
+      }
+
+    .wrapper .social_media ul li a{
+   
+        font-size:x-small;
+   
+      }
+
+      .wrapper .social_media ul li{
+        width: 50%;
+       
+       
+      
+      
+      }
+
+      .wrapper .left{
+       
+        background-position: center center;
+      
+      }
+      
+}
+
+
+@media  (min-width:400px) and (max-width: 499px){
+
+    .wrapper{
+       
+        height: 65%;
+        width: 100%;
+     
+      }
+
+    .wrapper .social_media ul li a{
+   
+        font-size:x-small;
+   
+      }
+
+      .wrapper .social_media ul li{
+        width: 50%;
+       
+      
+      
+      }
+
+      .wrapper .left{
+       
+        background-position: center center;
+      
+      }
+
+
+
+
+      
+}
+
+@media  (min-width:280px) and (max-width: 399px){
+
+    .wrapper{
+       
+        height: 65%;
+        width: 110%;
+     
+      }
+
+    .wrapper .social_media ul li a{
+   
+        font-size:x-small;
+   
+      }
+
+      .wrapper .social_media ul li{
+        width: 50%;
+       
+      
+      
+      }
+
+      .wrapper .left{
+       
+        background-position: center center;
+      
+      }
+
+      .wrapper .right .info_data .data p,
+.wrapper .right .projects_data .data p{
+  font-size: x-small;
+  margin-bottom: 10px;
+  color: #919aa3;
+  width: 5%;
+}
+
+      
+}
