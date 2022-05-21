@@ -24,7 +24,9 @@ body{
 }
 
 .wrapper .left{
-  width: 60%;
+  margin-top:150px;
+  width: 100%;
+  height: 100%;
   background-image: url('../img/projectimg/prof\ 2.jpg');
   background-size: cover;
   padding: 30px 25px;
@@ -33,8 +35,6 @@ body{
   text-align: center;
   color: #fff;
 }
-
-
 
 .wrapper .right{
   width: 65%;
@@ -61,20 +61,13 @@ body{
 }
 
 
-
-
-
-
-
-
-
 .wrapper .social_media ul{
   display: flex;
   
 }
 
 .wrapper .social_media ul li{
-  width: 30%;
+  width: 50%;
   height: 5%;
     background-color: #c20f1e95;
  
@@ -93,152 +86,13 @@ body{
   text-decoration: none;
 }
 
-
-
 /* ========================================== */
-
-@media  (min-width:940px) and (max-width: 1250px){
-
-    .wrapper .social_media ul li a{
-    
-        font-size: small;
-    
-      }
-      
-}
-
-
-@media  (min-width:800px) and (max-width: 939px){
-
-    .wrapper{
-       
-        height: 40%;
-     
-      }
-
-    .wrapper .social_media ul li a{
-   
-        font-size:x-small;
-   
-      }
-
-      .wrapper .social_media ul li{
-        width: 40%;
-       
-      
-      
-      }
-
-      .wrapper .left{
-       
-        background-position: center center;
-      
-      }
-      
-}
-
-
-@media  (min-width:500px) and (max-width: 799px){
-
-    .wrapper{
-       
-        height: 65%;
-        width: 90%;
-     
-      }
-
-    .wrapper .social_media ul li a{
-   
-        font-size:x-small;
-   
-      }
-
-      .wrapper .social_media ul li{
-        width: 50%;
-       
-       
-      
-      
-      }
-
-      .wrapper .left{
-       
-        background-position: center center;
-      
-      }
-      
-}
-
-
-@media  (min-width:400px) and (max-width: 499px){
-
-    .wrapper{
-       
-        height: 65%;
-        width: 100%;
-     
-      }
-
-    .wrapper .social_media ul li a{
-   
-        font-size:x-small;
-   
-      }
-
-      .wrapper .social_media ul li{
-        width: 50%;
-       
-      
-      
-      }
-
-      .wrapper .left{
-       
-        background-position: center center;
-      
-      }
-
-
-
-
-      
-}
-
-@media  (min-width:280px) and (max-width: 399px){
-
-    .wrapper{
-       
-        height: 65%;
-        width: 110%;
-     
-      }
-
-    .wrapper .social_media ul li a{
-   
-        font-size:x-small;
-   
-      }
-
-      .wrapper .social_media ul li{
-        width: 50%;
-       
-      
-      
-      }
-
-      .wrapper .left{
-       
-        background-position: center center;
-      
-      }
-
-      .wrapper .right .info_data .data p,
-.wrapper .right .projects_data .data p{
-  font-size: x-small;
-  margin-bottom: 10px;
-  color: #919aa3;
-  width: 5%;
-}
-
-      
+@media (max-width:992px){
+  .wrapper{
+    width:100%;
+  }
+  .wrapper .left{
+      display: none;
+ 
+  }
 }

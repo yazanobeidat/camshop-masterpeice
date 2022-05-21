@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
    $gender=$_POST['gender'];
 
    ////////////////////////////////////////////////////
-
+$email_correct3 = true;
 
    $stat = "SELECT * FROM  user;";
    $result = mysqli_query($conn,$stat);
@@ -33,13 +33,14 @@ if(isset($_POST['submit']))
 
         $emailERR2="<span style=' color:red'>The Email is already exist</span>";
         $email_correct2= false;
+        $email_correct3 = $email_correct2;
 
        }else{
         $email_correct2= true;
+        $email_correct3 = $email_correct2l;
        }
-
-
    }}
+
 
 
    ///firstname
@@ -104,7 +105,7 @@ if(isset($_POST['submit']))
     $confirm_password_correct= false;
    }
 
-if($firstname_correct && $lastname_correct && $email_correct && $phonenum_correct && $password_correct && $confirm_password_correct &&  $email_correct2)
+if($firstname_correct && $lastname_correct && $email_correct && $phonenum_correct && $password_correct && $confirm_password_correct &&  $email_correct3)
 {
 $sql = "INSERT INTO user (user_first_name, user_last_name, user_email,phone_num,user_password,age,gender)
 VALUES ('$first_name', '$last_name', '$email','$phonenumber','$password','$age','$gender');";
@@ -162,7 +163,7 @@ header("location:../loginpage/login.php");
 
 <form action="" method="post" >
     
-  <div class="container py-5 h-100">
+  <div >
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
         <div class="card card-registration my-4">

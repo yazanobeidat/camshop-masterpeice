@@ -53,7 +53,8 @@ if($result_check4 > 0){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="./css/footer.css">
-    <script src="https://kit.fontawesome.com/b4ff4e859b.js" crossorigin="anonymous"></script>
+   
+    <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
     
 
 
@@ -74,17 +75,18 @@ if($result_check4 > 0){
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> About us</a>
+                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
 
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link " href="#discount">Our discount</a>
                     </li>
@@ -108,16 +110,7 @@ if($result_check4 > 0){
                     <!-- profile icon/login/register -->
                     
                 <?php
-                //  if(isset($_POST['submit'])){
-                      
-                      
-                      // $profile_sql = "SELECT * FROM  user;";
-                      // $profile_result = mysqli_query($conn,$profile_sql);
-                      // $resultcheck = mysqli_num_rows( $profile_result);
-                   
-                      // if($resultcheck > 0)
-                      // ($row = mysqli_fetch_assoc( $profile_result));
-                      // {
+                
         
                           $check=0;
                         
@@ -418,6 +411,7 @@ if($result_check4 > 0){
                     </button></a>
 
 
+
     </section>
 
 
@@ -425,6 +419,7 @@ if($result_check4 > 0){
   
 
     <!-- ================================================ -->
+
 
 
     <section class="about">
@@ -563,11 +558,14 @@ if($result_check4 > 0){
             </div> -->
         </div>
     </section>
+    
 
    
     <!-- ============================================ -->
+    <div class="clearfix">
     <div class="footer-clean">
-        <footer>
+      
+        <footer id="footer">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-4 col-md-3 item">
@@ -603,9 +601,11 @@ if($result_check4 > 0){
             </div>
         </footer>
     </div>
+</div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
+    
 </body>
 
 </html>
