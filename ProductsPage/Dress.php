@@ -63,6 +63,9 @@ session_start();
     $result = $conn->query($sql_query);
     $result_check4= mysqli_num_rows($result);
 
+    $sql_query2="SELECT product_id FROM cart ;";
+    $result2 = $conn->query($sql_query2);
+    $result_check4= mysqli_num_rows($result2);
     // check result
     if($result_check4 > 0){
 
@@ -74,10 +77,14 @@ session_start();
             $category=$row['product_category'];
             $product_id=$row['product_id'];
 // product page buttom check
-
-            // if(isset($_POST['submit'])){
-            // $_SESSION["productID"]= $product_id;
-            // }
+while($row2=mysqli_fetch_assoc($result2)){
+            if(isset($_POST['submit'])){
+                $userId=$_SESSION['userID'];
+                $_SESSION['product']=$product_id;
+                echo  $_SESSION['product'];
+            $inserId="INSERT INTO cart (product_id, user_id) VALUE (' $product_id','$userId');";
+            $result3 = $conn->query($sql_query3);
+            }}
 
 
          
@@ -103,9 +110,9 @@ session_start();
 
 <!-- product page button -->
 
-<!-- <form action="singleProduct.php" method="post">
+<form action="../singleProduct.php" method="post">
 <input type="submit" name="submit" value="View Product">
-</form> -->
+</form>
 
 
 

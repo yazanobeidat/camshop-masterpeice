@@ -2,7 +2,8 @@
 include_once "./connection.php";
 session_start();
 $sessionUserId=3;
-
+$finalTotal=0;
+$user_id_final=$_SESSION['userID'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ $sessionUserId=3;
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
+    
 <table class="table">
   <thead>
     <tr>
@@ -33,6 +34,7 @@ $sessionUserId=3;
       $sql="SELECT * FROM cart";
       $result=mysqli_query($conn,$sql);
       $result_check=mysqli_num_rows($result);
+      $str='';
 
       // $sql2="SELECT product_id FROM cart WHERE user_id='1';";
       // $result2=mysqli_query($conn,$sql2);
@@ -40,33 +42,66 @@ $sessionUserId=3;
 
       if($result_check > 0){
       
-          while ($row= mysqli_fetch_assoc($result)) {
 
-            if (isset($_POST['submit'])){
+
+     
+
+          while ($row= mysqli_fetch_assoc($result)) {
+            if(isset($_POST['delete'])){
+              echo 'delet';
+              $OrderNum=$row['order_number'];
+              if($_POST['checkbox1']='true'){
+                echo 'true';
+                $sqlFkey="SET FOREIGN_KEY_CHECKS=0;"; //TO stop checking the forign key
+                $result5=mysqli_query($conn,$sqlFkey);
+                $sqlDelete="DELETE FROM cart WHERE order_number=$OrderNum";
+              $result3=mysqli_query($conn,$sqlDelete);}
               
-              $productId2= 1;
-              $updateOrderQuantity=$_POST[$row["product_id"]];
-              echo 'this is the updated value'.$updateOrderQuantity;
-              $update_data2 = "UPDATE cart SET order_quantity= '$updateOrderQuantity' WHERE product_id='$productId2';";
+              // foreach ($_POST["checkbox1"] as $id){
+              //   $sqlFkey="SET FOREIGN_KEY_CHECKS=0;"; //TO stop checking the forign key
+              //   $result5=mysqli_query($conn,$sqlFkey);
+              //    $sqlDelete="DELETE FROM cart WHERE order_number=$id";
+              // $result3=mysqli_query($conn,$sqlDelete);}
+            
+          }
+
+            if (isset($_POST["1"])){
+              echo strval($row['order_number']);
+             echo gettype(strval($row['order_number']));
+              $productId2= $row['product_id'];
+              $updateOrderQuantity=$_POST["1"];
+              // echo 'v'.$updateOrderQuantity;
+              $update_data2 = "UPDATE cart SET order_quantity= '$updateOrderQuantity' WHERE product_id = $productId2;";
               $updateDataQuery=mysqli_query($conn,$update_data2);
-              header("Refresh:0");
+               header("Refresh:0");
           
           }
           
               $total=$row['order_price']*$row['order_quantity'];
-            
-              echo "<tr>";
-              echo "<td>". $row['order_number']. "</td>";
-              //add image
-              echo "<td>". $row['product_name']. "</td>";
-              echo "<td>". $row['order_price']. "</td>";
-              echo "<td>". $row['product_color']. "</td>";
-              echo "<td> <input type='number' name='".$row['product_id']."' value='".$row['order_quantity']."'>
+          ?>
+          <form method='post'> 
+          <?php
+              $order_number=$row['order_number'];
+              $product_id=$row['product_id'];
+             
+              echo " <tr>
+               
+               <td>". $row['order_number']. "</td>
               
-              </td>";
-              echo $row['product_id'];
-              echo "<td>". $total. "</td>";
-              echo "</form>";
+               <td>". $row['product_name']. "</td>
+               <td>". $row['order_price']. "</td>
+               <td>". $row['product_color']. "</td>
+               <td> <input type='number' name='".$row['product_id']."' value='".$row['order_quantity']."'>
+              <input type='submit' name= ".strval($row['order_number'])." value='update'>
+              </td>
+            
+               <td>". $total. "</td>
+               <td><input type='checkbox' name='checkbox'> </td>
+              
+                </tr>";
+?>
+ </form>
+                <?php
               $productId=$row['product_id'];
               $orderNumber=$row['order_number'];
              $productQuantity= $row['order_quantity'];
@@ -80,7 +115,7 @@ $sessionUserId=3;
              
               
               
-         
+        
              
               if(isset($_POST['checkout']))
             {$totalInsert="INSERT INTO checkout (user_id,product_id,order_number,order_quantity,order_subtotal) VALUES ('$sessionUserId','$productId','$orderNumber','$productQuantity','$total');";
@@ -90,8 +125,8 @@ $sessionUserId=3;
           }
             
             // 
-              echo "</tr>";
-              // $finalTotal=
+             
+               $finalTotal= $finalTotal +$total;
           
           }
       }
@@ -100,11 +135,18 @@ $sessionUserId=3;
  
   </tbody>
 </table>
-<form method='post'>
-<input type='submit' name='submit' value='update'>
+
 <form action="" method="post">
+  <h3><?php
+   echo 'Total: '. $finalTotal;
+   $sqlFkey="SET FOREIGN_KEY_CHECKS=0;"; //TO stop checking the forign key
+    $result5=mysqli_query($conn,$sqlFkey);
+   $insertTotal="INSERT INTO checkout (user_id,product_id, order_number, total) VALUES ('$user_id_final','$product_id','$order_number', '$finalTotal');";
+   $resultQuantity= mysqli_query($conn , $insertTotal);
+   ?></h3>
+<button type="submit" name="delete">Delete</button>
 <button type="submit" name="checkout">Submit</button>
     </form>
-    </form>
+    
 </body>
 </html>

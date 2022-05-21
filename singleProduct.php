@@ -1,11 +1,15 @@
 <?php
 include_once "./connection.php";
+//Bring the product id from database
 session_start();
-$sql1="SELECT * from products;";
+$productId=$_SESSION['product'];
+echo $productId;
+if(isset($_SESSION['userID'])){
+    $sql1="SELECT * from products WHERE product_id='$productId'"; //WHER product_id=$_POST['product_id'];";
 $result= mysqli_query($conn , $sql1);
 $result_check= mysqli_num_rows($result);
 
-$sql2="SELECT * from user;";
+$sql2="SELECT * from user;"; //WHER product_id=$_GET['product_id'];
 $result2= mysqli_query($conn , $sql2);
 $result_check2= mysqli_num_rows($result2);
 
@@ -47,6 +51,10 @@ $result_check4= mysqli_num_rows($result4);
     }
     
    
+}
+
+}else{
+    header("Location: ./loginPage/login.php");
 }
 // if(isset($_post['submit'])){
 // $updated_quantity=$_POST['quantity'];
@@ -98,10 +106,14 @@ $result_check4= mysqli_num_rows($result4);
                     <?php
                      
     if(isset($_POST['submit'])){
-        $updated_quantity=$_POST['quantity'];
-        $updated_size=$_POST['size'];
-    $quantitySql="INSERT INTO cart (user_id, product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id', '$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
-    $resultQuantity= mysqli_query($conn , $quantitySql);
+        if(!empty($_POST['quantity']) && !empty($_POST['size'])){
+            $updated_quantity=$_POST['quantity'];
+            $updated_size=$_POST['size'];
+        $quantitySql="INSERT INTO cart (user_id,product_id, product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id', '$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
+        $resultQuantity= mysqli_query($conn , $quantitySql);
+        }
+    
+    
      
                  }             ?>
                 </form>
@@ -131,6 +143,7 @@ $result_check4= mysqli_num_rows($result4);
                         echo '<br>';
                         echo "<h5>". $row5['product_comment']. "</h5>";
                         echo '<br>';
+                        
                     }
                    
                      ?>
