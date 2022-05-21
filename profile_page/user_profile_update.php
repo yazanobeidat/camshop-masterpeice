@@ -67,13 +67,13 @@ if(isset($_POST['submit']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> About us</a>
+                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
                     </li>
@@ -85,11 +85,11 @@ if(isset($_POST['submit']))
                             CATEGORIES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
                          
                         </ul>
                       </li>

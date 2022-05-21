@@ -227,7 +227,7 @@ include_once "../connection.php";
 
 
             // check category
-            if($category==='Men shoes'){
+            if($category==='Men\'s Shoes'){
 
             ?>
             <div class="col-md-3 ">

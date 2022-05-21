@@ -219,5 +219,10 @@ footer
 {
     margin-top: 10%;
 }
+.dropdown-menu
+{
+    z-index: 9999 !important;
+
+}
 
 
