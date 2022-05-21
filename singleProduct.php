@@ -130,41 +130,38 @@ $result_check4= mysqli_num_rows($result4);
                         </div>
             </div>
         </div>
-    </div>
-
         <!--Comment Section-->
      <br>
-        <div class="container new">
-            
+            <div class="commentsSection">
                 <form method="get">
-                <div class="col-lg-6">
-                    <h2>Leave a Comment</h2>
+                <div class="col-lg-12">
+                    <span class="main-span">Leave a Comment</span>
                     <textarea placeholder="Leave a Comment" name="comment">
                     </textarea>
-                    <button type="submit" name="submit" class="btn btn-primary btn-s">Submit</button>
-                    <h3>Old comments</h3>
+                    <button type="submit" name="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <div class="oldCommentsContanier">
+                    <span class="sub-span">Old comments</span>
                     <!-- To show all comments-->
                     <?php
                     $sql5="SELECT user_first_name, user_last_name, product_comment FROM comments WHERE product_id='$product_id';";
                     $result5= mysqli_query($conn , $sql5);
                     $result_check5= mysqli_num_rows($result5);
+                    $id=1;
                     while ($row5=mysqli_fetch_assoc($result5)){
-                        echo "<h4>";
+                        echo "<h4 class='userName-comment'>";
+                        echo $id.'- ';
                         echo $row5['user_first_name'].' ';
                         echo $row5['user_last_name'];
                         echo "</h4>";
                         echo '<br>';
-                        echo "<h5>". $row5['product_comment']. "</h5>";
+                        echo "<h5 class='userComment-comment'>". $row5['product_comment']. "</h5>";
                         echo '<br>';
-                        
+                        $id++;
                     }
-                   
                      ?>
-                   
-                </form>
-                
+                     </div>
+                </form> 
             </div>
         </div>
-
 </body>
 </html>
