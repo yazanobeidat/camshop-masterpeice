@@ -21,6 +21,10 @@ if(isset($_GET['order_num']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/bootstrap.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./css/cart.css?v=<?php echo time(); ?>">
     <title>Your Cart</title>
@@ -31,8 +35,9 @@ if(isset($_GET['order_num']))
   <thead>
     <tr>
       
-      <th scope="col">Number</th>
-      <th scope="col">Product</th>
+      <th scope="col">Order Number</th>
+      <th scope="col">Product  Image</th>
+      <th scope="col">Product Name</th>
       <th scope="col">Price</th>
       <th scope="col">Color</th>
       <th scope="col">Quanity</th>
@@ -82,13 +87,13 @@ if(isset($_GET['order_num']))
               echo "<td>". $row['order_price']. "</td>";
               echo "<td>". $row['product_color']. "</td>";
               echo "<td> <input type='number' name='".$row['order_number']."' value='".$row['order_quantity']."'>
-               <input type='submit' name='submit' value='update'></a>
+               <input type='submit' name='submit' class='btn btn-primary btn-sm' value='update'></a>
               </td>";
               $arr1[$row['order_number']]=$row['order_quantity'];
 
               echo "<td>". $total. "</td>";
               echo "<td>
-               <a href='cart.php?order_num=".$row['order_number']."'><input type='button' name='".$row['order_number']."' value='delete'></a>
+               <a href='cart.php?order_num=".$row['order_number']."'><input class='deleteInput' type='button' name='".$row['order_number']."'><li class='fa fa-xmark'></li></a>
               </td>";
               echo "</form>";
                echo "</tr>";
@@ -104,20 +109,73 @@ if(isset($_GET['order_num']))
               header("Location: ./checkoutpage/checkout.php");
           }
            $finalTotal= $finalTotal +$total;
+          
           }
       }
+      $_SESSION['total']= $finalTotal;
       ?>
   </tbody>
 </table>
-<form method="post">
-  <h3>
-    <?php
-      echo 'Total: '. $finalTotal;
-   ?>
-   </h3>
-    <form action="" method="post">
-      <button type="submit" name="checkout">Submit</button>
+    <form method="post" class="toCheckOut">
+      <!-- <h3>
+        <?php
+          echo 'Total: '. $finalTotal;
+        ?>
+       </h3> -->
+      <div class="card">
+        <h5 class="card-header">Cart totals</h5>
+        <div class="card-body">
+          <p class="card-text">Your <b>total</b> price is: <h3>
+          <?php
+          echo $finalTotal. '$';
+          ?>
+          </h3> Approve your order by clicking the <b>Submit</b> button</p>
+          <button type="submit" class="'btn btn-primary btn-sm" name="checkout">Submit</button>
+        </div>
+      </div>  
     </form>
+    <br>
+    <div class="clearfix"></div>
+
+    <!-- Footer -->
+    <div class="footer-clean" style="margin-top: 70px;" >
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Our Team</h3>
+                        <ul>
+                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
+                            <li><a href="#"> <h6>Raghad</h6> </a></li>
+                            <li><a href="#"> <h6>Hadi</h6> </a></li>
+                            <li><a href="#"> <h6>Aya</h6> </a></li>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+   
   </body>
 </html>
 
