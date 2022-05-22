@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
            
            echo  $_SESSION["userID"];
             if($row["is_admin"] == '1'){
-                header("Location: ./admin.html");
+                header("Location: ../admin_dashboard/dashboard.php");
             }else{
                 header ("location: ../index.php");
             }

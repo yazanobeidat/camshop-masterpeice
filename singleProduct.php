@@ -38,8 +38,8 @@ if ($result_check > 0) {
     }
 }
 //Comment
-if(isset($_GET['submit'])){
-$comment= $_GET['comment'];
+if(isset($_POST['submit2'])){
+$comment= $_POST['comment'];
 $sql3="INSERT INTO comments (product_id, user_id, user_first_name, user_last_name, product_comment) VALUES ('$product_id','$user_id','$first_name','$last_name','$comment');";
 $result3= mysqli_query($conn , $sql3);
 $sql4="SELECT * FROM comments WHERE product_id='$product_id';";
@@ -51,9 +51,7 @@ $result_check4= mysqli_num_rows($result4);
 
             $commentShow=$comment;
         }
-    }
-    
-   
+    }  
 }
 
 
@@ -85,114 +83,127 @@ $result_check4= mysqli_num_rows($result4);
 
 </head>
 <body>
-<nav class="navbar navbar_single_product navbar-expand-lg ">
-        <div class="container  navbar_single_product  ">
-            <a class="navbar-brand" href="#">Luxury</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" >
-                <span class="navbar-toggler-icon" style="color: black;"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
-                            Contact us
-                        </a>
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="./img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon" style="color: black;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about us/about_us.php"> About us</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="#contact">
+                        Contact us
+                    </a>
 
-                    </li>
-                   
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                         
-                        </ul>
-                      </li>
-                    
-                </ul>
-                <form action="" method="post">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <!-- profile icon/login/register -->
-                    
-                <?php
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./index.php#discount">Our discount</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        CATEGORIES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
+                      <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
+                      <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
+                      <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                      <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                     
+                    </ul>
+                  </li>
                 
-        
-                          $check=0;
-                        
-                          if(isset($_SESSION["userID"])){
-
-                               $profile_icon= '
-                               <a class="nav-link" href="./profile_page/user_profile.php">
-                                   <i class="fa-solid fa-user"></i>
-                               </a>';
-
-                               $cart='
-                               <a class="nav-link" href="./cart.php">
-                               <i class="fa-solid fa-cart-shopping"></i>
-                                 </a>'
-                               
-                               
-                               ?>
-                               <form action="" method='post'>
-                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
-                                </li>
-                                   </form>
-                                 
-                                  <?php if(isset($_POST['logout'])){
-                                   
-                                    session_destroy();
-                                    echo'<script>
-                                     setTimeout(() => {
-                                         window.location = "index.php";
-                                       })
-                                     
-                                     </script>';
-                               
-                                  }
-
-                          }else
-                           
-                           { echo '<li class="nav-item ">
-                            <a class="nav-link " href="./loginPage/login.php">
-                                Login </a> </li>';
-
-                            echo '<li class="nav-item ">
-                            <a class="nav-link " href="./registerPage/register.php">
-                                Register </a> </li>';
-                           }?>
-                       <!-- <li class="nav-item">
-                      
-
-                    </li> -->
-
-                       <li class="nav-item">
-                       <?php if(isset( $profile_icon)){echo $profile_icon;}?>
-
-                    </li>
+            </ul>
+            <form action="" method="post">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <!-- profile icon/login/register -->
+                
+            <?php
+            //  if(isset($_POST['submit'])){
                   
-                    <li class="nav-item">
-                    <?php if(isset( $cart)){echo $cart;}?>
+                  
+                  // $profile_sql = "SELECT * FROM  user;";
+                  // $profile_result = mysqli_query($conn,$profile_sql);
+                  // $resultcheck = mysqli_num_rows( $profile_result);
+               
+                  // if($resultcheck > 0)
+                  // ($row = mysqli_fetch_assoc( $profile_result));
+                  // {
+    
+                      $check=0;
+                    
+                      if(isset($_SESSION["userID"])){
 
-                    </li>
-                </ul>
-                </form>
+                           $profile_icon= '
+                           <a class="nav-link" href="./profile_page/user_profile.php">
+                               <i class="fa-solid fa-user"></i>
+                           </a>';
 
-            </div>
+                           $cart='
+                           <a class="nav-link" href="./cart.php">
+                           <i class="fa-solid fa-cart-shopping"></i>
+                             </a>'
+                           
+                           
+                           ?>
+                           <form action="" method='post'>
+                       <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
+                            </li>
+                               </form>
+                             
+                              <?php if(isset($_POST['logout'])){
+                               
+                                session_destroy();
+                                echo'<script>
+                                 setTimeout(() => {
+                                     window.location = "index.php";
+                                   })
+                                 
+                                 </script>';
+                           
+                              }
+
+                      }else
+                       
+                       { echo '<li class="nav-item ">
+                        <a class="nav-link " href="./loginPage/login.php">
+                            Login </a> </li>';
+
+                        echo '<li class="nav-item ">
+                        <a class="nav-link " href="./registerPage/register.php">
+                            Register </a> </li>';
+                       }?>
+                   <!-- <li class="nav-item">
+                  
+
+                </li> -->
+
+                   <li class="nav-item">
+                   <?php if(isset( $profile_icon)){echo $profile_icon;}?>
+
+                </li>
+              
+                <li class="nav-item">
+                <?php if(isset( $cart)){echo $cart;}?>
+
+                </li>
+            </ul>
+            </form>
+
         </div>
-    </nav>
+    </div>
+</nav>
+      
+
     <div class="container">
         <div class="row singleProductDesc">
             <!--Product Image-->
@@ -253,12 +264,12 @@ $result_check4= mysqli_num_rows($result4);
         <!--Comment Section-->
      <br>
             <div class="commentsSection">
-                <form method="get">
+                <form method="post">
                 <div class="col-lg-12">
                     <span class="main-span">Leave a Comment</span>
                     <textarea placeholder="Leave a Comment" name="comment">
                     </textarea>
-                    <button type="submit" name="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <button type="submit" name="submit2" class="btn btn-primary btn-lg">Submit</button>
                     <div class="oldCommentsContanier">
                     <span class="sub-span">Old comments</span>
                     <!-- To show all comments-->

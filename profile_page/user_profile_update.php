@@ -58,7 +58,7 @@ if(isset($_POST['submit']))
 <body>
 <nav class="navbar navbar-expand-lg navbar_single_product">
         <div class="container navbar_single_product">
-            <a class="navbar-brand" href="#">Luxury</a>
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -205,7 +205,6 @@ if(isset($_POST['submit']))
         </div>
     </div>
 
-    <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png" alt="">
     
 
 
@@ -213,7 +212,6 @@ if(isset($_POST['submit']))
     </form>
     
  
- <a href="../index.php"><button>landing page</button></a>
 
 
 </body>

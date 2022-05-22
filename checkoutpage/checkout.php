@@ -59,7 +59,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 <body>
 <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#">Luxury</a>
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >

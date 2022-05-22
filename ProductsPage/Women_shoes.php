@@ -34,7 +34,7 @@ include_once "../connection.php";
 <header>
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#">Luxury</a>
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -106,11 +106,11 @@ include_once "../connection.php";
                           }else
                            
                            { echo '<li class="nav-item ">
-                            <a class="nav-link " href="./loginPage/login.php">
+                            <a class="nav-link " href="../loginPage/login.php">
                                 Login </a> </li>';
 
                             echo '<li class="nav-item ">
-                            <a class="nav-link " href="./registerPage/register.php">
+                            <a class="nav-link " href="../registerPage/register.php">
                                 Register </a> </li>';
                            }?>
                        <!-- <li class="nav-item">
@@ -227,7 +227,7 @@ include_once "../connection.php";
 
 
             // check category
-            if($category==='women shoes'){
+            if($category==='Women\'s shoes'){
 
             ?>
             <div class="col-md-3 ">
