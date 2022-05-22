@@ -87,7 +87,7 @@ $result_check4= mysqli_num_rows($result4);
 <body>
 <nav class="navbar navbar_single_product navbar-expand-lg ">
         <div class="container-fluid  navbar_single_product  ">
-            <a class="navbar-brand" href="#">Luxury</a>
+            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
