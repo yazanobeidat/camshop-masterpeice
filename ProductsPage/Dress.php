@@ -234,6 +234,7 @@ include_once "../connection.php";
             $category=$row['product_category'];
 
             $product_id=$row['product_id'];
+            echo $product_id;
 // product page buttom check
 // while($row2=mysqli_fetch_assoc($result2)){
             // if(isset($_POST[strval($row['product_id'])])){

@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
-a
+.a_button_create
 {
     font-size: 20px;
     text-decoration: none;
@@ -12,6 +12,14 @@ body{
     align-items: center;
    
 }
+
+.avatar_logout
+{
+    margin-right: 25px;
+
+
+}
+
 
 h2{
     display:inline-block;
@@ -28,7 +36,7 @@ h2{
 
 .btn-sunny {
     height: 50px;
-    width: 60%;
+    width: 20%;
     color: #fff;
     background-color: #f4ad49;
     border-bottom:2px solid #c38a3a;

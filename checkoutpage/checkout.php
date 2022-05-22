@@ -1,5 +1,4 @@
 <?php
-
 include_once "../connection.php";
 session_start();
 $user_id=$_SESSION['userID'];
@@ -16,13 +15,12 @@ $postcode=$_POST['postcode'];
 $phone_number=$_POST['phonenumber'];
 $email_address=$_POST['emailaddress'];
 
-$product_id="1";
-
-
-
-
-
-
+// $product_id="1";
+$checkoutData="SELECT product_id FROM checkout;";//WHERE
+$resultData=mysqli_query($conn,$checkoutData);
+while($row=mysqli_fetch_assoc($resultData)){
+	$product_id=$row['product_id'];
+}
 $sql5 = "INSERT INTO checkout (product_id,user_id, firist_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
 VALUES ( '$product_id','$user_id','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
 
@@ -39,30 +37,6 @@ if ( $conn->query($sql5 ) === TRUE) {
   $conn->close();
 }
 
-// $conn->query($sql);
-
-// if(!$result3= mysqli_query($conn , $sql5 )){
-// 	echo Mysqli_error($conn);
-// }
-
-
-
-// $result_check3= mysqli_num_rows($result3);
-// if ($result_check3 > 0) {
-//     while ($row3=mysqli_fetch_assoc($result3)) {
-// 		$first_name= $row3['firist_name'];
-// 		$last_name= $row3['last_name'];
-// 		$country=$row3['country'];
-//         // $commentShow=$comment;
-// 		echo $first_name;
-//     }
-// }}
-
-
-//////////////////////payment check////////////////////////
-
-
-/////////////////////////////////
 ?>
 
 
@@ -156,32 +130,7 @@ if ( $conn->query($sql5 ) === TRUE) {
                     <label for="email">Email address </label>
                     <input type="email" class="form-control" name="emailaddress" id="email" placeholder="you@example.com" required>
             </div>
-
-			
-
-				<!-- <hr>
-				
-				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="shipping-adress"> 
-						Shipping address is the same as my billing address
-					<label for="shipping-adress" class="form-check-label"></label>
-				</div>
-
-				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="same-adress">
-						Save this information for next time
-					<label for="same-adress" class="form-check-label"></label>					
-					</div> -->
-
-				<!-- <hr> -->
-
-			
-			
-
-		
-
-					
-			
+	
 		</div>
 
 	
@@ -201,7 +150,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 			while($row=mysqli_fetch_assoc($result)){
 		
 				$items=$row['product_name'].'  x'. $row['order_quantity'];
-				$itemprice=$row['order_price'];
+				$itemprice=$row['order_price'] * $row['order_quantity'];
 			
 				echo  "<div class='d-flex justify-content-between mt-2'>";
 				echo "<span>".'$'.$items. "</span>";
@@ -213,9 +162,9 @@ if ( $conn->query($sql5 ) === TRUE) {
 			
 			}}
 ///////////////////////total price/////////////////////////
-$total=0;
-$summ="SELECT (order_price)
-FROM  cart
+
+$summ="SELECT *
+FROM  checkout
 WHERE user_id={$_SESSION['userID']};";
 $result1= mysqli_query($conn , $summ);
 $result_check1= mysqli_num_rows($result1);
@@ -223,7 +172,7 @@ $result_check1= mysqli_num_rows($result1);
 if ($result_check1 > 0) {
 	while($row1=mysqli_fetch_assoc($result1)){
 
-$total=$total+$row1['order_price'];
+
 
 
 
@@ -240,7 +189,7 @@ $total=$total+$row1['order_price'];
 		<hr>
 
         <div class="d-flex justify-content-between mt-2">
-          <span>Total </span> <span class="text-success"><?php echo $total?></span>
+          <span>Total </span> <span class="text-success"><?php echo $_SESSION['total'].'$'?></span>
         </div>
 		
 	
