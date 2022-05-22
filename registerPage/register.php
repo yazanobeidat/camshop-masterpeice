@@ -162,7 +162,7 @@ header("location:../loginpage/login.php");
 
 <form action="" method="post" >
     
-  <div class="container py-5 h-100">
+  <div >
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
         <div class="card card-registration my-4">

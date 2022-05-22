@@ -3,7 +3,8 @@ include_once "./connection.php";
 //Bring the product id from database
 session_start();
 //DELETE LATER
-$productId=$_SESSION['product'];
+
+$productId=$_GET['id'];
 echo $productId;
 
     $sql1="SELECT * from products WHERE product_id='$productId'"; //WHER product_id=$_POST['product_id'];";
@@ -156,6 +157,7 @@ $result_check4= mysqli_num_rows($result4);
                      ?>
                      </div>
                 </form> 
+                <!-- comment -->
             </div>
         </div>
 </body>

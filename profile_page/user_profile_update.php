@@ -65,6 +65,6 @@ if(isset($_POST['submit']))
     </form>
     
  
- <a href="employees.php"><button>landing page</button></a>
+ <a href="../index.php"><button>landing page</button></a>
 </body>
 </html>
