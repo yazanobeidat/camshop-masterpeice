@@ -117,6 +117,8 @@ include "../connection.php";
     $stmt = $conn->query("SELECT * FROM products");
     while($product = $stmt->fetch_assoc())
     {
+      if($product['is_deleted']== 0)
+      {
         echo "<tr>
         <th scope='row'>$product[product_id]</th>
         <td>$product[product_name]</td>
@@ -137,6 +139,7 @@ include "../connection.php";
         // <a href='delete.php'><button class='btn  btn-sm'><i class='fa-solid fa-wrench'></i>delete</button></a>
         // </td>
       echo "</tr>";
+      }
       
 
     };

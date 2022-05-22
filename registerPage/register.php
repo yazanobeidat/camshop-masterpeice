@@ -37,7 +37,7 @@ $email_correct3 = true;
 
        }else{
         $email_correct2= true;
-        $email_correct3 = $email_correct2l;
+        $email_correct3 = $email_correct2;
        }
    }}
 

@@ -362,7 +362,7 @@ if (isset($_SESSION['userID'])){
 
 
 
-              <div ><p> <?php echo $Fname ?> <?php echo $Lname  ?> From: <?php echo $country?> / <?php echo $city?> / <?php echo $state?>   </p>
+              <!-- <div ><p> <?php echo $Fname ?> <?php echo $Lname  ?> From: <?php echo $country?> / <?php echo $city?> / <?php echo $state?>   </p>
             
             </div>
             <p>your phone is :  <?php echo $phone?> </p>
@@ -372,7 +372,7 @@ if (isset($_SESSION['userID'])){
 
                   <button type="button" class="btn btn-outline-success"><a href="../index.php">Done</a></button>
                </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"> -->
 
               
             

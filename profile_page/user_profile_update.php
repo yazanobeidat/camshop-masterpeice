@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 $user_id= $_SESSION['userID'];
@@ -58,7 +57,7 @@ if(isset($_POST['submit']))
 <body>
 <nav class="navbar navbar-expand-lg navbar_single_product">
         <div class="container navbar_single_product">
-            <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -67,13 +66,13 @@ if(isset($_POST['submit']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="../index.php">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
+                        <a class="nav-link" href="#"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#footer">
+                        <a class="nav-link " href="#contact">
                             Contact us
                         </a>
                     </li>
@@ -103,11 +102,11 @@ if(isset($_POST['submit']))
                           $check=0;
                           if(isset($_SESSION["userID"])){
                                $profile_icon= '
-                               <a class="nav-link" href="./profile_page/user_profile.php">
+                               <a class="nav-link" href="../profile_page/user_profile.php">
                                    <i class="fa-solid fa-user"></i>
                                </a>';
                                $cart='
-                               <a class="nav-link" href="./cart.php">
+                               <a class="nav-link" href="../cart.php">
                                <i class="fa-solid fa-cart-shopping"></i>
                                  </a>'
                                ?>
@@ -128,15 +127,14 @@ if(isset($_POST['submit']))
                           }else
                            
                            { echo '<li class="nav-item ">
-                            <a class="nav-link " href="./loginPage/login.php">
+                            <a class="nav-link " href="../loginPage/login.php">
                                 Login </a> </li>';
 
                             echo '<li class="nav-item ">
-                            <a class="nav-link " href="./registerPage/register.php">
+                            <a class="nav-link " href="../registerPage/register.php">
                                 Register </a> </li>';
                            }?>
                        <!-- <li class="nav-item">
-
                     </li> -->
                        <li class="nav-item">
                        <?php if(isset( $profile_icon)){echo $profile_icon;}?>
@@ -205,7 +203,6 @@ if(isset($_POST['submit']))
         </div>
     </div>
 
-    <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png" alt="">
     
 
 
@@ -213,9 +210,7 @@ if(isset($_POST['submit']))
     </form>
     
  
- <a href="../index.php"><button>landing page</button></a>
 
 
 </body>
 </html>
-
