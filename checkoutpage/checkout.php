@@ -16,22 +16,38 @@ $phone_number=$_POST['phonenumber'];
 $email_address=$_POST['emailaddress'];
 $productid;
 // $product_id="1";
-$checkoutData="SELECT product_id FROM checkout;";
+// $checkoutData="SELECT product_id FROM checkout;";
+// $resultData=mysqli_query($conn,$checkoutData);
+// while($row=mysqli_fetch_assoc($resultData)){
+// 	$product_id=$row['product_id'];
+//   $productid=$product_id;
+
+// }
+
+
+$checkoutData="SELECT * FROM checkout;";
 $resultData=mysqli_query($conn,$checkoutData);
 while($row=mysqli_fetch_assoc($resultData)){
-	$product_id=$row['product_id'];
-  $productid=$product_id;
+    $product_id=$row['product_id'];
+ 
+  $order_num=$row['order_number'];
+ $order_quan = $row['order_quantity'];
 
 }
+echo $order_num;
 
-$sql5 = "INSERT INTO checkout (product_id,user_id, first_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
-VALUES ('$product_id','$user_id','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
-
-$sql6 = "DELETE FROM checkout WHERE first_name = '';";
-
+$sql5 = "INSERT INTO checkout (order_number,product_id,user_id,order_quantity, first_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
+VALUES ('$order_num','$product_id','$user_id','$order_quan','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
 $resultplease=mysqli_query($conn,$sql5);
-$delete_temp = mysqli_query($conn,$sql6);
+if(!$sql5)
+echo("Error description: " . mysqli_error($conn));
+
+//$sql7 = "DELETE FROM checkout WHERE first_name = '';";
+
+
+//$delete_temp = mysqli_query($conn,$sql7);
 header("location:../billPage/billPage.php");
+
 
 //
 $sqlBill = "SELECT billing_number FROM billing_history";
