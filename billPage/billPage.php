@@ -174,7 +174,6 @@ $user_id=$_SESSION['userID'];
                     </li>
                 </ul>
                 </form>
-    
             </div>
         </div>
     </nav>
