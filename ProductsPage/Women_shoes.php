@@ -34,7 +34,7 @@ include_once "../connection.php";
 <header>
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#">Luxury</a>
+            <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -75,12 +75,12 @@ include_once "../connection.php";
                           if(isset($_SESSION["userID"])){
 
                                $profile_icon= '
-                               <a class="nav-link" href="./profile_page/user_profile.php">
+                               <a class="nav-link" href="../profile_page/user_profile.php">
                                    <i class="fa-solid fa-user"></i>
                                </a>';
 
                                $cart='
-                               <a class="nav-link" href="./cart.php">
+                               <a class="nav-link" href="../cart.php">
                                <i class="fa-solid fa-cart-shopping"></i>
                                  </a>'
                                
@@ -227,7 +227,7 @@ include_once "../connection.php";
 
 
             // check category
-            if($category==='women shoes'){
+            if($category==='Women\'s shoes'){
 
             ?>
             <div class="col-md-3 ">
