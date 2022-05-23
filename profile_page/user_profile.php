@@ -6,6 +6,7 @@ $user_id= $_SESSION['userID'];
 $get_id=$_GET['id'];
 if(isset($_GET['id']))
 {
+$get_id = $_GET['id'];
     $stmt = $conn->query("SELECT * FROM user Where user_id=$get_id");
 $user = $stmt->fetch_assoc();
 

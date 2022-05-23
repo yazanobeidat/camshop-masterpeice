@@ -57,7 +57,9 @@ if(isset($_POST['submit']))
 <body>
 <nav class="navbar navbar-expand-lg navbar_single_product">
         <div class="container navbar_single_product">
+
         <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -66,13 +68,13 @@ if(isset($_POST['submit']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> About us</a>
+                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
                     </li>
@@ -203,14 +205,12 @@ if(isset($_POST['submit']))
         </div>
     </div>
 
+
     
-
-
 
     </form>
     
  
-
 
 </body>
 </html>

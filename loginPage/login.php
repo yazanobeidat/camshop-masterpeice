@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
            
            echo  $_SESSION["userID"];
             if($row["is_admin"] == '1'){
-                header("Location: ./admin.html");
+                header("Location: ../admin_dashboard/dashboard.php");
             }else{
                 header ("location: ../index.php");
             }
@@ -55,6 +55,23 @@ if(isset($_POST['submit'])){
 
 <!-- fontawesome link  -->
 <script src="https://kit.fontawesome.com/41d0e79cb4.js" crossorigin="anonymous"></script>
+<style>
+#btn1{
+  background-color: #570A57;
+}
+
+
+#btn1:hover{
+  background-color: #570a57c6;
+}
+
+
+  form p a:hover{
+    color: #570a5783;
+
+  }
+
+</style>
 
 </head>
 <body>
@@ -84,16 +101,16 @@ if(isset($_POST['submit'])){
 
 
 <form action="" method="post">
-<section class="h-100 h-custom" style="background-color: #8fc4b7;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
+<section class="h-100 h-custom" style="background-color: #f8f1f88f;">
+  <div class="container py-5 h-75">
+    <div class="row d-flex justify-content-center align-items-center ">
       <div class="col-lg-8 col-xl-6">
         <div class="card rounded-3">
-          <img src="http://cdn.shopify.com/s/files/1/0267/3799/9943/collections/DRESS_1_1200x1200.png?v=1629960072"
+          <img src="../img/projectimg/pexels-gustavo-fring-3984871.jpg"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;    height: 300px;"
             alt="Sample photo">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login</h3>
+            <h3 class="mb-4 pb-2 pb-md-0 px-md-2">Login</h3>
 
             <form class="px-md-2">
 
@@ -102,9 +119,9 @@ if(isset($_POST['submit'])){
 
 
                 
-
+              <label for="loginEmail" >Email</label>
 <input type="text" name='loginEmail' placeholder= 'Email@...' class="form-control" >
-<label for="loginEmail" >Email</label>
+
               </div>
 
               <div class="row">
@@ -113,15 +130,17 @@ if(isset($_POST['submit'])){
 
                 
                   
-
+                <label for="loginPassword">Password</label>
 <input type="password" name='loginPassword' placeholder='Passwprd' class="form-control">
-<label for="loginPassword">Password</label>
+
 <?php if(isset($ERROR)){echo $ERROR;}?>
 
 
                 </div>
 
-                <input type="submit" name='submit' value='submit' class="btn btn-success btn-lg mb-1">
+                <input type="submit" name='submit' value='submit' id="btn1" class="btn btn-lg mb-1" style=" color:white">
+
+                <p style="text-align: center; ">Don't you have an account? <a href="../registerPage/register.php" style="text-decoration:none; font-size:larger; color:#570A57" > Sign up</a></p>
               
 
             </form>

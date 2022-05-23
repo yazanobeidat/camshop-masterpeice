@@ -1,4 +1,3 @@
-
 <?php
 include_once "./connection.php";
 
@@ -33,6 +32,7 @@ if($result_check4 > 0){
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,12 +50,12 @@ if($result_check4 > 0){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="./css/footer.css">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
     <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
-    
+
 
 
 
@@ -66,13 +66,15 @@ if($result_check4 > 0){
 
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
+
             <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" >
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="color: black;"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.php">Home</a>
@@ -86,30 +88,31 @@ if($result_check4 > 0){
                         </a>
 
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link " href="#discount">Our discount</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             CATEGORIES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                         
+                            <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+
                         </ul>
-                      </li>
-                    
+                    </li>
+
                 </ul>
                 <form action="" method="post">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <!-- profile icon/login/register -->
-                    
-                <?php
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <!-- profile icon/login/register -->
+
+                        <?php
                 
         
                           $check=0;
@@ -128,12 +131,13 @@ if($result_check4 > 0){
                                
                                
                                ?>
-                               <form action="" method='post'>
-                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
-                                </li>
-                                   </form>
-                                 
-                                  <?php if(isset($_POST['logout'])){
+                        <form action="" method='post'>
+                            <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout "
+                                    style="border:none; background-color: white;">
+                            </li>
+                        </form>
+
+                        <?php if(isset($_POST['logout'])){
                                    
                                     session_destroy();
                                     echo'<script>
@@ -155,28 +159,28 @@ if($result_check4 > 0){
                             <a class="nav-link " href="./registerPage/register.php">
                                 Register </a> </li>';
                            }?>
-                       <!-- <li class="nav-item">
+                        <!-- <li class="nav-item">
                       
 
                     </li> -->
 
-                       <li class="nav-item">
-                       <?php if(isset( $profile_icon)){echo $profile_icon;}?>
+                        <li class="nav-item">
+                            <?php if(isset( $profile_icon)){echo $profile_icon;}?>
 
-                    </li>
-                  
-                    <li class="nav-item">
-                    <?php if(isset( $cart)){echo $cart;}?>
+                        </li>
 
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <?php if(isset( $cart)){echo $cart;}?>
+
+                        </li>
+                    </ul>
                 </form>
 
             </div>
         </div>
     </nav>
-    
-  
+
+
     <!-- ============================================== -->
     <section class="main">
         <div class="container py-5">
@@ -187,78 +191,85 @@ if($result_check4 > 0){
             </div>
         </div>
     </section>
- <!-- =================================================== -->
+    <!-- =================================================== -->
 
- <section class="benefit">
-    <div class="container"  >
-        <div class="row benefit_row">
-
-            <div class="col-lg-3 benefit_col">
-                <div class="benefit_item d-flex flex-row align-item-center">
-                    <div class="benefit_icon">
-                        <i class="fa-solid fa-truck" aria-hidden="true"></i>
-                    </div>
-                    <div class="benefit_content">
-                        <h6>
-                            Free Shiping
-
-                        </h6>
-                        <p> Suffered Alteration is Some Form</p>
-                    </div>
-                </div>
+    <section class="benefit my-5 pd-5">
+        <div class="container mt-5 py-5">
+            <div class="text-center">
+                <h1> Our Features</h1>
+                <hr class="mx-auto mb-5 line" style="width: 30px;
+        height: 2px;
+        background-color: #c20f1e95;">
             </div>
 
-            <div class="col-lg-3 benefit_col">
-                <div class="benefit_item d-flex flex-row align-item-center">
-                    <div class="benefit_icon">
-                     <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
+            <div class="row benefit_row pt-4" style="background-color:rgba(0, 0, 0, 0.578)">
 
-                    </div>
-                    <div class="benefit_content">
-                        <h6>
-                            45 days return
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-item-center">
+                        <div class="benefit_icon">
+                            <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                        </div>
+                        <div class="benefit_content">
+                            <h6>
+                                Free Shiping
 
-                        </h6>
-                        <p> Making it look like Readable</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 benefit_col">
-                <div class="benefit_item d-flex flex-row align-item-center">
-                    <div class="benefit_icon">
-                        <i class="fa-solid fa-money-bill-1 "aria-hidden="true"></i>
-
-                    </div>
-                    <div class="benefit_content">
-                        <h6>
-                            Cash on delivery
-
-                        </h6>
-                        <p> The Internet tend To Repeat</p>
+                            </h6>
+                            <p> Suffered Alteration is Some Form</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-3 benefit_col">
-                <div class="benefit_item d-flex flex-row align-item-center">
-                    <div class="benefit_icon">
-                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-item-center">
+                        <div class="benefit_icon">
+                            <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
 
+                        </div>
+                        <div class="benefit_content">
+                            <h6>
+                                45 days return
+
+                            </h6>
+                            <p> Making it look like Readable</p>
+                        </div>
                     </div>
-                    <div class="benefit_content">
-                        <h6>
-                            Opening all week
+                </div>
 
-                        </h6>
-                        <p> 8:00AM - 10:00PM</p>
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-item-center">
+                        <div class="benefit_icon">
+                            <i class="fa-solid fa-money-bill-1 " aria-hidden="true"></i>
+
+                        </div>
+                        <div class="benefit_content">
+                            <h6>
+                                Cash on delivery
+
+                            </h6>
+                            <p> The Internet tend To Repeat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-item-center">
+                        <div class="benefit_icon">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+
+                        </div>
+                        <div class="benefit_content">
+                            <h6>
+                                Opening all week
+
+                            </h6>
+                            <p> 8:00AM - 10:00PM</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</section>
+    </section>
 
     <!-- ================================================= -->
     <section class="banner" style="margin-top:5% ;">
@@ -266,7 +277,10 @@ if($result_check4 > 0){
             <div class="row py-5 ">
                 <div class="col-lg-5 m-auto text-center">
                     <h1>CATEGORIES</h1>
-                  
+                    <hr class="mx-auto mb-5 line" style="width: 30px;
+                    height: 2px;
+                    background-color: #c20f1e95;">
+
                 </div>
 
             </div>
@@ -281,7 +295,8 @@ if($result_check4 > 0){
                 </div>
 
                 <div class="col-md-4">
-                    <div class="banner_item align-item-center" style="background-image:url(./img/projectimg/cate\ 2.jpg) ;">
+                    <div class="banner_item align-item-center"
+                        style="background-image:url(./img/projectimg/cate\ 2.jpg) ;">
                         <div class="banner_category">
                             <a href="./ProductsPage/Suit.php">Suits</a>
                         </div>
@@ -289,26 +304,28 @@ if($result_check4 > 0){
                 </div>
 
                 <div class="col-md-4">
-                    <div class="banner_item align-item-center" style="background-image:url('./img/projectimg/cate\ 5.jpg') ;">
+                    <div class="banner_item align-item-center"
+                        style="background-image:url('./img/projectimg/cate\ 5.jpg') ;">
                         <div class="banner_category">
                             <a href="./ProductsPage/Accessories.php">Accessories</a>
                         </div>
                     </div>
                 </div>
-                
-            </div>
-         
-                
-
 
             </div>
+
+
+
+
+        </div>
         </div>
     </section>
-    <section class="banner" style="margin-top: 1%;" >
+    <section class="banner" style="margin-top: 1%;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 m-auto">
-                    <div class="banner_item flex-row align-item-center" style="background-image:url('./img/projectimg/cate\ 3.jpg') ;">
+                    <div class="banner_item flex-row align-item-center"
+                        style="background-image:url('./img/projectimg/cate\ 3.jpg') ;">
                         <div class="banner_category">
                             <a href="./ProductsPage/Women_shoes.php">WOMEN's SHOSE</a>
                         </div>
@@ -316,21 +333,22 @@ if($result_check4 > 0){
                 </div>
 
                 <div class="col-md-6">
-                    <div class="banner_item flex-row align-item-center" style="background-image:url(./img/projectimg/cate\ 4.jpg) ;">
+                    <div class="banner_item flex-row align-item-center"
+                        style="background-image:url(./img/projectimg/cate\ 4.jpg) ;">
                         <div class="banner_category">
                             <a href="./ProductsPage/Men_shoes.php">MEN's SHOES</a>
                         </div>
                     </div>
                 </div>
 
-               
-                
-            </div>
-         
-                
 
 
             </div>
+
+
+
+
+        </div>
         </div>
     </section>
 
@@ -351,13 +369,16 @@ if($result_check4 > 0){
 
 
 
-<!-- ================================================== -->
+    <!-- ================================================== -->
     <section class="product">
         <div class="container py-5">
             <div class="row py-5 ">
                 <div class="col-lg-5 m-auto text-center">
                     <h1>COLLECTION 2022</h1>
-                    <h6 style="color: red;">SPRING / SUMMER </h6>
+                    <h6 style="color: #c20f1e95;">SPRING / SUMMER </h6>
+                    <hr class="mx-auto mb-5 line" style="width: 30px;
+                    height: 2px;
+                    background-color: #c20f1e95;">
                 </div>
 
             </div>
@@ -396,7 +417,7 @@ if($result_check4 > 0){
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                           <a href=""><img src="./img/DRESS/dress 5-1.PNG" class="img-fluid " alt=""></a> 
+                            <a href=""><img src="./img/DRESS/dress 5-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>MULTICOLOR EMBROIDERED LONG DRESS</h6>
@@ -407,8 +428,13 @@ if($result_check4 > 0){
             <div class="row">
                 <div class="col-lg-6 text-center m-auto ">
                     <a href="./ProductsPage/Dress.php"><button class="btn1">
-                        Click for more
-                    </button></a>
+                            Click for more
+                        </button></a>
+
+                </div>
+            </div>
+
+        
 
 
 
@@ -416,7 +442,7 @@ if($result_check4 > 0){
 
 
 
-  
+
 
     <!-- ================================================ -->
 
@@ -428,7 +454,8 @@ if($result_check4 > 0){
 
                 <div class="container">
                     <div class="col-lg-12">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
+                            data-interval="1000">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="./img/projectimg/pexels-alexandra-maria-318236.jpg" class=" w-100"
@@ -502,7 +529,10 @@ if($result_check4 > 0){
             <div class="row py-5 ">
                 <div class="col-lg-5 m-auto text-center">
                     <h1 id="discount">20% DISCOUNT</h1>
-                  
+                    <hr class="mx-auto mb-5 line" style="width: 30px;
+                    height: 2px;
+                    background-color: #c20f1e95;">
+
                 </div>
 
             </div>
@@ -525,17 +555,19 @@ if($result_check4 > 0){
                         </div>
                     </div>
                     <h6>DESIGNER ORANGE TULLE VOLUME DRESS</h6>
-                    <p style="text-decoration: line-through ;">$7,668</p><p>$6,134</p>
+                    <p style="text-decoration: line-through ;">$7,668</p>
+                    <p>$6,134</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                           <a href=""><img src="./img/SUIT/suit 8-1.png" class="img-fluid " alt=""></a> 
+                            <a href=""><img src="./img/SUIT/suit 8-1.png" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>EXTRA-SLIM-FIT SUIT IN PATTERNED STRETCH WOOL</h6>
-                   <p style="text-decoration: line-through ;">$1,295</p><p>$1,036</p>
+                    <p style="text-decoration: line-through ;">$1,295</p>
+                    <p>$1,036</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
@@ -545,7 +577,8 @@ if($result_check4 > 0){
                         </div>
                     </div>
                     <h6>HANDCRAFTED FEATHERED & BEADED TUBINO PARTY DRESS</h6>
-                    <p style="text-decoration: line-through ;">$6,366</p><p>$5,092</p>
+                    <p style="text-decoration: line-through ;">$6,366</p>
+                    <p>$5,092</p>
 
                 </div>
             </div>
@@ -558,54 +591,65 @@ if($result_check4 > 0){
             </div> -->
         </div>
     </section>
-    
 
-   
+
+
     <!-- ============================================ -->
     <div class="clearfix">
-    <div class="footer-clean">
-      
-        <footer id="footer">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Our Team</h3>
-                        <ul>
-                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
-                            <li><a href="#"> <h6>Raghad</h6> </a></li>
-                            <li><a href="#"> <h6>Hadi</h6> </a></li>
-                            <li><a href="#"> <h6>Aya</h6> </a></li>
-                          
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3 id="contact">Contact</h3>
-                        <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Legacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Careers</h3>
-                        <ul>
-                            <li><a href="#">Job openings</a></li>
-                            <li><a href="#">Employee success</a></li>
-                            <li><a href="#">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name © 2018</p>
+        <div class="footer-clean">
+
+            <footer id="footer">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Our Team</h3>
+                            <ul>
+                                <li><a href="#">
+                                        <h6>Ibrahim</h6>
+                                    </a></li>
+                                <li><a href="#">
+                                        <h6>Raghad</h6>
+                                    </a></li>
+                                <li><a href="#">
+                                        <h6>Hadi</h6>
+                                    </a></li>
+                                <li><a href="#">
+                                        <h6>Aya</h6>
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3 id="contact">Contact</h3>
+                            <ul>
+                                <li><a href="#"></a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Legacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Careers</h3>
+                            <ul>
+                                <li><a href="#">Job openings</a></li>
+                                <li><a href="#">Employee success</a></li>
+                                <li><a href="#">Benefits</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a
+                                href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i
+                                    class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                    class="icon ion-social-instagram"></i></a>
+                            <p class="copyright">Company Name © 2018</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
-</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 
 </html>
