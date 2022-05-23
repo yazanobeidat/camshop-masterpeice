@@ -209,6 +209,7 @@ $user_id=$_SESSION['userID'];
             $userEmail=$rowData['order_email'];
             $orderDate=$rowData['created_at'];
         $add_sales="INSERT INTO sales (ord_num,user_id,total) VALUES ($billNum,$user_id,$total)";
+        $sqlSales=mysqli_query($conn,$add_sales);
         //echo $userFirstName;
         } ?>
         <h6 class="card-text">Your bill number: <b>624<?php echo $billNum;?></b></h6>
