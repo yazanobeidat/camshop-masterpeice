@@ -144,12 +144,12 @@ $result_check4= mysqli_num_rows($result4);
                           if(isset($_SESSION["userID"])){
 
                                $profile_icon= '
-                               <a class="nav-link" href="../profile_page/user_profile.php">
+                               <a class="nav-link" href="./profile_page/user_profile.php">
                                    <i class="fa-solid fa-user"></i>
                                </a>';
 
                                $cart='
-                               <a class="nav-link" href="../cart.php">
+                               <a class="nav-link" href="./cart.php">
                                <i class="fa-solid fa-cart-shopping"></i>
                                  </a>'
                                
@@ -166,7 +166,7 @@ $result_check4= mysqli_num_rows($result4);
                                     session_destroy();
                                     echo'<script>
                                      setTimeout(() => {
-                                         window.location = "../index.php";
+                                         window.location = "./index.php";
                                        })
                                      
                                      </script>';
@@ -176,11 +176,11 @@ $result_check4= mysqli_num_rows($result4);
                           }else
                            
                            { echo '<li class="nav-item ">
-                            <a class="nav-link " href="../loginPage/login.php">
+                            <a class="nav-link " href="./loginPage/login.php">
                                 Login </a> </li>';
 
                             echo '<li class="nav-item ">
-                            <a class="nav-link " href="../registerPage/register.php">
+                            <a class="nav-link " href="./registerPage/register.php">
                                 Register </a> </li>';
                            }?>
                         <!-- <li class="nav-item">
