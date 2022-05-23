@@ -105,7 +105,7 @@ $result_check4= mysqli_num_rows($result4);
                         <a class="nav-link active" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
+                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="#footer">
