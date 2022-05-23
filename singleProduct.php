@@ -152,8 +152,6 @@ $result_check4= mysqli_num_rows($result4);
                            <a class="nav-link" href="./cart.php">
                            <i class="fa-solid fa-cart-shopping"></i>
                              </a>'
-                           
-                           
                            ?>
                            <form action="" method='post'>
                        <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
@@ -202,12 +200,10 @@ $result_check4= mysqli_num_rows($result4);
         </div>
     </div>
 </nav>
-      
-
     <div class="container">
         <div class="row singleProductDesc">
             <!--Product Image-->
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center">
                 <img src="<?php echo  $product_image;?>" alt="" height="auto" width="60%" class="singleProductImage">
             </div>
             <!--Product Name & Description-->
@@ -215,63 +211,58 @@ $result_check4= mysqli_num_rows($result4);
                 <?php
                 echo "<h3>". $product_name. "</h3>";
                 echo "<br>";
-                echo "<p>". $product_description. "</p>";
-                echo "<br>";
-                echo "<p>". $product_color. "</p>";
-                
+                echo "<h6><b>". $product_price. "JOD </b></h6>";
+                echo "<p class='product_color'> <b>Color</b>: ". $product_color. "</p>";
+                //echo "<p>". $product_description. "</p>";
                 ?>
+                <div class="col-lg-12 categories">
+                    <p><b>Categories</b>: <?php echo $product_category?></p>
+                </div>
                 <div class="row singleProductDesc-divider">
                     <form method="post" class="firstForm">
                         <div class="col-lg-12">
-                        <label>Quantity</label> <input type='number' name='quantity' value='1' class="quantityInput text-center"> 
-                        
-                        
-                        <label>Size</label>
-                            <select name="size" class="text-center">
-                                <option value="S">S<option>
-                                <option value="M">M<option>
-                                <option value="L">L<option>
-                                <option value="XL">XL<option>
-                            </seclect>
-                            </div> 
-                        
+                            <label>Quantity</label> <input type='number' name='quantity' value='1' class="quantityInput text-center"> 
+                            <label>Size</label>
+                                <select name="size" class="text-center">
+                                    <option value="S">S<option>
+                                    <option value="M">M<option>
+                                    <option value="L">L<option>
+                                    <option value="XL">XL<option>
+                                </seclect>
+                        </div> 
                         <div class="col-lg-12 btn">
-                            <input type="submit" name='submit' class="btn btn-primary btn-s addToCart" value="Add To Cart">
+                            <input type="submit" name='submit' class="btn btn-s addToCart" value="Add To Cart">
                         </div>
-                        
+                        <div class="col-lg-12 productDesc">
+                <h4> Product Description</h4>
+                <?php echo "<p>". $product_description. "</p>"; ?>
+        </div>
                         <?php
                             if(isset($_POST['submit'])){
                                 if(isset($_SESSION['userID'])){
-                                if(!empty($_POST['quantity']) && !empty($_POST['size'])){
-                                    $updated_quantity=$_POST['quantity'];
-                                    $updated_size=$_POST['size'];
-                                $quantitySql="INSERT INTO cart (user_id,product_id,product_image ,product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id','$product_image' ,'$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
-                                $resultQuantity= mysqli_query($conn , $quantitySql);
+                                    if(!empty($_POST['quantity']) && !empty($_POST['size'])){
+                                        $updated_quantity=$_POST['quantity'];
+                                        $updated_size=$_POST['size'];
+                                        $quantitySql="INSERT INTO cart (user_id,product_id,product_image ,product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id','$product_image' ,'$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
+                                        $resultQuantity= mysqli_query($conn , $quantitySql);
+                                    }
                                 }
-                            }
-                            else{
-                                header("Location: ./loginPage/login.php");
-                            }
+                                else{
+                                    header("Location: ./loginPage/login.php");
+                                }
                         }
                         ?>
                     </form>
                 </div>
-                <div class="col-lg-12 categories">
-                            <p><b>Categories</b>: <?php echo $product_category?></p>
-                        </div>
             </div>
         </div>
         <!--Comment Section-->
      <br>
-            <div class="commentsSection">
+     <div class="row">
+            <div class="col-lg-6 commentsSection">
                 <form method="post">
-                <div class="col-lg-12">
-                    <span class="main-span">Leave a Comment</span>
-                    <textarea placeholder="Leave a Comment" name="comment">
-                    </textarea>
-                    <button type="submit" name="submit2" class="btn btn-primary btn-lg">Submit</button>
-                    <div class="oldCommentsContanier">
-                    <span class="sub-span">Old comments</span>
+                    <div class="col-lg-12">
+                    <span class="sub-span">Comments</span>
                     <!-- To show all comments-->
                     <?php
                     $sql5="SELECT user_first_name, user_last_name, product_comment FROM comments WHERE product_id='$product_id';";
@@ -279,24 +270,44 @@ $result_check4= mysqli_num_rows($result4);
                     $result_check5= mysqli_num_rows($result5);
                     $id=1;
                     while ($row5=mysqli_fetch_assoc($result5)){
-                        echo "<h4 class='userName-comment'>";
-                        echo $id.'- ';
-                        echo $row5['user_first_name'].' ';
+                        echo "<div class='old-comment-container'>";
+                        echo "<img src=img/projectimg/profilePic.png class='profilePic'>";
+                        
+                        // echo $id.'- ';
+                        echo "<div class='comment-container'>";
+                        echo "<span class='userName-comment'>";
+                        echo ' '.$row5['user_first_name'].' ';
                         echo $row5['user_last_name'];
-                        echo "</h4>";
+                        echo "</span>";
                         echo '<br>';
                         echo "<h5 class='userComment-comment'>". $row5['product_comment']. "</h5>";
+                        echo "</div>";
+                        echo "</div>";
                         echo '<br>';
                         $id++;
                     }
                     unset($_SESSION['product']);
                      ?>
                      </div>
+                     <div class="col-lg-12 add-new-comment">
+                     <img src=img/projectimg/profilePic.png class='profilePic'>
+                     <div class='comment-container new-comment'>
+                     <!-- <span class="main-span">Leave a Comment</span> -->
+                     
+                        <textarea placeholder="Leave a Comment..." name="comment"></textarea>
+                       
+                        <!-- <div class="oldCommentsContanier">
+                     </div> -->
+                    </div>
+                    </div>
+                    <button type="submit" name="submit2" class="btn newCommentBtn btn-lg">Submit</button>
+                
                 </form> 
                 <!-- comment -->
             </div>
-        </div>
-                </div>
+            
+    </div>
+</div>
         
         <div class="footer-clean">
         <footer>

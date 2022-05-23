@@ -150,7 +150,7 @@ if(isset($_GET['order_num']))
         </div>
     </nav>
     
-    
+  
 <table class="table">
   <thead>
     <tr>

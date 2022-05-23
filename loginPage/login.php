@@ -122,7 +122,7 @@ if(isset($_POST['submit'])){
                 </div>
 
                 <input type="submit" name='submit' value='submit' class="btn btn-success btn-lg mb-1">
-              
+                <a href="../registerPage/register.php">Don't have an account?</a>
 
             </form>
 

@@ -1,6 +1,6 @@
 <?php
-include "../connection.php";
 
+include "../connection.php";
 
 
 ?>
@@ -92,7 +92,7 @@ include "../connection.php";
   <br>
 <!--         nav --> 
 <div class="dbcontainer" >
-<button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="user_create.php">create new employee</a></button>
+<button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="user_create.php">Create new Employee</a></button>
 
 
 <table class="table container table-bordered table-dark">
@@ -116,6 +116,8 @@ include "../connection.php";
     $stmt = $conn->query("SELECT * FROM user ");
     while($user = $stmt->fetch_assoc())
     {
+      if($user['is_deleted']== 0)
+      {
         echo "<tr>
         <th scope='row'>$user[user_id]</th>
         <td>$user[user_first_name]</td>
@@ -135,6 +137,7 @@ include "../connection.php";
         // <a href='delete.php'><button class='btn  btn-sm'><i class='fa-solid fa-wrench'></i>delete</button></a>
         // </td>
       echo "</tr>";
+      }
       
 
     };

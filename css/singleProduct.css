@@ -23,19 +23,25 @@
     padding-bottom: 20px;
 }
 .categories{
-    border-top: 1px solid gray;
-    padding-top: 20px;
+    /*border-top: 1px solid gray;
+    padding-top: 20px;*/
 }
 .categories p{
     position: relative;
     left: -15px;
 
 }
+.product_color{
+    margin-bottom: 5px;
+}
+.singleProductDesc{
+    margin-top: 70px;
+}
 .commentsSection{
     border: 1px solid #e1dddd;
     margin-top: 100px;
     padding: 50px;
-    box-shadow: 7px 10px 20px grey;
+    /*box-shadow: 7px 10px 20px grey;*/
     margin-bottom: 20px;
 }
 .main-span,
@@ -45,13 +51,16 @@
     font-weight: lighter;
     margin-bottom: 50px;
 }
-.sub-span{
+/* .sub-span{
     margin-top: 50px;
-}
+} */
 textarea{
     width: 100%;
     height: 40%;
     margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(181, 181, 181);
 }
 .btn-lg{
     width: 40%;
@@ -59,11 +68,13 @@ textarea{
     padding: 10px;
 }
 .userName-comment{
-    font-style: italic;
     font-weight: 400;
+    font-size: 25px;
+    line-height: 2;
 }
 .userComment-comment{
     margin-left: 20px;
+    font-style: italic;
 }
 @media(max-width:992px){
     .singleProductDesc{
@@ -82,4 +93,44 @@ textarea{
     .sub-span{
         font-size:35px;
     }
+}
+h4{
+    color: #570A57;
+}
+.comment-container{
+    display: inline-block;
+}
+.addToCart{
+    background-color: #570A57;
+    color: white;
+}
+.profilePic{
+    height: 60px;
+    margin-top: -82px;
+}
+.old-comment-container{
+    background-color: rgb(237 237 237);
+    border-radius: 10px;
+    padding: 20px;
+}
+.new-comment{
+    width: 79%;
+}
+.add-new-comment{
+    background-color: rgb(237 237 237);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 20px;
+}
+.newCommentBtn{
+    background-color: #570A57;
+    color: white;
+    margin: auto;
+    text-align: center;
+    margin: 50px 100px;
+    position: relative;
+    left: 15%;
+}
+.productDesc{
+    margin-top: 50px;
 }

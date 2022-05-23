@@ -8,16 +8,16 @@ if(isset($_POST['submit']))
 {
     $id=$_POST['product_id'];
     $product_name = $_POST['product_name'];
-    $Product_price=$_POST['product_price'];
-   $Product_color=$_POST['product_color'];
-   $Product_size=$_POST['product_size'];
+    $product_price=$_POST['product_price'];
+   $product_color=$_POST['product_color'];
+   $product_size=$_POST['product_size'];
    $product_description=$_POST['product_description'];
    $product_image=$_POST['product_image'];
    
 
-   $update_data = "UPDATE products SET product_name='$product_name',product_price='$Product_price',product_color='$Product_color',product_size='$Product_size',product_description='$product_description',product_image='$product_image' WHERE product_id=$_GET[id];";
+   $update_data = "UPDATE products SET product_name='$product_name',product_price='$product_price',product_color='$product_color',product_size='$product_size',product_description='$product_description',product_image='$product_image' WHERE product_id=$_GET[id];";
    $conn->query($update_data);
-
+   header("Refresh:0");
 }
 
 ?>
@@ -104,11 +104,11 @@ if(isset($_POST['submit']))
         <label for="mail"><strong>product name</strong></label>
         <input type="text" placeholder="product name" name="product_name" value= <?php echo $product_data['product_name']; ?> >
         <label for="psw"><strong>Product price</strong></label>
-        <input type="text" placeholder="Productprice" name="Product_price" value=<?php echo $product_data['Product_price']; ?>>
+        <input type="text" placeholder="Productprice" name="product_price" value=<?php echo $product_data['product_price']; ?>>
         <label for="psw"><strong>Product color</strong></label>
-        <input type="text" placeholder="Productcolor" name="Product_color" value=  <?php echo $product_data['Product_color']; ?>>
+        <input type="text" placeholder="Productcolor" name="product_color" value=  <?php echo $product_data['product_color']; ?>>
         <label for="psw"><strong>Product size</strong></label>
-        <input type="text" placeholder="Product size" name="Product_size" value=  <?php echo $product_data['Product_size']; ?>>
+        <input type="text" placeholder="Product size" name="product_size" value=  <?php echo $product_data['product_size']; ?>>
         <label for="psw"><strong>product description</strong></label>
         <input type="text" placeholder="product description" name="product_description" value=  <?php echo $product_data['product_description']; ?>>
         <label for="psw"><strong>product image</strong></label>

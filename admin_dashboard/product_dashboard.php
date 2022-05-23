@@ -1,7 +1,7 @@
 <?php
 include "../connection.php";
 
-
+// header("Refresh:0");
 
 ?>
 <!DOCTYPE html>
@@ -92,7 +92,7 @@ include "../connection.php";
   <br>
 <!--         nav --> 
 <div class="dbcontainer" >
-<button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="product_create.php">create new employee</a></button>
+<button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="product_create.php">Create new product</a></button>
 
 
 <table class="table container table-bordered table-dark">
@@ -117,6 +117,8 @@ include "../connection.php";
     $stmt = $conn->query("SELECT * FROM products");
     while($product = $stmt->fetch_assoc())
     {
+      if($product['is_deleted']== 0)
+      {
         echo "<tr>
         <th scope='row'>$product[product_id]</th>
         <td>$product[product_name]</td>
@@ -137,6 +139,7 @@ include "../connection.php";
         // <a href='delete.php'><button class='btn  btn-sm'><i class='fa-solid fa-wrench'></i>delete</button></a>
         // </td>
       echo "</tr>";
+      }
       
 
     };

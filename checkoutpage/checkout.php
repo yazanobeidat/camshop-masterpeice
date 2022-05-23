@@ -253,7 +253,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 		if ($result_check > 0) {
 			while($row=mysqli_fetch_assoc($result)){
 		
-				$items=$row['product_name'].'  x'. $row['order_quantity'];
+				$items=$row['product_name'].'  x '. $row['order_quantity'];
 				$itemprice=$row['order_price'] * $row['order_quantity'];
 			
 				echo  "<div class='d-flex justify-content-between mt-2'>";

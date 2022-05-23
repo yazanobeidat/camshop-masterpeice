@@ -186,8 +186,9 @@ if($result_check4 > 0){
 
  <section class="benefit">
     <div class="container"  >
+    <h1 class="text-center">OUR FEATUERS</h1>
         <div class="row benefit_row">
-
+        
             <div class="col-lg-3 benefit_col">
                 <div class="benefit_item d-flex flex-row align-item-center">
                     <div class="benefit_icon">
@@ -398,7 +399,7 @@ if($result_check4 > 0){
 
                 <div class="container">
                     <div class="col-lg-12">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="./img/projectimg/pexels-alexandra-maria-318236.jpg" class=" w-100"
