@@ -3,9 +3,13 @@ include "../connection.php";
 session_start();
 $get_id = $_GET['id'];
 $user_id= $_SESSION['userID'];
+$get_id=$_GET['id'];
 if(isset($_GET['id']))
 {
-    $stmt = $conn->query("SELECT * FROM user Where user_id= $get_id");
+
+$get_id = $_GET['id'];
+    $stmt = $conn->query("SELECT * FROM user Where user_id=$get_id");
+
 $user = $stmt->fetch_assoc();
 
 }else
@@ -46,7 +50,9 @@ $user = $stmt->fetch_assoc();
 <body>
 <nav class="navbar navbar-expand-lg ">
         <div class="container">
-        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+
+            <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >

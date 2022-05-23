@@ -8,6 +8,8 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $conn->query($sql);
     header("Location:./product_dashboard.php");
 
+    header("Location:./product_dashboard.php");
+
 
 }
 ?>
