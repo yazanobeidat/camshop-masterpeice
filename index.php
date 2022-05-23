@@ -123,7 +123,7 @@ if($result_check4 > 0){
                                $cart='
                                <a class="nav-link" href="./cart.php">
                                <i class="fa-solid fa-cart-shopping"></i>
-                                 </a>'
+                                 </a>';
                                
                                
                                ?>
@@ -285,8 +285,8 @@ if($result_check4 > 0){
             <div class="row">
                 <div class="col-md-4">
                     <div class="banner_item " style="background-image:url('./img/projectimg/cate\ 1.jpg') ;">
-                        <div class="banner_category">
-                            <a href="./ProductsPage/Dress.php">DRESSES</a>
+                        <div>
+                            <a href="./ProductsPage/Dress.php" class="banner_category">DRESSES</a>
                         </div>
                     </div>
                 </div>
@@ -294,8 +294,8 @@ if($result_check4 > 0){
                 <div class="col-md-4">
                     <div class="banner_item align-item-center"
                         style="background-image:url(./img/projectimg/cate\ 2.jpg) ;">
-                        <div class="banner_category">
-                            <a href="./ProductsPage/Suit.php">Suits</a>
+                        <div>
+                            <a href="./ProductsPage/Suit.php" class="banner_category">Suits</a>
                         </div>
                     </div>
                 </div>
@@ -303,8 +303,8 @@ if($result_check4 > 0){
                 <div class="col-md-4">
                     <div class="banner_item align-item-center"
                         style="background-image:url('./img/projectimg/cate\ 5.jpg') ;">
-                        <div class="banner_category">
-                            <a href="./ProductsPage/Accessories.php">Accessories</a>
+                        <div>
+                            <a href="./ProductsPage/Accessories.php" class="banner_category">Accessories</a>
                         </div>
                     </div>
                 </div>
@@ -323,8 +323,8 @@ if($result_check4 > 0){
                 <div class="col-md-6 m-auto">
                     <div class="banner_item flex-row align-item-center"
                         style="background-image:url('./img/projectimg/cate\ 3.jpg') ;">
-                        <div class="banner_category">
-                            <a href="./ProductsPage/Women_shoes.php">WOMEN's SHOSE</a>
+                        <div>
+                            <a href="./ProductsPage/Women_shoes.php" class="banner_category">WOMEN's SHOSE</a>
                         </div>
                     </div>
                 </div>
@@ -332,8 +332,8 @@ if($result_check4 > 0){
                 <div class="col-md-6">
                     <div class="banner_item flex-row align-item-center"
                         style="background-image:url(./img/projectimg/cate\ 4.jpg) ;">
-                        <div class="banner_category">
-                            <a href="./ProductsPage/Men_shoes.php">MEN's SHOES</a>
+                        <div>
+                            <a href="./ProductsPage/Men_shoes.php" class="banner_category" >MEN's SHOES</a>
                         </div>
                     </div>
                 </div>

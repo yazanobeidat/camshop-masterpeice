@@ -88,11 +88,13 @@
 }
 
 .banner_category{
-    height: 50px;
-    background: #ffffff;
+    height: 60px;
+    color: white;;
     min-width: 180px;
     padding-left: 25px;
     padding-right: 25px;
+    border: 7px solid white;
+    padding: 20px;
 }
 
 
@@ -105,10 +107,14 @@
     text-align: center;
     line-height: 50px;
     width: 100%;
+    transition: .5s all ease-in-out;
+    text-decoration: none;
 }
 
-.banner_category a:hover{
-    color: #b5aec4;
+.banner_category:hover{
+background-color: white;
+    color: black;
+    transition: .5s all ease-in-out;
 }
 
 
