@@ -238,3 +238,39 @@ footer
 .benefit h1{
     display: block;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar-toggler-icon{
+    color: black;
+    border: solid black 1px;
+}
+.navbar-brand{
+
+    font-size: 2rem;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+.navbar-brand:hover{
+    color: black;
+}
+
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+}
+
+.nav-link:hover{
+    color: black;
+}
+.navbar .container{
+    margin-top:30px
+}

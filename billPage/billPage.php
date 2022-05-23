@@ -5,9 +5,6 @@ include_once "../connection.php";
 $total=$_SESSION['total'];
 $user_id=$_SESSION['userID'];
 
-
-
-
 // $sql1="SELECT * FROM cart WHERE user_id={$_SESSION['userID']}";
 // $result= mysqli_query($conn , $sql1);
 // $result_check= mysqli_num_rows($result);

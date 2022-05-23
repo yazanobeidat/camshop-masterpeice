@@ -46,11 +46,11 @@ if($result_check4 > 0){
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="./css/footer.css">
+ 
 
     <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
 
-
+    <link rel="stylesheet" href="./css/footer.css">
 
 
     <title>Document</title>
@@ -189,7 +189,9 @@ if($result_check4 > 0){
     </section>
     <!-- =================================================== -->
 
-    <section class="benefit my-5 pd-5">
+
+
+            <section class="benefit my-5 pd-5">
         <div class="container mt-5 py-5">
             <div class="text-center">
                 <h1> Our Features</h1>
@@ -197,21 +199,6 @@ if($result_check4 > 0){
         height: 2px;
         background-color: #c20f1e95;">
             </div>
-
-
- <section class="benefit">
-    <div class="container"  >
-    <h1 class="text-center">OUR FEATUERS</h1>
-        <div class="row benefit_row">
-        
-            <div class="col-lg-3 benefit_col">
-                <div class="benefit_item d-flex flex-row align-item-center">
-                    <div class="benefit_icon">
-                        <i class="fa-solid fa-truck" aria-hidden="true"></i>
-                    </div>
-                    <div class="benefit_content">
-                        <h6>
-                            Free Shiping
 
             <div class="row benefit_row pt-4" style="background-color:rgba(0, 0, 0, 0.578)">
 
@@ -281,7 +268,6 @@ if($result_check4 > 0){
         </div>
 
     </section>
-
     <!-- ================================================= -->
     <section class="banner" style="margin-top:5% ;">
         <div class="container">
@@ -371,10 +357,7 @@ if($result_check4 > 0){
             <div class="row py-5 ">
                 <div class="col-lg-5 m-auto text-center">
                     <h1>COLLECTION 2022</h1>
-                    <h6 style="color: #c20f1e95;">SPRING / SUMMER </h6>
-                    <hr class="mx-auto mb-5 line" style="width: 30px;
-                    height: 2px;
-                    background-color: #c20f1e95;">
+                    <h6 style="color: red;">SPRING / SUMMER </h6>
                 </div>
 
             </div>
@@ -383,58 +366,54 @@ if($result_check4 > 0){
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/DRESS/dress 2-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=10"><img src="./img/DRESS/N dress 2-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>BLACK STRAPLESS BEAD EMBROIDERED LONG DRESS</h6>
-                    <p>$7,350</p>
+                    <h6>HALTER TOP BALLGONE</h6>
+                    <p>9995 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/DRESS/dress 3-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=7"><img src="./img/DRESS/dress 7-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>ONE SHOULDER ELECTRIC-BLUE DRESS</h6>
-                    <p>$5,150</p>
+                    <p>5,150 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/DRESS/dress 6-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=6"><img src="./img/DRESS/dress 6-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>STRAPLESS EMBROIDERED AND SILK LONG DRESS</h6>
-                    <p>$6,350</p>
+                    <p>6,350 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/DRESS/dress 5-1.PNG" class="img-fluid " alt=""></a>
+                           <a href="singleProduct.php?id=5"><img src="./img/DRESS/dress 5-1.PNG" class="img-fluid " alt=""></a> 
                         </div>
                     </div>
                     <h6>MULTICOLOR EMBROIDERED LONG DRESS</h6>
-                    <p>$8,770</p>
+                    <p>8,770 JOD</p>
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 text-center m-auto ">
                     <a href="./ProductsPage/Dress.php"><button class="btn1">
-                            Click for more
-                        </button></a>
-
-                </div>
-            </div>
-
-        
+                        Click for more
+                    </button></a>
 
 
 
     </section>
+
 
 
 

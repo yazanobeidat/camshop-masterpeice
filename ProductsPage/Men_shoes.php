@@ -37,12 +37,8 @@ include_once "../connection.php";
 
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
-
-
             <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"
                     alt=""></a>
-
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -235,28 +231,6 @@ if($result_check4 > 0){
         //     echo  $_SESSION['product'];
         // }
 
-
-
-            // check category
-            if($category==='Men\'s Shoes'){
-
-            ?>
-            <div class="col-md-3 ">
-    <div class="product-grid">
-        <div class="product-image">
-            <a href="#" class="image">
-                <img class="pic-1" src="../<?php echo $img ?> "style="height:80% ; width:100% ;">
-            </a>
-            
-
-        </div>
-        <div class="product-content">
-
-            <h3 class="title" ><a href="#"  ><?php  echo $productName ?></a></h3>
-            <div class="price">$<?php echo $price ?></div>
-
-
-            // check category
 
 
         // check category

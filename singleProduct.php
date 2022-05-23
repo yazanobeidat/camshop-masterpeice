@@ -67,6 +67,9 @@ $result_check4= mysqli_num_rows($result4);
     <link rel="stylesheet" href="./css/singleProduct.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
    
+
+ <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -75,133 +78,131 @@ $result_check4= mysqli_num_rows($result4);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="./css/footer.css">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+ 
+
     <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="./product.css">
+   
+
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
 
-<nav class="navbar navbar_single_product navbar-expand-lg ">
-        <div class="container-fluid  navbar_single_product  ">
-            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+<nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./img/projectimg/logo.png" width="125px" height="auto" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" >
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="color: black;"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Home</a>
+                        <a class="nav-link active" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
+                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="#footer">
                             Contact us
                         </a>
 
+                    </li>
 
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="./index.php#discount">Our discount</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        CATEGORIES
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                      <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                      <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                      <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                      <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                     
-                    </ul>
-                  </li>
-                
-            </ul>
-            <form action="" method="post">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                <!-- profile icon/login/register -->
-                
-            <?php
-            //  if(isset($_POST['submit'])){
-                  
-                  
-                  // $profile_sql = "SELECT * FROM  user;";
-                  // $profile_result = mysqli_query($conn,$profile_sql);
-                  // $resultcheck = mysqli_num_rows( $profile_result);
                
-                  // if($resultcheck > 0)
-                  // ($row = mysqli_fetch_assoc( $profile_result));
-                  // {
-    
-                      $check=0;
-                    
-                      if(isset($_SESSION["userID"])){
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            CATEGORIES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
 
-                           $profile_icon= '
-                           <a class="nav-link" href="./profile_page/user_profile.php">
-                               <i class="fa-solid fa-user"></i>
-                           </a>';
+                        </ul>
+                    </li>
+                 
 
-                           $cart='
-                           <a class="nav-link" href="./cart.php">
-                           <i class="fa-solid fa-cart-shopping"></i>
-                             </a>'
-                           ?>
-                           <form action="" method='post'>
-                       <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
-                            </li>
-                               </form>
-                             
-                              <?php if(isset($_POST['logout'])){
+                </ul>
+                <form action="" method="post">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <!-- profile icon/login/register -->
+
+                        <?php
+                
+        
+                          $check=0;
+                        
+                          if(isset($_SESSION["userID"])){
+
+                               $profile_icon= '
+                               <a class="nav-link" href="../profile_page/user_profile.php">
+                                   <i class="fa-solid fa-user"></i>
+                               </a>';
+
+                               $cart='
+                               <a class="nav-link" href="../cart.php">
+                               <i class="fa-solid fa-cart-shopping"></i>
+                                 </a>'
                                
-                                session_destroy();
-                                echo'<script>
-                                 setTimeout(() => {
-                                     window.location = "index.php";
-                                   })
-                                 
-                                 </script>';
+                               
+                               ?>
+                        <form action="" method='post'>
+                            <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout "
+                                    style="border:none; background-color: white;">
+                            </li>
+                        </form>
+
+                        <?php if(isset($_POST['logout'])){
+                                   
+                                    session_destroy();
+                                    echo'<script>
+                                     setTimeout(() => {
+                                         window.location = "../index.php";
+                                       })
+                                     
+                                     </script>';
+                               
+                                  }
+
+                          }else
                            
-                              }
+                           { echo '<li class="nav-item ">
+                            <a class="nav-link " href="../loginPage/login.php">
+                                Login </a> </li>';
 
-                      }else
-                       
-                       { echo '<li class="nav-item ">
-                        <a class="nav-link " href="./loginPage/login.php">
-                            Login </a> </li>';
+                            echo '<li class="nav-item ">
+                            <a class="nav-link " href="../registerPage/register.php">
+                                Register </a> </li>';
+                           }?>
+                        <!-- <li class="nav-item">
+                      
 
-                        echo '<li class="nav-item ">
-                        <a class="nav-link " href="./registerPage/register.php">
-                            Register </a> </li>';
-                       }?>
-                   <!-- <li class="nav-item">
-                  
+                    </li> -->
 
-                </li> -->
+                        <li class="nav-item">
+                            <?php if(isset( $profile_icon)){echo $profile_icon;}?>
 
-                   <li class="nav-item">
-                   <?php if(isset( $profile_icon)){echo $profile_icon;}?>
+                        </li>
 
-                </li>
-              
-                <li class="nav-item">
-                <?php if(isset( $cart)){echo $cart;}?>
+                        <li class="nav-item">
+                            <?php if(isset( $cart)){echo $cart;}?>
 
-                </li>
-            </ul>
-            </form>
+                        </li>
+                    </ul>
+                </form>
 
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <div class="container">
         <div class="row singleProductDesc">
             <!--Product Image-->
@@ -267,16 +268,6 @@ $result_check4= mysqli_num_rows($result4);
                     <div class="col-lg-12">
                     <span class="sub-span">Comments</span>
 
-            <div class="commentsSection">
-                <form method="post">
-                <div class="col-lg-12">
-                    <span class="main-span">Leave a Comment</span>
-                    <textarea placeholder="Leave a Comment" name="comment">
-                    </textarea>
-                    <button type="submit" name="submit2" class="btn btn-primary btn-lg">Submit</button>
-                    <div class="oldCommentsContanier">
-                    <span class="sub-span">Old comments</span>
-
                     <!-- To show all comments-->
                     <?php
                     $sql5="SELECT user_first_name, user_last_name, product_comment FROM comments WHERE product_id='$product_id';";
@@ -321,45 +312,58 @@ $result_check4= mysqli_num_rows($result4);
             </div>
             
     </div>
-</div>
-        
+</div>   <div class="clearfix">
         <div class="footer-clean">
-        <footer>
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Our Team</h3>
-                        <ul>
-                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
-                            <li><a href="#"> <h6>Raghad</h6> </a></li>
-                            <li><a href="#"> <h6>Hadi</h6> </a></li>
-                            <li><a href="#"> <h6>Aya</h6> </a></li>
-                          
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3 id="contact">Contact</h3>
-                        <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Legacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Careers</h3>
-                        <ul>
-                            <li><a href="#">Job openings</a></li>
-                            <li><a href="#">Employee success</a></li>
-                            <li><a href="#">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name © 2018</p>
+
+            <footer id="footer">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Our Team</h3>
+                            <ul>
+                                <li><a href="#">
+                                        <h6>Ibrahim</h6>
+                                    </a></li>
+                                <li><a href="#">
+                                        <h6>Raghad</h6>
+                                    </a></li>
+                                <li><a href="#">
+                                        <h6>Hadi</h6>
+                                    </a></li>
+                                <li><a href="#">
+                                        <h6>Aya</h6>
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3 id="contact">Contact</h3>
+                            <ul>
+                                <li><a href="#"></a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Legacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Careers</h3>
+                            <ul>
+                                <li><a href="#">Job openings</a></li>
+                                <li><a href="#">Employee success</a></li>
+                                <li><a href="#">Benefits</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a
+                                href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i
+                                    class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                    class="icon ion-social-instagram"></i></a>
+                            <p class="copyright">Company Name © 2018</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
