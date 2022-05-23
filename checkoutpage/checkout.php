@@ -14,22 +14,38 @@ $state=$_POST['state'];
 $postcode=$_POST['postcode'];
 $phone_number=$_POST['phonenumber'];
 $email_address=$_POST['emailaddress'];
-
+$productid;
 // $product_id="1";
 $checkoutData="SELECT product_id FROM checkout;";
 $resultData=mysqli_query($conn,$checkoutData);
 while($row=mysqli_fetch_assoc($resultData)){
 	$product_id=$row['product_id'];
+  $productid=$product_id;
+
 }
-$sql5 = "INSERT INTO checkout (product_id,user_id, firist_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
-VALUES ( '$product_id','$user_id','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
-if ( $conn->query($sql5 ) === TRUE) {
-	
-	echo "New record created successfully";
-  } else {
-	echo "Error: " . $sql5 . "<br>" . $conn->error;
-  }
-  $conn->close();
+
+$sql5 = "INSERT INTO checkout (product_id,user_id, first_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
+VALUES ('$product_id','$user_id','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
+
+$sql6 = "DELETE FROM checkout WHERE first_name = '';";
+
+$resultplease=mysqli_query($conn,$sql5);
+$delete_temp = mysqli_query($conn,$sql6);
+header("location:../billPage/billPage.php");
+
+//
+$sqlBill = "SELECT billing_number FROM billing_history";
+    $queryBill = mysqli_query($conn, $sqlBill);
+    $row1 = mysqli_fetch_assoc($queryBill);
+    $resultcheck1 = mysqli_num_rows($queryBill);
+
+    $num = $resultcheck1 + 1;
+
+    // echo "$num / $id / $total";
+
+    $_SESSION["bill_id"] = $num;
+    $sqlBill = "INSERT INTO billing_history(billing_number, user_id) VALUES('$num', '$user_id');";
+    $run2 = mysqli_query($conn, $sqlBill);
 }
 ?>
 
@@ -171,7 +187,7 @@ if ( $conn->query($sql5 ) === TRUE) {
 			<h4 class="my-4">
 				Billing details
 			</h4>
-			<form action="../billPage/billPage.php" method="post" >
+			<form action="" method="post">
 				<div class="form-row">
 					<div class="col-md-6 form-group">
 						<label for="firstname">First Name</label>
@@ -268,17 +284,17 @@ if ( $conn->query($sql5 ) === TRUE) {
 			
 ///////////////////////total price/////////////////////////
 
-$summ="SELECT *
-FROM  checkout
-WHERE user_id={$_SESSION['userID']};";
-$result1= mysqli_query($conn , $summ);
-$result_check1= mysqli_num_rows($result1);
+// $summ="SELECT *
+// FROM  checkout
+// WHERE user_id={$_SESSION['userID']};";
+// $result1= mysqli_query($conn , $summ);
+// $result_check1= mysqli_num_rows($result1);
 
-if ($result_check1 > 0) {
-	while($row1=mysqli_fetch_assoc($result1)){
+// if ($result_check1 > 0) {
+// 	while($row1=mysqli_fetch_assoc($result1)){
 
-	}
-}
+// 	}
+// }
 	?>
 		<hr>
         <div class="d-flex justify-content-between mt-2">
@@ -287,7 +303,7 @@ if ($result_check1 > 0) {
 		<hr class="mb-4">
 		<h6 class="fw-bold">Cash on delivery</h6>
 		<p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-		<button class="btn btn-primary bt-lg btn-block" type="submit" name="submitt">PLACE ORDER</button>
+		<button class="btn btn-primary bt-lg btn-block" type="submit" name="submit">PLACE ORDER</button>
       </div>
     </div>
   </div>
