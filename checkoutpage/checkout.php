@@ -35,9 +35,15 @@ while($row=mysqli_fetch_assoc($resultData)){
 
 }
 echo $order_num;
+$sqlBill = "SELECT billing_number FROM billing_history";
+    $queryBill = mysqli_query($conn, $sqlBill);
+    $row1 = mysqli_fetch_assoc($queryBill);
+    $resultcheck1 = mysqli_num_rows($queryBill);
 
-$sql5 = "INSERT INTO checkout (order_number,product_id,user_id,order_quantity, first_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
-VALUES ('$order_num','$product_id','$user_id','$order_quan','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
+    $num = $resultcheck1 + 1;
+    
+$sql5 = "INSERT INTO checkout (order_number,product_id,bill_id,user_id,order_quantity, first_name, last_name, country, state, city, street_address, zipcode, phone, order_email)
+VALUES ('$order_num','$product_id','$num','$user_id','$order_quan','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
 $resultplease=mysqli_query($conn,$sql5);
 if(!$sql5)
 echo("Error description: " . mysqli_error($conn));
@@ -50,20 +56,15 @@ header("location:../billPage/billPage.php");
 
 
 //
-$sqlBill = "SELECT billing_number FROM billing_history";
-    $queryBill = mysqli_query($conn, $sqlBill);
-    $row1 = mysqli_fetch_assoc($queryBill);
-    $resultcheck1 = mysqli_num_rows($queryBill);
 
-    $num = $resultcheck1 + 1;
 
     // echo "$num / $id / $total";
 
     $_SESSION["bill_id"] = $num;
     $sqlBill = "INSERT INTO billing_history(billing_number, user_id) VALUES('$num', '$user_id');";
     $run2 = mysqli_query($conn, $sqlBill);
-    $sqlBill2 = "UPDATE `checkout` SET `bill_id`='$num',`user_id`='$user_id' WHERE 1;";
-    $run3 = mysqli_query($conn, $sqlBill2);
+    // $sqlBill2 = "UPDATE `checkout` SET `bill_id`='$num',`user_id`='$user_id' WHERE 1;";
+    // $run3 = mysqli_query($conn, $sqlBill2);
 }
 ?>
 
