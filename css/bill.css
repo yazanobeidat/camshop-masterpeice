@@ -2,4 +2,14 @@
 {
     position: relative;
     top: 95px;
+    left: 20;
+}
+.mb-3{
+margin: auto !important;
+}
+.container{
+    margin-top:70px
+}
+.card-title{
+    margin-bottom: 70px;
 }
