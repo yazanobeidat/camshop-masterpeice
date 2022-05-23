@@ -1,3 +1,42 @@
+
+<?php
+session_start();
+include_once "../connection.php";
+//$add_sales="INSERT INTO sales (ord_num,user_id,toatl)";
+$user_id=$_SESSION['userID'];
+$sqlBringBillData="SELECT * FROM billing_history WHERE user_id='12';";
+$resultBringBillData=mysqli_query($conn,$sqlBringBillData);
+while($rowBill=mysqli_fetch_assoc($resultBringBillData)){
+    $billNum= $rowBill['billing_number'];
+}
+$addBillNum="INSERT INTO checkout bill_id VALUE $billNum WHERE user_id='$user_id';";
+$sqlAddBillNum=mysqli_query($conn,$addBillNum);
+echo $billNum;
+
+
+
+// $sql1="SELECT * FROM cart WHERE user_id={$_SESSION['userID']}";
+// $result= mysqli_query($conn , $sql1);
+// $result_check= mysqli_num_rows($result);
+
+// if ($result_check > 0) {
+//     while($row=mysqli_fetch_assoc($result)){
+
+//         $items=$row['product_name'].'  x '. $row['order_quantity'];
+//         $itemprice=$row['order_price'] * $row['order_quantity'];
+    
+//         echo  "<div class='d-flex justify-content-between mt-2'>";
+//         echo "<span>".'$'.$items. "</span>";
+//         echo "<span>".'$'.$itemprice. "</span>";
+    
+    
+//       echo "</div>";
+
+    
+//     }}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <!DOCTYPE html>
@@ -22,6 +61,9 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="../css/bill.css">
+
        
         <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
     
@@ -146,6 +188,53 @@
             </div>
         </div>
     </nav>
+  <div class="container bill">
+  <!-- <h1 class="text-center">Thank You :)</h1> -->
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 img">
+      <img src="../img/projectimg/thankyou.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="card-title">Thank you for visit US</h3>
+        <?php
+        $sqlBringData="SELECT * FROM checkout WHERE bill_id='2'";
+        $resultBringData=mysqli_query($conn,$sqlBringData);
+        while($rowData=mysqli_fetch_assoc($resultBringData)){
+            $userFirstName= $rowData['first_name'];
+            $userLastName= $rowData['last_name'];
+            $userCountry=$rowData['country'];
+            $userState=$rowData['state'];
+            $userCity=$rowData['city'];
+            $userStreet=$rowData['street_address'];
+            $userZipcode=$rowData['zipcode'];
+            $userPhone=$rowData['phone'];
+            $userPhone=$rowData['phone'];
+            $userPhone=$rowData['order_email'];
+            $orderDate=$rowData['created_at'];
+        //echo $userFirstName;
+        } ?>
+        <h6 class="card-text">Your bill number: <b>624<?php echo $billNum;?></b></h6>
+        <br>
+        <h6 class="card-text">Your Name: <?php echo $userFirstName. ' '.$userLastName;?></h6>
+        <br>
+        <h6 class="card-text">Your Location: <?php echo $userCountry. '- '.$userState. '- '.$userCity.
+        '<br>'.
+        $userStreet.' zipcode: '.$userZipcode;
+        ;?></h6>
+        <br>
+        <h6 class="card-text">Your Phone Number: <?php echo $userPhone;?></h6>
+        <br>
+        <h6 class="card-text">Order Date & Time: <?php echo $orderDate;?></h6>
+        <br>
+        <p class="card-text"><small class="text-muted">Please feel free to contact us :)</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+=======
 
           
 
@@ -389,6 +478,7 @@ if (isset($_SESSION['userID'])){
         </div>
       </div>
     </div>
+
 
   </div>
    

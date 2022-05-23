@@ -317,6 +317,12 @@ header("location:../loginpage/login.php");
 
 
 
+                <div class="d-flex justify-content-end pt-3">
+                
+                  <input type="submit" name='submit' class="btn btn-warning btn-lg ms-2">
+                </div>
+                <a href="../loginPage/login.php">Already have an account</a>
+
 
               </div>
 

@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+.dropdown-menu{
+    z-index: 9999 !important;
+}
 .navbar-toggler-icon{
     color: black;
     border: solid black 1px;
@@ -233,3 +235,6 @@ footer
 }
 
 
+.benefit h1{
+    display: block;
+}

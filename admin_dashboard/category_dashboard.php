@@ -109,9 +109,7 @@ include "../connection.php";
     <?php
     
     $stmt = $conn->query("SELECT * FROM category");
-   
-
-   
+  
     while($category = $stmt->fetch_assoc())
     {
       if($category['is_deleted']== 0)

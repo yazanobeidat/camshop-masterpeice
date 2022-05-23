@@ -9,11 +9,14 @@ session_start();
 <link rel="stylesheet" href="./css/bootstrap.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        
     crossorigin="anonymous"></script>
     
 <script src="https://kit.fontawesome.com/b4ff4e859b.js" crossorigin="anonymous"></script>
+
 <!-- ********************************************************************************************************************* -->
 
 <!DOCTYPE html>
@@ -34,6 +37,7 @@ session_start();
 
 <link rel="stylesheet" href="../css/product.css">
 <link rel="stylesheet" href="../style.css?v=<?php echo time(); ?>">
+
 <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,9 +57,69 @@ session_start();
 
 
 
+
 </head>
 <body>
 <header>
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+    <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon" style="color: black;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about us/about_us.php"> About us</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="#contact-us">
+                        Contact us
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../index.php#discount">Our discount</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        CATEGORIES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
+                      <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
+                      <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
+                      <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                      <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                     
+                    </ul>
+                  </li>
+                
+            </ul>
+            <form action="" method="post">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <!-- profile icon/login/register -->
+                
+            <?php
+            //  if(isset($_POST['submit'])){
+                  
+                  
+                  // $profile_sql = "SELECT * FROM  user;";
+                  // $profile_result = mysqli_query($conn,$profile_sql);
+                  // $resultcheck = mysqli_num_rows( $profile_result);
+               
+                  // if($resultcheck > 0)
+                  // ($row = mysqli_fetch_assoc( $profile_result));
+                  // {
+    
+                      $check=0;
+
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
             <a class="navbar-brand" href="#">Luxury</a>
@@ -72,6 +136,7 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
+
                     
                     <li class="nav-item ">
                         <a class="nav-link " href="#footer">
@@ -143,11 +208,28 @@ session_start();
 
                           }else
                            
+
+                              }
+
+                      }else
+                       
+                       { echo '<li class="nav-item ">
+                        <a class="nav-link " href="../loginPage/login.php">
+                            Login </a> </li>';
+
+                        echo '<li class="nav-item ">
+                        <a class="nav-link " href="../registerPage/register.php">
+                            Register </a> </li>';
+                       }?>
+                   <!-- <li class="nav-item">
+                  
+
                            {
                                
                             echo '<li class="nav-item ">
                             <a class="nav-link " href="../loginPage/login.php">
                                 Login </a> </li>';
+
 
                             echo '<li class="nav-item ">
                             <a class="nav-link " href="../registerPage/register.php">
@@ -328,19 +410,6 @@ session_start();
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
 
 
@@ -376,7 +445,7 @@ session_start();
                       <li><a href="#">Benefits</a></li>
                   </ul>
               </div>
-              <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+              <div class="col-lg-3 item social" id="contact-us"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
                   <p class="copyright">Company Name © 2022</p>
               </div>
           </div>

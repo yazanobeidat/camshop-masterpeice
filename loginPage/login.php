@@ -138,10 +138,15 @@ if(isset($_POST['submit'])){
 
                 </div>
 
+
+                <input type="submit" name='submit' value='submit' class="btn btn-success btn-lg mb-1">
+                <a href="../registerPage/register.php">Don't have an account?</a>
+
                 <input type="submit" name='submit' value='submit' id="btn1" class="btn btn-lg mb-1" style=" color:white">
 
                 <p style="text-align: center; ">Don't you have an account? <a href="../registerPage/register.php" style="text-decoration:none; font-size:larger; color:#570A57" > Sign up</a></p>
               
+
 
             </form>
 

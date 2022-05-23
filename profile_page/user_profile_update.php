@@ -58,7 +58,9 @@ if(isset($_POST['submit']))
 <nav class="navbar navbar-expand-lg navbar_single_product">
         <div class="container navbar_single_product">
 
+
         <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -206,11 +208,13 @@ if(isset($_POST['submit']))
     </div>
 
 
+
     
 
     </form>
     
  
+
 
 </body>
 </html>

@@ -7,6 +7,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Prepare a delete statement
     $sql = "UPDATE user SET is_deleted=1 WHERE user_id = '$_GET[id]';";
     $conn->query($sql);
+    header("Location:./user_dashboard.php");
 
 
 

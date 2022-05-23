@@ -24,9 +24,10 @@
                   <a href="product_dashboard.php" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>product dashboard</span>
                   </a>
-                  <!-- <a href="category_dashboard.php" class="list-group-item list-group-item-action py-2 ripple"><i
+
                       class="fas fa-lock fa-fw me-3"></i><span>Catagory dashboard</span></a> -->
                   
+
                 </div>
               </div>
             </nav>

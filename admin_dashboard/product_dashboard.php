@@ -1,7 +1,7 @@
 <?php
 include "../connection.php";
 
-
+// header("Refresh:0");
 
 ?>
 <!DOCTYPE html>
@@ -92,7 +92,9 @@ include "../connection.php";
   <br>
 <!--         nav --> 
 <div class="dbcontainer" >
+
 <button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="product_create.php">create new product</a></button>
+
 
 
 <table class="table container table-bordered table-dark">

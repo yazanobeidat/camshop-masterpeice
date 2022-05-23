@@ -1,6 +1,6 @@
 <?php
-include "../connection.php";
 
+include "../connection.php";
 
 
 ?>
@@ -92,7 +92,9 @@ include "../connection.php";
   <br>
 <!--         nav --> 
 <div class="dbcontainer" >
+
 <button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="user_create.php">create new user</a></button>
+
 
 
 <table class="table container table-bordered table-dark">

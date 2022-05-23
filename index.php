@@ -25,13 +25,7 @@ if($result_check4 > 0){
     
     }}
 
-   
-    
     ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +61,9 @@ if($result_check4 > 0){
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
 
+
             <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -201,6 +197,21 @@ if($result_check4 > 0){
         height: 2px;
         background-color: #c20f1e95;">
             </div>
+
+
+ <section class="benefit">
+    <div class="container"  >
+    <h1 class="text-center">OUR FEATUERS</h1>
+        <div class="row benefit_row">
+        
+            <div class="col-lg-3 benefit_col">
+                <div class="benefit_item d-flex flex-row align-item-center">
+                    <div class="benefit_icon">
+                        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                    </div>
+                    <div class="benefit_content">
+                        <h6>
+                            Free Shiping
 
             <div class="row benefit_row pt-4" style="background-color:rgba(0, 0, 0, 0.578)">
 
@@ -341,7 +352,9 @@ if($result_check4 > 0){
                     </div>
                 </div>
 
-
+   
+            </div>
+        
 
             </div>
 
@@ -353,23 +366,6 @@ if($result_check4 > 0){
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ================================================== -->
     <section class="product">
         <div class="container py-5">
             <div class="row py-5 ">
@@ -454,8 +450,12 @@ if($result_check4 > 0){
 
                 <div class="container">
                     <div class="col-lg-12">
+
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10">
+
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
                             data-interval="1000">
+
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="./img/projectimg/pexels-alexandra-maria-318236.jpg" class=" w-100"
