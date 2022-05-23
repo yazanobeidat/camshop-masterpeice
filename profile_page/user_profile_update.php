@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 $user_id= $_SESSION['userID'];
@@ -58,7 +57,9 @@ if(isset($_POST['submit']))
 <body>
 <nav class="navbar navbar-expand-lg navbar_single_product">
         <div class="container navbar_single_product">
-            <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -128,15 +129,14 @@ if(isset($_POST['submit']))
                           }else
                            
                            { echo '<li class="nav-item ">
-                            <a class="nav-link " href="./loginPage/login.php">
+                            <a class="nav-link " href="../loginPage/login.php">
                                 Login </a> </li>';
 
                             echo '<li class="nav-item ">
-                            <a class="nav-link " href="./registerPage/register.php">
+                            <a class="nav-link " href="../registerPage/register.php">
                                 Register </a> </li>';
                            }?>
                        <!-- <li class="nav-item">
-
                     </li> -->
                        <li class="nav-item">
                        <?php if(isset( $profile_icon)){echo $profile_icon;}?>
@@ -205,17 +205,12 @@ if(isset($_POST['submit']))
         </div>
     </div>
 
- 
+
     
-
-
 
     </form>
     
  
- 
-
 
 </body>
 </html>
-

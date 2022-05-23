@@ -146,8 +146,250 @@
             </div>
         </div>
     </nav>
-  <div class="container bill">
-  <h1 class="text-center">Thank You :)</h1>
+
+          
+
+     
+    </header>
+          
+
+     
+    </header>
+
+
+<?php
+
+
+$sql_query="SELECT * FROM checkout;";
+$result = $conn->query($sql_query);
+$result_check= mysqli_num_rows($result);
+
+// check result
+// if($result_check > 0){
+
+  
+
+//     while($row=mysqli_fetch_assoc($result)){
+
+
+
+//       $Fname= $row['firist_name'];
+//       $Lname= $row['last_name'];
+//       $city = $row['city'];
+//       $country = $row['country'];
+//       $state = $row['state'];
+//       $street_address = $row['street_address'];
+
+
+
+
+
+
+        // $productName=$row['product_name'];
+
+        // $productPrice=$row['order_price'];
+
+        // $orderQuantity=$row['order_quantity'];
+
+        // $total =$row['firist_name'];
+        
+
+
+        
+
+
+        //  }
+        // };
+?>
+
+<!-- <table class="table" style="border:1;">
+  <thead>
+    <tr>
+      <th scope="col">product</th>
+      <th scope="col">Total</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><?php echo $productName  ?></th>
+      <td><?php echo $productPrice?></td>
+
+    </tr>
+    <tr>
+      <th scope="row">Paymnet Method</th>
+      <td>Cash on delivery</td>
+
+    </tr>
+    <tr>
+      <th scope="row">Total</th>
+      <td colspan="2"><?php echo $total ?></td>
+      
+
+    </tr>
+  </tbody>
+</table>
+
+ -->
+
+
+<!-- <p>Thank you for purchasing <?php echo $Fname ?> <?php echo $Lname  ?> from: <?php echo $country?> / <?php echo $city?> / <?php echo $state?>   </p>
+
+<?php echo $street_address?> 
+ -->
+
+
+<?php 
+// $sql_query2="SELECT * FROM cart;";
+// $result2 = $conn->query($sql_query2);
+// $result_check2= mysqli_num_rows($result2);
+
+// // check result
+// if($result_check2 > 0){
+
+  
+
+//     while($row=mysqli_fetch_assoc($result2)){
+
+
+
+//       $productName=$row['product_name'];
+
+//         $productPrice=$row['order_price'];
+
+//         $orderQuantity=$row['order_quantity'];
+
+
+
+
+//     }}
+?>
+
+
+<?php
+
+if (isset($_SESSION['userID'])){
+
+  $sql_query="SELECT * FROM checkout;"; 
+  $result = $conn->query($sql_query);
+  $result_check= mysqli_num_rows($result);
+
+
+  $sql_query2="SELECT * FROM cart;";
+  $result2 = $conn->query($sql_query2);
+  $result_check2= mysqli_num_rows($result2);
+
+
+  if($result_check > 0){
+
+
+    while($row=mysqli_fetch_assoc($result)){
+
+           
+      $Fname= $row['first_name'];
+           
+      $Lname= $row['last_name'];
+          
+      $city = $row['city'];
+           
+      $country = $row['country'];
+            
+      $state = $row['state'];
+          
+      $street_address = $row['street_address'];
+          
+      $phone = $row['phone'];
+
+
+
+   
+
+
+
+    while($row2=mysqli_fetch_assoc($result2)){
+
+                $productName=$row2['product_name'];
+
+                $productPrice=$row2['order_price'];
+        
+                $orderQuantity=$row2['order_quantity'];
+               
+                $order_subtotal=$row2['order_subtotal'];
+              
+
+
+
+    }
+
+
+  }
+?>
+
+<!-- <?php echo $Fname ?>;
+<?php echo  $Lname?>;
+<?php echo $city ?>;
+<?php echo $country ?>;
+<?php echo $state ?>;
+
+<?php echo $productName ?>;
+<?php echo  $productPrice?>;
+<?php echo $orderQuantity ?>;
+<?php echo $order_subtotal ?>; -->
+
+
+<div class="coontainer">
+  <div class="row">
+
+</div>
+<div class="container">
+  <div class="row">
+
+
+
+
+
+
+  </div>
+</div>
+<!-- ********************************************************************************************************************** -->
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                     <p >Thank you for purchasing </p>
+                    
+
+
+
+
+              <!-- <div ><p> <?php echo $Fname ?> <?php echo $Lname  ?> From: <?php echo $country?> / <?php echo $city?> / <?php echo $state?>   </p>
+            
+            </div>
+            <p>your phone is :  <?php echo $phone?> </p>
+           
+
+                  <p>your order has been submitted</p> 
+
+                  <button type="button" class="btn btn-outline-success"><a href="../index.php">Done</a></button>
+               </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"> -->
+
+              
+            
+              
+               
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
    
 </body>

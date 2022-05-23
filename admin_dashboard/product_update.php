@@ -8,17 +8,16 @@ if(isset($_POST['submit']))
 {
     $id=$_POST['product_id'];
     $product_name = $_POST['product_name'];
-    $Product_price=$_POST['product_price'];
-   $Product_color=$_POST['product_color'];
-   $Product_size=$_POST['product_size'];
+    $product_price=$_POST['product_price'];
+   $product_color=$_POST['product_color'];
+   $product_size=$_POST['product_size'];
    $product_description=$_POST['product_description'];
    $product_image=$_POST['product_image'];
    
 
-   $update_data = "UPDATE products SET product_name='$product_name',product_price='$Product_price',product_color='$Product_color',product_size='$Product_size',product_description='$product_description',product_image='$product_image' WHERE product_id=$_GET[id];";
+   $update_data = "UPDATE products SET product_name='$product_name',product_price='$product_price',product_color='$product_color',product_size='$product_size',product_description='$product_description',product_image='$product_image' WHERE product_id=$_GET[id];";
    $conn->query($update_data);
    header("Refresh:0");
-
 }
 
 ?>

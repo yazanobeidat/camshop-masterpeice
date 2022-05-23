@@ -3,6 +3,7 @@ include "../connection.php";
 session_start();
 // $get_id = $_GET['id'];
 $user_id= $_SESSION['userID'];
+$get_id=$_GET['id'];
 if(isset($_GET['id']))
 {
 $get_id = $_GET['id'];

@@ -37,8 +37,10 @@ include_once "../connection.php";
 
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
+
             <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"
                     alt=""></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -231,6 +233,10 @@ if($result_check4 > 0){
         //     echo  $_SESSION['product'];
         // }
 
+
+
+
+            // check category
 
 
         // check category
