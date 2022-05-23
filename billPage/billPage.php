@@ -2,15 +2,9 @@
 session_start();
 include_once "../connection.php";
 //$add_sales="INSERT INTO sales (ord_num,user_id,toatl)";
+$total=$_SESSION['total'];
 $user_id=$_SESSION['userID'];
-$sqlBringBillData="SELECT * FROM billing_history WHERE user_id='12';";
-$resultBringBillData=mysqli_query($conn,$sqlBringBillData);
-while($rowBill=mysqli_fetch_assoc($resultBringBillData)){
-    $billNum= $rowBill['billing_number'];
-}
-$addBillNum="INSERT INTO checkout bill_id VALUE $billNum WHERE user_id='$user_id';";
-$sqlAddBillNum=mysqli_query($conn,$addBillNum);
-echo $billNum;
+
 
 
 
@@ -195,7 +189,14 @@ echo $billNum;
       <div class="card-body">
         <h3 class="card-title">Thank you for visit US</h3>
         <?php
-        $sqlBringData="SELECT * FROM checkout WHERE bill_id='2'";
+        $sqlBringBillData="SELECT * FROM billing_history WHERE user_id='$user_id';";
+        $resultBringBillData=mysqli_query($conn,$sqlBringBillData);
+        while($rowBill=mysqli_fetch_assoc($resultBringBillData)){
+            $billNum= $rowBill['billing_number'];
+        }
+        $addBillNum="INSERT INTO checkout bill_id VALUE $billNum WHERE user_id='$user_id';";
+        $sqlAddBillNum=mysqli_query($conn,$addBillNum);
+        $sqlBringData="SELECT * FROM checkout WHERE bill_id='$billNum'";
         $resultBringData=mysqli_query($conn,$sqlBringData);
         while($rowData=mysqli_fetch_assoc($resultBringData)){
             $userFirstName= $rowData['first_name'];
@@ -206,9 +207,9 @@ echo $billNum;
             $userStreet=$rowData['street_address'];
             $userZipcode=$rowData['zipcode'];
             $userPhone=$rowData['phone'];
-            $userPhone=$rowData['phone'];
-            $userPhone=$rowData['order_email'];
+            $userEmail=$rowData['order_email'];
             $orderDate=$rowData['created_at'];
+        $add_sales="INSERT INTO sales (ord_num,user_id,total) VALUES ($billNum,$user_id,$total)";
         //echo $userFirstName;
         } ?>
         <h6 class="card-text">Your bill number: <b>624<?php echo $billNum;?></b></h6>
@@ -221,6 +222,8 @@ echo $billNum;
         ;?></h6>
         <br>
         <h6 class="card-text">Your Phone Number: <?php echo $userPhone;?></h6>
+        <br>
+        <h6 class="card-text">Total Price: <?php echo $total.' JOD';?></h6>
         <br>
         <h6 class="card-text">Order Date & Time: <?php echo $orderDate;?></h6>
         <br>
