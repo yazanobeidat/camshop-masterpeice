@@ -33,8 +33,8 @@ include "../connection.php";
                   <a href="product_dashboard.php" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>product dashboard</span>
                   </a>
-                  <a href="category_dashboard.php" class="list-group-item list-group-item-action py-2 ripple"><i
-                      class="fas fa-lock fa-fw me-3"></i><span>Catagory dashboard</span></a>
+                  <!-- <a href="category_dashboard.php" class="list-group-item list-group-item-action py-2 ripple"><i
+                      class="fas fa-lock fa-fw me-3"></i><span>Catagory dashboard</span></a> -->
                   
                 </div>
               </div>
@@ -92,7 +92,7 @@ include "../connection.php";
   <br>
 <!--         nav --> 
 <div class="dbcontainer" >
-<button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="user_create.php">create new employee</a></button>
+<button type="button" class="btn btn-sunny  text-uppercase"><a class="a_button_create" href="user_create.php">create new user</a></button>
 
 
 <table class="table container table-bordered table-dark">
@@ -116,6 +116,8 @@ include "../connection.php";
     $stmt = $conn->query("SELECT * FROM user ");
     while($user = $stmt->fetch_assoc())
     {
+      if($user['is_deleted']== 0)
+      {
         echo "<tr>
         <th scope='row'>$user[user_id]</th>
         <td>$user[user_first_name]</td>
@@ -135,6 +137,7 @@ include "../connection.php";
         // <a href='delete.php'><button class='btn  btn-sm'><i class='fa-solid fa-wrench'></i>delete</button></a>
         // </td>
       echo "</tr>";
+      }
       
 
     };

@@ -61,6 +61,13 @@
     
 }
 
+
+/* .line{
+    width: 30px;
+    height: 2px;
+    background-color:rgba(0, 0, 0, 0.578);
+} */
+
 .banner{
     width: 100%;
     /* margin-top: 15%; */
@@ -218,6 +225,11 @@ footer
 .totalcard
 {
     margin-top: 10%;
+}
+.dropdown-menu
+{
+    z-index: 9999 !important;
+
 }
 
 

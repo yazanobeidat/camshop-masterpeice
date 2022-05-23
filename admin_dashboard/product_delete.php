@@ -4,8 +4,10 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     
     require_once "../connection.php";
     
-    $sql = "UPDATE products SET delete_product=1 WHERE product_id = '$_GET[id]';";
+    $sql = "UPDATE products SET is_deleted=1 WHERE product_id = '$_GET[id]';";
     $conn->query($sql);
+
+    header("Location:./product_dashboard.php");
 
 
 }
