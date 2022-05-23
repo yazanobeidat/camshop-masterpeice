@@ -317,12 +317,8 @@ header("location:../loginpage/login.php");
 
 
 
-                <div class="d-flex justify-content-end pt-3">
+              
                 
-                  <input type="submit" name='submit' class="btn btn-warning btn-lg ms-2">
-                </div>
-                <a href="../loginPage/login.php">Already have an account</a>
-
 
               </div>
 
@@ -334,7 +330,7 @@ header("location:../loginpage/login.php");
 
                 
               </div>
-              <p>Have an account already? <a href="../loginPage/login.php"  style="text-decoration:none; font-size:larger; color:#570A57"> Log In</a></p>
+              <p>Already have an account? <a href="../loginPage/login.php"  style="text-decoration:none; font-size:larger; color:#570A57"> Log In</a></p>
 
             </div>
           </div>

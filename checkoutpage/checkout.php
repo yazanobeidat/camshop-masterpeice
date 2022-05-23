@@ -62,6 +62,8 @@ $sqlBill = "SELECT billing_number FROM billing_history";
     $_SESSION["bill_id"] = $num;
     $sqlBill = "INSERT INTO billing_history(billing_number, user_id) VALUES('$num', '$user_id');";
     $run2 = mysqli_query($conn, $sqlBill);
+    $sqlBill2 = "UPDATE `checkout` SET `bill_id`='$num',`user_id`='$user_id' WHERE 1;";
+    $run3 = mysqli_query($conn, $sqlBill2);
 }
 ?>
 
