@@ -208,7 +208,7 @@ echo("Error description: " . mysqli_error($conn));
 			<h4 class="my-4">
 				Billing details
 			</h4>
-            <h6 style="margin-bottom:70px">Please fill all data so you can complete your purchase process:</h6>
+            <h6 style="margin-bottom:70px">Please fill all your information to complete the purchase process:</h6>
 			<form action="" method="post">
 				<div class="form-row">
 					<div class="col-md-6 form-group">
