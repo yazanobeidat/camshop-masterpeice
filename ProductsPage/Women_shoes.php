@@ -302,17 +302,16 @@ if($result_check4 > 0){
                         
                     </div>
                     <div class="col-lg-3 item social">
-                        <a href="https://web.facebook.com/eliesaabworld/?_rdc=1&_rdr"><i class="icon ion-social-facebook"></i></a>
-                        <a href="https://twitter.com/ElieSaabWorld?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="icon ion-social-twitter"></i></a>
-                        <a href="https://www.snapchat.com/add/eliesaablive"><i class="icon ion-social-snapchat"></i></a>
-                        <a href="https://www.instagram.com/accounts/login/?next=/eliesaabworld/"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name © 2022</p>
+                        <a href="https://web.facebook.com/eliesaabworld/?_rdc=1&_rdr" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                        <a href="https://twitter.com/ElieSaabWorld?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                        <a href="https://www.snapchat.com/add/eliesaablive" target="_blank"><i class="icon ion-social-snapchat"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/?next=/eliesaabworld/" target="_blank"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name Â© 2022</p>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-
 </body>
 
 </html>

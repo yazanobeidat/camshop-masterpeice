@@ -94,7 +94,7 @@
     padding-left: 25px;
     padding-right: 25px;
     border: 7px solid white;
-    padding: 20px;
+    padding: 20px 55px;
 }
 
 
@@ -109,6 +109,7 @@
     width: 100%;
     transition: .5s all ease-in-out;
     text-decoration: none;
+
 }
 
 .banner_category:hover{
@@ -174,8 +175,8 @@ h3 i {
 }
 
 .benefit_col{
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .benefit_item {
@@ -278,4 +279,10 @@ footer
 }
 .navbar .container{
     margin-top:30px
+}
+.m-auto button{
+    margin: 40px auto!important;
+}
+p{
+    margin-bottom: 0!important;
 }
