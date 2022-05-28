@@ -6,9 +6,13 @@
 }
 .mb-3{
 margin: auto !important;
+box-shadow: -2px 1px 25px -4px rgb(0 0 0 / 75%) !important;
 }
 .container{
     margin-top:70px
+}
+.card{
+    box-shadow: -2px 1px 25px -4px rgb(0 0 0 / 75%) !important;
 }
 .card-title{
     margin-bottom: 70px;

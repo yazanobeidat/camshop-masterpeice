@@ -153,7 +153,7 @@ if(isset($_GET['order_num']))
     </nav>
     
   
-<table class="table">
+<table class="table table-bordered text-center">
   <thead>
     <tr>
       
@@ -213,14 +213,16 @@ if(isset($_GET['order_num']))
               echo "<td>". $row['product_name']. "</td>";
               echo "<td>". $row['order_price']. "</td>";
               echo "<td>". $row['product_color']. "</td>";
-              echo "<td> <input type='number' name='".$row['order_number']."' value='".$row['order_quantity']."'>
+              echo "<td> <input type='number' class='updateInput' name='".$row['order_number']."' value='".$row['order_quantity']."'>
+              <br>
+              <br>
                <input type='submit' name='submit' class='btn btn-primary btn-sm' value='update'></a>
               </td>";
               $arr1[$row['order_number']]=$row['order_quantity'];
 
               echo "<td>". $total. "</td>";
               echo "<td>
-               <a href='cart.php?order_num=".$row['order_number']."'><input class='deleteInput' type='button' name='".$row['order_number']."'><li class='fa fa-xmark'></li></a>
+               <a href='cart.php?order_num=".$row['order_number']."'><input class='deleteInput' type='button' name='".$row['order_number']."'> <li class='fa-solid fa-trash-can'></li></a>
               </td>";
               echo "</form>";
                echo "</tr>";
@@ -261,7 +263,7 @@ if(isset($_GET['order_num']))
         <div class="card-body">
           <p class="card-text">Your <b>total</b> price is: <h3>
           <?php
-          echo $finalTotal. '$';
+          echo $finalTotal. ' JOD';
           ?>
           </h3> Approve your order by clicking the <b>Submit</b> button</p>
           <button type="submit" class="'btn btn-primary btn-sm" name="checkout">Submit</button>
@@ -309,7 +311,7 @@ if(isset($_GET['order_num']))
             </div>
         </footer>
     </div>
-   
+   <!--for delete items: <li class='fa fa-xmark'></li> -->
   </body>
 </html>
 

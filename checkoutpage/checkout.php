@@ -50,9 +50,11 @@ echo("Error description: " . mysqli_error($conn));
 
 //$sql7 = "DELETE FROM checkout WHERE first_name = '';";
 
-
 //$delete_temp = mysqli_query($conn,$sql7);
-header("location:../billPage/billPage.php");
+
+    header("location:../billPage/billPage.php");
+
+
 
 
 //
@@ -196,9 +198,9 @@ header("location:../billPage/billPage.php");
         </div>
     </nav>
     
-  
+  <div class="container">
 	<div class="row">
-		<div class="col-md-5 container bg-default">
+		<div class="col-md-5 col-lg-7 bg-default">
 			<h1 class="my-4">
                 Checkout
         	</h1>
@@ -206,11 +208,12 @@ header("location:../billPage/billPage.php");
 			<h4 class="my-4">
 				Billing details
 			</h4>
+            <h6 style="margin-bottom:70px">Please fill all data so you can complete your purchase process:</h6>
 			<form action="" method="post">
 				<div class="form-row">
 					<div class="col-md-6 form-group">
 						<label for="firstname">First Name</label>
-						<input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name">
+						<input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name" required>
 						<div class="invalid-feedback">
 							Valid first name is required.
 						</div>
@@ -218,7 +221,7 @@ header("location:../billPage/billPage.php");
 
 					<div class="col-md-6 form-group">
 						<label for="lastname">Last Name</label>
-						<input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name">
+						<input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name" required>
 						<div class="invalid-feedback">
 							Valid last name is required.
 						</div>
@@ -247,21 +250,20 @@ header("location:../billPage/billPage.php");
 
 				<div class="form-group">
 					<label for="state">State
-						<span class="text-muted">(Optional)</span>
 					</label>
-					<input type="text" class="form-control" name="state" id="state" placeholder="state">
+					<input type="text" class="form-control" name="state" id="state" placeholder="state" required>
 				</div>
 
                 <div class="form-group">
 					<label for="postcode">Postcode
 					</label>
-					<input type="text" class="form-control" name="postcode" id="postcode" placeholder="postcode">
+					<input type="text" class="form-control" name="postcode" id="postcode" placeholder="postcode" required>
 				</div>
 
                 <div class="form-group">
 					<label for="tel">Phone Number
 					</label>
-					<input type="tel" class="form-control" name="phonenumber" id="tel" placeholder="000-0000-000">
+					<input type="tel" class="form-control" name="phonenumber" id="tel" placeholder="000-0000-000" required>
 				</div>
 
                 
@@ -273,7 +275,7 @@ header("location:../billPage/billPage.php");
 		</div>
 
 	
-		<div class="col-md-5 col-lg-3 col-xl-3 offset-lg-1 offset-xl-2 container totalcard ">
+		<div class="col-md-5 col-lg-4 totalcard" style="margin-left: 95px;">
       <div class="p-3" style="border:1px solid blue ">
         <h2 class="fw-bold">Your order</h2>
         <div class="d-flex justify-content-between mt-2">
@@ -327,6 +329,7 @@ header("location:../billPage/billPage.php");
     </div>
   </div>
   </form>
+</div>
 </div>
 </body>
 </html>
