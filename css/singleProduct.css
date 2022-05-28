@@ -1,6 +1,6 @@
 .container
 {
-    margin-top: 250px;
+    margin-top: 150px;
 
 }.singleProductImage{
     border:10px double silver;
@@ -133,6 +133,23 @@ h4{
 }
 .productDesc{
     margin-top: 50px;
+}
+.leica-info{
+    margin-top: 100px;
+    padding-left: 50px;
+}
+.leica-info h2{
+    font-size: 55px;
+    font-weight: lighter;
+    padding: 55px 0 0 55px;
+}
+.leica-info h5{
+    padding: 0 0 0 55px;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+.leica-info h5 ol{
+    padding: 20px 0 0 65px;
 }
 footer .container{
     margin-top:50px

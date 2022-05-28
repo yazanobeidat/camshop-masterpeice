@@ -24,6 +24,7 @@ $user_id=$_SESSION['userID'];
 
     
 //     }}
+
 ?>
 
 <!DOCTYPE html>
@@ -178,12 +179,12 @@ $user_id=$_SESSION['userID'];
   <!-- <h1 class="text-center">Thank You :)</h1> -->
   <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
-    <div class="col-md-4 img">
-      <img src="../img/projectimg/thankyou.png" class="img-fluid rounded-start" alt="...">
+    <div class="col-lg-4 img">
+      <img src="../img/projectimg/thankyou.png" class="img-fluid rounded-start" alt="Thank you">
     </div>
-    <div class="col-md-8">
+    <div class=" col-lg-8">
       <div class="card-body">
-        <h3 class="card-title">Thank you for visit US</h3>
+        <h3 class="card-title">Thank you for visiting us</h3>
         <?php
         $sqlBringBillData="SELECT * FROM billing_history WHERE user_id='$user_id';";
         $resultBringBillData=mysqli_query($conn,$sqlBringBillData);
@@ -206,6 +207,7 @@ $user_id=$_SESSION['userID'];
             $userPhone=$rowData['phone'];
             $userEmail=$rowData['order_email'];
             $orderDate=$rowData['created_at'];
+            
         $add_sales="INSERT INTO sales (ord_num,user_id,total) VALUES ($billNum,$user_id,$total)";
         $sqlSales=mysqli_query($conn,$add_sales);
         //echo $userFirstName;
@@ -221,7 +223,29 @@ $user_id=$_SESSION['userID'];
         <br>
         <h6 class="card-text">Your Phone Number: <?php echo $userPhone;?></h6>
         <br>
-
+        <h6 class='card-text'>Your purchases:</h6>
+        <p>
+        <?php
+           $sqlItem="SELECT * FROM cart WHERE user_id={$_SESSION['userID']}";
+           $resultItem= mysqli_query($conn , $sqlItem);
+           $result_checkItem= mysqli_num_rows($resultItem);
+           
+           if ($result_checkItem > 0) {
+               while($rowItem=mysqli_fetch_assoc($resultItem)){
+           
+                   $items=$rowItem['product_name'].'  x '. $rowItem['order_quantity'];
+                   $itemprice=$rowItem['order_price'] * $rowItem['order_quantity'];
+               
+                   echo  "<div class='d-flex justify-content-between mt-2'>";
+                   echo $items. " </span>";
+                   echo "<span>".$itemprice. " JOD</span>";
+               
+               
+                 echo "</div>";}}
+                 
+                 
+        ?>
+        </p>
         <h6 class="card-text">Total Price: <?php echo $total.' JOD';?></h6>
         <br>
         <h6 class="card-text">Order Date & Time: <?php echo $orderDate;?></h6>
@@ -233,6 +257,7 @@ $user_id=$_SESSION['userID'];
 </div>
  
   </div>
-   
+   <!-- <?php/* $sqlDelete="TRUNCATE TABLE `cart`"; //To clear cart
+                $sqlResult=mysqli_query($conn,$sqlDelete);?> */-->
 </body>
 </html>

@@ -338,6 +338,17 @@ $result_check4= mysqli_num_rows($result4);
                 </form> 
                 <!-- comment -->
             </div>
+            <div class="col-lg-6 leica-info">
+                <h2>Leica<h2>
+                    <h5>The only place you can find the most luxurious clothes, shoes and accessories which specially made in France in the highest quality and the latest models. In addition to:
+                        <ol type="1">
+                            <li>Free shiping</li>
+                            <li>45 Days return</li>
+                            <li>Cash on delivery</li>
+                            <li>The best customer service EVER</li>
+                        </ol>
+                    </h5>
+                </div>
             
     </div>
 </div>   <div class="clearfix">
