@@ -43,6 +43,7 @@
     padding: 50px;
     /*box-shadow: 7px 10px 20px grey;*/
     margin-bottom: 20px;
+    border-radius: 0.25rem;
 }
 .main-span,
 .sub-span{
@@ -153,4 +154,7 @@ h4{
 }
 footer .container{
     margin-top:50px
+}
+.card{
+    height: 655px;
 }

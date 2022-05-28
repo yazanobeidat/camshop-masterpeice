@@ -263,10 +263,7 @@ $result_check4= mysqli_num_rows($result4);
                         <div class="col-lg-12 btn">
                             <input type="submit" name='submit' class="btn btn-s addToCart" value="Add To Cart">
                         </div>
-                        <div class="col-lg-12 productDesc">
-                <h4> Product Description</h4>
-                <?php echo "<p>". $product_description. "</p>"; ?>
-        </div>
+                        
                         <?php
                             if(isset($_POST['submit'])){
                                 if(isset($_SESSION['userID'])){
@@ -275,6 +272,9 @@ $result_check4= mysqli_num_rows($result4);
                                         $updated_size=$_POST['size'];
                                         $quantitySql="INSERT INTO cart (user_id,product_id,product_image ,product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id','$product_image' ,'$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
                                         $resultQuantity= mysqli_query($conn , $quantitySql);
+                                        echo '<br>';
+                                        echo '<div class="alert alert-success d-flex justify-content-center" role="alert">
+                                        The item has been added successfully to the cart</div>';
                                     }
                                 }
                                 else{
@@ -282,6 +282,10 @@ $result_check4= mysqli_num_rows($result4);
                                 }
                         }
                         ?>
+                        <div class="col-lg-12 productDesc">
+                <h4> Product Description</h4>
+                <?php echo "<p>". $product_description. "</p>"; ?>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -337,7 +341,7 @@ $result_check4= mysqli_num_rows($result4);
                 </form> 
                 <!-- comment -->
             </div>
-            <div class="col-lg-6 leica-info">
+            <div class="col-lg-6 card shadow-none leica-info">
                 <h2>Leica<h2>
                     <h5>The only place you can find the most luxurious clothes, shoes and accessories which specially made in France in the highest quality and the latest models. In addition to:
                         <ol type="1">
