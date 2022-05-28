@@ -1,9 +1,8 @@
 <?php
 include "../connection.php";
 session_start();
-$get_id = $_GET['id'];
 $user_id= $_SESSION['userID'];
-$get_id=$_GET['id'];
+// $get_id=$_GET['id'];
 if(isset($_GET['id']))
 {
 
@@ -48,7 +47,7 @@ $user = $stmt->fetch_assoc();
     <title>Document</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg ">
+<!-- <nav class="navbar navbar-expand-lg ">
         <div class="container">
 
             <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
@@ -92,10 +91,10 @@ $user = $stmt->fetch_assoc();
                 </ul>
                 <form action="" method="post">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <!-- profile icon/login/register -->
+                     profile icon/login/register -->
                     
                 <?php
-                
+                /*
         
                           $check=0;
                         
@@ -151,16 +150,17 @@ $user = $stmt->fetch_assoc();
                     </li>
                   
                     <li class="nav-item">
-                    <?php if(isset( $cart)){echo $cart;}?>
+                    <?php if(isset( $cart)){echo $cart;}?*/
+                    ?>
 
-                    </li>
-                </ul>
-                </form>
+    <!-- //                 </li>
+    //             </ul>
+    //             </form>
 
-            </div>
-        </div>
-    </nav>
-    
+    //         </div>
+    //     </div>
+    // </nav> -->
+   
   
     <!-- ============================================== -->
     <div class="wrapper">

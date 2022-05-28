@@ -257,7 +257,9 @@ $user_id=$_SESSION['userID'];
 </div>
  
   </div>
-   <!-- <?php/* $sqlDelete="TRUNCATE TABLE `cart`"; //To clear cart
-                $sqlResult=mysqli_query($conn,$sqlDelete);?> */-->
+    <?php 
+    $sqlDelete="TRUNCATE TABLE `cart`"; //To clear cart
+    $sqlResult=mysqli_query($conn,$sqlDelete);
+    ?> 
 </body>
 </html>

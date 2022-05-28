@@ -34,7 +34,6 @@ if($result_check4 > 0){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +50,7 @@ if($result_check4 > 0){
     <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 
     <title>Document</title>
@@ -369,7 +369,7 @@ if($result_check4 > 0){
                             <a href="singleProduct.php?id=10"><img src="./img/DRESS/N dress 2-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>HALTER TOP BALLGONE</h6>
+                    <h6><br>HALTER TOP BALLGONE</h6>
                     <p>9995 JOD</p>
 
                 </div>
@@ -379,7 +379,8 @@ if($result_check4 > 0){
                             <a href="singleProduct.php?id=7"><img src="./img/DRESS/dress 7-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>ONE SHOULDER ELECTRIC-BLUE DRESS</h6>
+                    <h6>
+                        <br>ONE SHOULDER ELECTRIC-BLUE DRESS</h6>
                     <p>5,150 JOD</p>
 
                 </div>
@@ -389,7 +390,9 @@ if($result_check4 > 0){
                             <a href="singleProduct.php?id=6"><img src="./img/DRESS/dress 6-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>STRAPLESS EMBROIDERED AND SILK LONG DRESS</h6>
+                    <h6>
+                        <br>
+                    STRAPLESS EMBROIDERED AND SILK LONG DRESS</h6>
                     <p>6,350 JOD</p>
 
                 </div>
@@ -399,7 +402,10 @@ if($result_check4 > 0){
                            <a href="singleProduct.php?id=5"><img src="./img/DRESS/dress 5-1.PNG" class="img-fluid " alt=""></a> 
                         </div>
                     </div>
-                    <h6>MULTICOLOR EMBROIDERED LONG DRESS</h6>
+                    <h6>
+                    <br>    
+                    MULTICOLOR EMBROIDERED LONG DRESS
+                </h6>
                     <p>8,770 JOD</p>
 
                 </div>
@@ -520,44 +526,56 @@ if($result_check4 > 0){
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/SUIT/suit 6-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=23"><img src="./img/SUIT/suit 6-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>EXTRA-SLIM-FIT VIRGIN-WOOL SUIT WITH MICRO PATTERN</h6>
-                    <p style="text-decoration: line-through ;">$1,195 </p><span>$956.00</span>
+                    <h6>
+                        <br>
+                        EXTRA-SLIM-FIT VIRGIN-WOOL SUIT WITH MICRO PATTERN
+                    </h6>
+                    <p style="text-decoration: line-through ;">1,434 JOD </p><span>1,195 JOD</span>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/DRESS/R dress 3-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=14"><img src="./img/DRESS/R dress 3-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>DESIGNER ORANGE TULLE VOLUME DRESS</h6>
-                    <p style="text-decoration: line-through ;">$7,668</p>
-                    <p>$6,134</p>
+                    <h6>
+                        <br>
+                        DESIGNER ORANGE TULLE VOLUME DRESS
+                    </h6>
+                    <p style="text-decoration: line-through ;">9,201 JOD</p>
+                    <p>7,668 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/SUIT/suit 8-1.png" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=25"><img src="./img/SUIT/suit 8-1.png" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>EXTRA-SLIM-FIT SUIT IN PATTERNED STRETCH WOOL</h6>
-                    <p style="text-decoration: line-through ;">$1,295</p>
-                    <p>$1,036</p>
+                    <h6>
+                    <br>    
+                    EXTRA-SLIM-FIT SUIT IN PATTERNED STRETCH WOOL
+                </h6>
+                    <p style="text-decoration: line-through ;">1,554  JOD</p>
+                    <p>1,295 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href=""><img src="./img/DRESS/R dress 1-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=12"><img src="./img/DRESS/R dress 1-1.PNG" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6>HANDCRAFTED FEATHERED & BEADED TUBINO PARTY DRESS</h6>
-                    <p style="text-decoration: line-through ;">$6,366</p>
-                    <p>$5,092</p>
+                    <h6>
+                        <br>
+                        HANDCRAFTED FEATHERED & BEADED TUBINO PARTY DRESS
+                    </h6>
+                    <p style="text-decoration: line-through ;">7,639 JOD</p>
+                    <p>6,366 JOD</p>
 
                 </div>
             </div>

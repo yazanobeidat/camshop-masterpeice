@@ -233,33 +233,32 @@ $result_check4= mysqli_num_rows($result4);
                                     <option value="XL">XL<option>
                                 </seclect> -->
                                 <?php if($product_category == "Men's Shoes" || $product_category == "Women's shoes")
-                        {
-                            echo '<label>Size</label>
+                        {?>
+                            <label>Size</label>
                             <select name="size" class="text-center">
                                 <option value="38">38<option>
                                 <option value="39">39<option>
                                 <option value="49">49<option>
                                 <option value="41">41<option>
-                            </seclect>';
+                            </seclect>
 
 
-
+<?php
                         }
-                        else
-                        {
+                       
 
-
-                            echo '<label>Size</label>
+?>
+                            <label>Size</label>
                             <select name="size" class="text-center">
                                 <option value="S">S<option>
                                 <option value="M">M<option>
                                 <option value="L">L<option>
                                 <option value="XL">XL<option>
-                            </seclect>';
+                            </seclect>
 
 
 
-                        }?>
+                       <?php ?>
                         </div> 
                         <div class="col-lg-12 btn">
                             <input type="submit" name='submit' class="btn btn-s addToCart" value="Add To Cart">
