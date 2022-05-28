@@ -25,12 +25,24 @@
     float: right;
     margin-right: 50px;
 }
+.cart_btn
+{
+    background-color: #570A57;
+    border-color: #570A57;
+}
+.cart_btn:hover{
+    background-color: #570A57;
+}
 .updateInput{
     width: 50%;
     text-align: center;
 }
 a:hover{
     text-decoration: none;
+}
+.cart_icon
+{
+    color: #570A57;
 }
 @media (max-width:620px){
     .card{

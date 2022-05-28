@@ -216,13 +216,13 @@ if(isset($_GET['order_num']))
               echo "<td> <input type='number' class='updateInput' name='".$row['order_number']."' value='".$row['order_quantity']."'>
               <br>
               <br>
-               <input type='submit' name='submit' class='btn btn-primary btn-sm' value='update'></a>
+               <input type='submit' name='submit' class='btn btn-primary btn-sm cart_btn' value='Update'></a>
               </td>";
               $arr1[$row['order_number']]=$row['order_quantity'];
 
               echo "<td>". $total. "</td>";
               echo "<td>
-               <a href='cart.php?order_num=".$row['order_number']."'><input class='deleteInput' type='button' name='".$row['order_number']."'> <li class='fa-solid fa-trash-can'></li></a>
+               <a href='cart.php?order_num=".$row['order_number']."'><input class='deleteInput' type='button' name='".$row['order_number']."'> <li class='fa-solid fa-trash-can cart_icon'></li></a>
               </td>";
               echo "</form>";
                echo "</tr>";
@@ -266,7 +266,7 @@ if(isset($_GET['order_num']))
           echo $finalTotal. ' JOD';
           ?>
           </h3> Approve your order by clicking the <b>Submit</b> button</p>
-          <button type="submit" class="'btn btn-primary btn-sm" name="checkout">Submit</button>
+          <button type="submit" class="'btn btn-primary btn-sm cart_btn" name="checkout">Submit</button>
         </div>
       </div>  
     </form>

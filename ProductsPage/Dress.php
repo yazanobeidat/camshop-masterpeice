@@ -61,7 +61,9 @@ include_once "../connection.php";
                         </a>
 
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.php#discount">Our discount</a>
+                    </li>
                
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

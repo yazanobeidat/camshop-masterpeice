@@ -244,7 +244,7 @@ $result_check4= mysqli_num_rows($result4);
 
 
 <?php
-                        }
+                        } else{
                        
 
 ?>
@@ -258,7 +258,7 @@ $result_check4= mysqli_num_rows($result4);
 
 
 
-                       <?php ?>
+                       <?php }?>
                         </div> 
                         <div class="col-lg-12 btn">
                             <input type="submit" name='submit' class="btn btn-s addToCart" value="Add To Cart">

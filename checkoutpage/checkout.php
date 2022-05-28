@@ -204,7 +204,7 @@ echo("Error description: " . mysqli_error($conn));
 			<h1 class="my-4">
                 Checkout
         	</h1>
-        	<hr style="background-color: rgba(3, 50, 239, 0.804); height:3px">
+        	<hr style="background-color: #570A57; height:3px">
 			<h4 class="my-4">
 				Billing details
 			</h4>
@@ -214,17 +214,11 @@ echo("Error description: " . mysqli_error($conn));
 					<div class="col-md-6 form-group">
 						<label for="firstname">First Name</label>
 						<input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name" required>
-						<div class="invalid-feedback">
-							Valid first name is required.
-						</div>
 					</div>
 
 					<div class="col-md-6 form-group">
 						<label for="lastname">Last Name</label>
 						<input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name" required>
-						<div class="invalid-feedback">
-							Valid last name is required.
-						</div>
 					</div>
 				</div>
 
@@ -239,20 +233,19 @@ echo("Error description: " . mysqli_error($conn));
                 <input type="text" class="form-control" name="city" id="city" placeholder="city" required>
               </div>
 
-
-				<div class="form-group">
-					<label for="adress"> Street address</label>
-					<input type="text" class="form-control"  name="street" id="adress" placeholder="1234 Main Street" required>
-					<div class="invalid-feedback">
-						Please enter your shipping address.
-					</div>
-				</div>
-
-				<div class="form-group">
+              <div class="form-group">
 					<label for="state">State
 					</label>
 					<input type="text" class="form-control" name="state" id="state" placeholder="state" required>
 				</div>
+
+				<div class="form-group">
+					<label for="adress"> Street address</label>
+					<input type="text" class="form-control"  name="street" id="adress" placeholder="1234 Main Street" required>
+					
+				</div>
+
+				
 
                 <div class="form-group">
 					<label for="postcode">Postcode
@@ -276,7 +269,7 @@ echo("Error description: " . mysqli_error($conn));
 
 	
 		<div class="col-md-5 col-lg-4 totalcard" style="margin-left: 95px;">
-      <div class="p-3" style="border:1px solid blue ">
+      <div class="p-3" style="border:1px solid #570A57 ">
         <h2 class="fw-bold">Your order</h2>
         <div class="d-flex justify-content-between mt-2">
           <h4>Product</h4> <h4>Subtotal</h4>
@@ -294,8 +287,8 @@ echo("Error description: " . mysqli_error($conn));
 				$itemprice=$row['order_price'] * $row['order_quantity'];
 			
 				echo  "<div class='d-flex justify-content-between mt-2'>";
-				echo "<span>".'$'.$items. "</span>";
-				echo "<span>".'$'.$itemprice. "</span>";
+				echo "<span>".$items. " JOD</span>";
+				echo "<span>".$itemprice. " JOD</span>";
 			
 			
 			  echo "</div>";
@@ -319,12 +312,12 @@ echo("Error description: " . mysqli_error($conn));
 	?>
 		<hr>
         <div class="d-flex justify-content-between mt-2">
-          <span>Total </span> <span class="text-success"><?php echo $_SESSION['total'].'$'?></span>
+          <span>Total </span> <span class="text-success"><?php echo $_SESSION['total'].' JOD'?></span>
         </div>
 		<hr class="mb-4">
 		<h6 class="fw-bold">Cash on delivery</h6>
 		<p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-		<button class="btn btn-primary bt-lg btn-block" type="submit" name="submit">PLACE ORDER</button>
+		<button class="btn btn-primary bt-lg btn-block" style="background-color:#570A57; border-color:#570A57;" type="submit" name="submit">PLACE ORDER</button>
       </div>
     </div>
   </div>

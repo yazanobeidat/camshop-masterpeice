@@ -74,7 +74,7 @@ $user_id=$_SESSION['userID'];
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#contact">
+                        <a class="nav-link " href="../index.php#contact">
                             Contact us
                         </a>
     
@@ -118,12 +118,12 @@ $user_id=$_SESSION['userID'];
                           if(isset($_SESSION["userID"])){
     
                                $profile_icon= '
-                               <a class="nav-link" href="./profile_page/user_profile.php">
+                               <a class="nav-link" href="../profile_page/user_profile.php">
                                    <i class="fa-solid fa-user"></i>
                                </a>';
     
                                $cart='
-                               <a class="nav-link" href="./cart.php">
+                               <a class="nav-link" href="../cart.php">
                                <i class="fa-solid fa-cart-shopping"></i>
                                  </a>'
                                
@@ -246,6 +246,7 @@ $user_id=$_SESSION['userID'];
                  
         ?>
         </p>
+        <br>
         <h6 class="card-text">Total Price: <?php echo $total.' JOD';?></h6>
         <br>
         <h6 class="card-text">Order Date & Time: <?php echo $orderDate;?></h6>

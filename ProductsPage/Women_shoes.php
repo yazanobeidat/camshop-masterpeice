@@ -61,7 +61,9 @@ include_once "../connection.php";
                         </a>
 
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.php#discount">Our discount</a>
+                    </li>
                
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -133,7 +135,6 @@ include_once "../connection.php";
                            }?>
                         <!-- <li class="nav-item">
                       
-
                     </li> -->
 
                         <li class="nav-item">
@@ -240,7 +241,7 @@ if($result_check4 > 0){
 
 
         // check category
-        if($category ==='Women\'s shoes'){
+        if($category =="Women's shoes"){
 
         ?>
             <div class="col-lg-3 text-center m-auto ">
@@ -252,7 +253,6 @@ if($result_check4 > 0){
                 <h6><?php  echo $productName ?></h6>
                 <p>$<?php echo $price ?></p>
                 <!-- <form action="" method="post">
-
                  <a href='../singleProduct.php?id=<?php echo $row['product_id']?>' > <input type="button" name="view" value="View Product"class="add-to-cart" ></a>
                  
                  </form> -->

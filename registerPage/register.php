@@ -202,7 +202,7 @@ header("location:../loginpage/login.php");
 
 
                     <!-- First Name -->
-                    <label for="firstName" class="form-label">First Nmae</label>
+                    <label for="firstName" class="form-label">First Name</label>
                     <input type="text" name="firstName" placeholder="First Name" id="form3Example1m"
                       class="form-control form-control-lg">
 
