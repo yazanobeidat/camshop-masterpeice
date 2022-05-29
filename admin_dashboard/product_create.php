@@ -3,15 +3,16 @@ include "../connection.php";
 
 if (isset($_POST['submit'])){
 $product_name = $_POST["product_name"];
+$Product_category = $_POST['product_category'];
 $Product_price = $_POST["Product_price"];
 $Product_color = $_POST["Product_color"];
 $Product_size = $_POST['Product_size'];
-$Product_size = $_POST['Product_image'];
+$product_image = $_POST['Product_image'];
 $product_description = $_POST['product_description'];
 // $product_image = $_POST['product_image'];
 
 
-$add_user = "INSERT INTO products (product_name, Product_price, Product_color , Product_size , product_description) VALUES ('$product_name', '$Product_price', '$Product_color' , '$Product_size' , '$product_description');";
+$add_user = "INSERT INTO products (product_name,product_category, product_price, product_color , product_size , product_description, product_image) VALUES ('$product_name','$Product_category', '$Product_price', '$Product_color' , '$Product_size' , '$product_description','$product_image');";
 if ($conn->query($add_user) === TRUE) {
     echo "New product created successfully";
   } else {
@@ -25,7 +26,7 @@ Employee was added successfully redircting you to the main page</div>';
 
 echo'<script>
 setTimeout(() => {
-    window.location = "user_dashboard.php";
+    window.location = "product_dashboard.php";
   }, "2000")
 
 </script>';
@@ -63,7 +64,11 @@ setTimeout(() => {
 
               <div class="form-outline mb-4">
                 <input type="text" id="form3Example1q" name="product_name" class="form-control" />
-                <label class="form-label"  for="form3Example1q">product name </label>
+                <label class="form-label"  for="form3Example1q">Product name </label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" name="product_category" class="form-control" />
+                <label class="form-label"  for="form3Example1q">Product category </label>
               </div>
               <div class="form-outline mb-4">
                 <input type="text" id="form3Example1q" name="Product_price" class="form-control" />
@@ -83,7 +88,7 @@ setTimeout(() => {
               </div>
               <div class="form-outline mb-4">
                 <input type="text" id="form3Example1q" name="product_description" class="form-control" />
-                <label class="form-label"  for="form3Example1q">productdescription</label>
+                <label class="form-label"  for="form3Example1q">Product description</label>
               </div>
               <!-- <div class="form-outline mb-4">
                 <input type="text" id="form3Example1q" name="product_image" class="form-control" />

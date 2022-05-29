@@ -9,7 +9,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 
     echo'<script>
 setTimeout(() => {
-    window.location = "user_dashboard.php";
+    window.location = "product_dashboard.php";
   }, "2000")
 
 </script>';

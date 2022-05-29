@@ -8,6 +8,7 @@ if(isset($_POST['submit']))
 {
     $id=$_POST['product_id'];
     $product_name = $_POST['product_name'];
+    $product_category=$_POST['product_category'];
     $product_price=$_POST['product_price'];
    $product_color=$_POST['product_color'];
    $product_size=$_POST['product_size'];
@@ -15,11 +16,11 @@ if(isset($_POST['submit']))
    $product_image=$_POST['product_image'];
    
 
-   $update_data = "UPDATE products SET product_name='$product_name',product_price='$product_price',product_color='$product_color',product_size='$product_size',product_description='$product_description',product_image='$product_image' WHERE product_id=$_GET[id];";
+   $update_data = "UPDATE products SET product_name='$product_name',product_category='$product_category',product_price='$product_price',product_color='$product_color',product_size='$product_size',product_description='$product_description',product_image='$product_image' WHERE product_id=$_GET[id];";
    $conn->query($update_data);
    echo'<script>
    setTimeout(() => {
-       window.location = "user_dashboard.php";
+       window.location = "product_dashboard.php";
      }, "10")
    
    </script>';
@@ -125,6 +126,9 @@ if(isset($_POST['submit']))
         <input type="text" placeholder="product_id" name="product_id"  value =<?php echo $product_data['product_id']; ?> readonly   >
         <label for="mail"><strong>product name</strong></label>
         <input type="text" placeholder="product name" name="product_name" value= <?php echo $product_data['product_name']; ?> >
+        <label for="category"><strong>product category</strong></label>
+        <input type="text" placeholder="product name" name="product_category" value= <?php echo $product_data['product_category']; ?> >
+
         <label for="psw"><strong>Product price</strong></label>
         <input type="text" placeholder="Productprice" name="product_price" value=<?php echo $product_data['product_price']; ?>>
         <label for="psw"><strong>Product color</strong></label>
