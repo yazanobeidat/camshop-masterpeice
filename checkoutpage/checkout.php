@@ -15,16 +15,6 @@ $postcode=$_POST['postcode'];
 $phone_number=$_POST['phonenumber'];
 $email_address=$_POST['emailaddress'];
 $productid;
-// $product_id="1";
-// $checkoutData="SELECT product_id FROM checkout;";
-// $resultData=mysqli_query($conn,$checkoutData);
-// while($row=mysqli_fetch_assoc($resultData)){
-// 	$product_id=$row['product_id'];
-//   $productid=$product_id;
-
-// }
-
-
 $checkoutData="SELECT * FROM checkout;";
 $resultData=mysqli_query($conn,$checkoutData);
 while($row=mysqli_fetch_assoc($resultData)){
@@ -46,30 +36,13 @@ $sql5 = "INSERT INTO checkout (order_number,product_id,bill_id,user_id,order_qua
 VALUES ('$order_num','$product_id','$num','$user_id','$order_quan','$first_name', '$last_name', '$country','$state','$city','$street_address','$postcode','$phone_number','$email_address');";
 $resultplease=mysqli_query($conn,$sql5);
 if(!$sql5)
-echo("Error description: " . mysqli_error($conn));
-
-//$sql7 = "DELETE FROM checkout WHERE first_name = '';";
-
-//$delete_temp = mysqli_query($conn,$sql7);
-
+    echo("Error description: " . mysqli_error($conn));
     header("location:../billPage/billPage.php");
-
-
-
-
-//
-
-
-    // echo "$num / $id / $total";
-
     $_SESSION["bill_id"] = $num;
     $sqlBill = "INSERT INTO billing_history(billing_number, user_id) VALUES('$num', '$user_id');";
     $run2 = mysqli_query($conn, $sqlBill);
-    // $sqlBill2 = "UPDATE `checkout` SET `bill_id`='$num',`user_id`='$user_id' WHERE 1;";
-    // $run3 = mysqli_query($conn, $sqlBill2);
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,7 +69,7 @@ echo("Error description: " . mysqli_error($conn));
 <body>
 <nav class="navbar navbar-expand-lg ">
         <div class="container">
-        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="150px" height="auto" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -107,6 +80,23 @@ echo("Error description: " . mysqli_error($conn));
                     <li class="nav-item">
                         <a class="nav-link active" href="../index.php">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.php#discount">Our discount</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
@@ -116,23 +106,7 @@ echo("Error description: " . mysqli_error($conn));
                         </a>
     
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="../index.php#discount">Our discount</a>
-                    </li>
-                   
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                         
-                        </ul>
-                      </li>
+
                     
                 </ul>
                 <form action="" method="post">
@@ -157,7 +131,7 @@ echo("Error description: " . mysqli_error($conn));
                                
                                ?>
                                <form action="" method='post'>
-                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
+                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white; cursor:pointer">
                                 </li>
                                    </form>
                                  
@@ -314,11 +288,11 @@ echo("Error description: " . mysqli_error($conn));
 // 	while($row1=mysqli_fetch_assoc($result1)){
 
 // 	}
-// }
+//class="text-success" }
 	?>
 		<hr>
         <div class="d-flex justify-content-between mt-2">
-          <span>Total </span> <span class="text-success"><?php echo $_SESSION['total'].' JOD'?></span>
+          <span>Total </span> <span style="color:#570A57;"><?php echo $_SESSION['total'].' JOD'?></span>
         </div>
 		<hr class="mb-4">
 		<h6 class="fw-bold">Cash on delivery</h6>

@@ -29,6 +29,9 @@
 {
     background-color: #570A57;
     border-color: #570A57;
+    color: white;
+    cursor: pointer;
+    padding: 8px 15px;
 }
 .cart_btn:hover{
     background-color: #570A57;

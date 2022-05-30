@@ -59,7 +59,7 @@ $user_id=$_SESSION['userID'];
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="125px" height="auto"alt=""></a>
+        <a class="navbar-brand" href="#"><img src="../img/projectimg/logo.png" width="150px" height="auto" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -70,6 +70,23 @@ $user_id=$_SESSION['userID'];
                     <li class="nav-item">
                         <a class="nav-link active" href="../index.php">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.php#discount">Our discount</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
@@ -79,22 +96,7 @@ $user_id=$_SESSION['userID'];
                         </a>
     
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="../index.php#discount">Our discount</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                         
-                        </ul>
-                      </li>
+
                     
                 </ul>
                 <form action="" method="post">
@@ -102,16 +104,6 @@ $user_id=$_SESSION['userID'];
                     <!-- profile icon/login/register -->
                     
                 <?php
-                //  if(isset($_POST['submit'])){
-                      
-                      
-                      // $profile_sql = "SELECT * FROM  user;";
-                      // $profile_result = mysqli_query($conn,$profile_sql);
-                      // $resultcheck = mysqli_num_rows( $profile_result);
-                   
-                      // if($resultcheck > 0)
-                      // ($row = mysqli_fetch_assoc( $profile_result));
-                      // {
         
                           $check=0;
                         
@@ -130,7 +122,7 @@ $user_id=$_SESSION['userID'];
                                
                                ?>
                                <form action="" method='post'>
-                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
+                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white; cursor:pointer">
                                 </li>
                                    </form>
                                  

@@ -38,7 +38,7 @@ if(isset($_GET['order_num']))
 <body>
 <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="150px" height="100px"alt=""></a>
+            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="150px" height="auto" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" >
@@ -49,6 +49,23 @@ if(isset($_GET['order_num']))
                     <li class="nav-item">
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./index.php#discount">Our discount</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./about us/about_us.php"> About us</a>
                     </li>
@@ -57,21 +74,6 @@ if(isset($_GET['order_num']))
                             Contact us
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#discount">Our discount</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
-                        </ul>
-                      </li>
                 </ul>
                 <form action="" method="post">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
@@ -89,7 +91,7 @@ if(isset($_GET['order_num']))
                                  </a>'
                                ?>
                                <form action="" method='post'>
-                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white;">
+                           <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout " style="border:none; background-color: white; cursor:pointer">
                                 </li>
                                    </form>
                                   <?php if(isset($_POST['logout'])){
@@ -219,9 +221,9 @@ if(isset($_GET['order_num']))
           <?php
           echo $finalTotal. ' JOD';
           ?>
-          </h3> Approve your order by clicking the <b>Submit</b> button</p></h3>
+          </h3> Approve your order by clicking the <b>Checkout</b> button</p></h3>
           <br>
-          <button type="submit" class="'btn btn-primary btn-sm cart_btn" name="checkout">Checkout</button>
+          <button type="submit" class="btn btn-sm cart_btn" name="checkout">Checkout</button>
         </div>
       </div>  
     </form>

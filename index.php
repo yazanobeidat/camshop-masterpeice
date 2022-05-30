@@ -62,7 +62,7 @@ if($result_check4 > 0){
         <div class="container">
 
 
-            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="150px" height="auto"  alt=""></a>
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -75,23 +75,10 @@ if($result_check4 > 0){
                     <li class="nav-item">
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="#footer">
-                            Contact us
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="#discount">Our discount</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
+                            SHOP
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
@@ -102,7 +89,18 @@ if($result_check4 > 0){
 
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#discount">Our discount</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about us/about_us.php"> About us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#footer">
+                            Contact us
+                        </a>
 
+                    </li>
                 </ul>
                 <form action="" method="post">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
@@ -129,7 +127,7 @@ if($result_check4 > 0){
                                ?>
                         <form action="" method='post'>
                             <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout "
-                                    style="border:none; background-color: white;">
+                                    style="border:none; background-color: white; cursor:pointer">
                             </li>
                         </form>
 
@@ -191,7 +189,7 @@ if($result_check4 > 0){
 
 
 
-            <section class="benefit my-5 pd-5">
+    <section class="benefit my-5 pd-5">
         <div class="container mt-5 py-5">
             <div class="text-center">
                 <h1> Our Features</h1>
@@ -310,10 +308,6 @@ if($result_check4 > 0){
                 </div>
 
             </div>
-
-
-
-
         </div>
         </div>
     </section>
@@ -343,8 +337,6 @@ if($result_check4 > 0){
         
 
             </div>
-
-
 
 
         </div>
@@ -420,14 +412,7 @@ if($result_check4 > 0){
 
     </section>
 
-
-
-
-
-
     <!-- ================================================ -->
-
-
 
     <section class="about">
         <div class="container py-5">
@@ -475,39 +460,6 @@ if($result_check4 > 0){
             </div>
         </div>
     </section>
-    <!-- ============================================= -->
-    <!-- <section class="category">
-        <div class="container-fluied py-5">
-            <div class="row pt-5" style="background-color: black;">
-                <div class="col-lg-7 m-auto">
-                    <div class="row text-center m-auto "  >
-                        <div class="col-lg-2  px-5" id="img1" style="margin-bottom: 5%; margin-right: 7%;">
-                       
-                            <img src="./img/projectimg/cat1.jpg" class="img-fluid" alt="">
-                            <h4>Lorem ipsum dolor sit amet, </h4>
-                            <p>Lorem ipsum</p>
-
-                        </div>
-                     
-                        <div class="col-lg-2 px-5" id="img2" style="margin-bottom: 5%;margin-right: 7%;">
-                            <img src="./img/projectimg/cat1.jpg" class="img-fluid" alt=""> 
-
-                        </div>
-                      
-                        <div class="col-lg-2 px-5" id="img3" style="margin-bottom: 5%;margin-right: 7%;">
-                            <img src="./img/projectimg/cat1.jpg" class="img-fluid" alt="">
-
-                        </div>
-                       
-                        <div class="col-lg-2 px-5" id="img4" style="margin-bottom: 5%;margin-right: 7%;">
-                        
-                            <img src="./img/projectimg/cat1.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <!-- ==================================================== -->
     <section class="product" style="margin-top: -5%; margin-bottom: 10%;">
         <div class="container py-5">
@@ -579,18 +531,8 @@ if($result_check4 > 0){
 
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-lg-6 text-center m-auto ">
-                    <button class="btn1">
-                        Click for more
-                    </button>
-                </div>
-            </div> -->
         </div>
     </section>
-
-
-
     <!-- ============================================ -->
     <div class="clearfix"></div>
     <div class="footer-clean" style="margin-top: 70px;" >

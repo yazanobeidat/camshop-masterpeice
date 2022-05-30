@@ -39,7 +39,7 @@ include_once "../connection.php";
         <div class="container">
 
 
-            <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="125px" height="auto"alt=""></a>
+            <a class="navbar-brand" href="#"><img src="../img/projectimg/Lecia-logo.png" width="150px" height="auto"  alt=""></a>
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -52,6 +52,23 @@ include_once "../connection.php";
                     <li class="nav-item">
                         <a class="nav-link active" href="../index.php">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.php#discount">Our discount</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
@@ -62,25 +79,7 @@ include_once "../connection.php";
 
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="../index.php#discount">Our discount</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            CATEGORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./Dress.php">Dress</a></li>
-                            <li><a class="dropdown-item" href="./Suit.php">Suits</a></li>
-                            <li><a class="dropdown-item" href="./Accessories.php">Accessories</a></li>
-                            <li><a class="dropdown-item" href="./Men_shoes.php">Men Shoes</a></li>
-                            <li><a class="dropdown-item" href="./Women_shoes.php">Women Shoes</a></li>
-
-                        </ul>
-                    </li>
-                 
-
+                    
                 </ul>
                 <form action="" method="post">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
@@ -107,7 +106,7 @@ include_once "../connection.php";
                                ?>
                         <form action="" method='post'>
                             <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout "
-                                    style="border:none; background-color: white;">
+                                    style="border:none; background-color: white; cursor:pointer">
                             </li>
                         </form>
 
@@ -134,8 +133,6 @@ include_once "../connection.php";
                                 Register </a> </li>';
                            }?>
                         <!-- <li class="nav-item">
-                      
-
                     </li> -->
 
                         <li class="nav-item">
@@ -192,10 +189,7 @@ include_once "../connection.php";
                     </div>
                 </div>
             </div>
-
-       
         </div>
-
     </section>
 
 
@@ -213,9 +207,6 @@ $sql_query="SELECT * FROM products ;";
 $result = $conn->query($sql_query);
 $result_check4= mysqli_num_rows($result);
 
-// $sql_query2="SELECT product_id FROM cart ;";
-// $result2 = $conn->query($sql_query2);
-// $result_check4= mysqli_num_rows($result2);
 // check result
 if($result_check4 > 0){
 
@@ -227,16 +218,6 @@ if($result_check4 > 0){
         $category=$row['product_category'];
 
         $product_id=$row['product_id'];
-       
-// product page buttom check
-// while($row2=mysqli_fetch_assoc($result2)){
-        // if(isset($_POST[strval($row['product_id'])])){
-        //     $userId=$_SESSION['userID'];
-        //     $_SESSION['product']=$product_id;
-        //     echo  $_SESSION['product'];
-        // }
-
-
 
         // check category
         if($category ==='Suit'){
@@ -260,7 +241,6 @@ if($result_check4 > 0){
 
          
             <?php 
-                        // echo "<input type='button' name='".$row['product_id']."'class='add-to-cart'>";
 
             }
         }
