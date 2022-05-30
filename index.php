@@ -358,11 +358,11 @@ if($result_check4 > 0){
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=10"><img src="./img/DRESS/N dress 2-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=4"><img src="img/DRESS/dress 4-1.PNG" height="310px" width="215px" alt=""></a>
                         </div>
                     </div>
-                    <h6><br>HALTER TOP BALLGONE</h6>
-                    <p>9995 JOD</p>
+                    <h6><br>LONG BEAD EMBROIDERED RUFFLED DRESS</h6>
+                    <p>17100.00</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
@@ -404,7 +404,7 @@ if($result_check4 > 0){
             </div>
             <div class="row">
                 <div class="col-lg-6 text-center m-auto ">
-                    <a href="./ProductsPage/Dress.php"><button class="btn1">
+                    <a href="./ProductsPage/Dress.php"><button class="btn1" style="cursor:pointer;">
                         Click for more
                     </button></a>
 
