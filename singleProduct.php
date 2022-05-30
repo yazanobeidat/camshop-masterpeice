@@ -241,10 +241,10 @@ $result_check4= mysqli_num_rows($result4);
         <!--Comment Section-->
      <br>
      <div class="row">
-            <div class="col-lg-12 commentsSection">
+            <div class="col-lg-8 commentsSection">
                 <form method="post">
                     <div class="col-lg-12">
-                    <span class="sub-span">Reviews</span>
+                    <span class="sub-span text-center">Reviews</span>
                     <!-- To show all comments-->
                     <?php
                     $sql5="SELECT user_first_name, user_last_name, product_comment FROM comments WHERE product_id='$product_id';";
@@ -270,7 +270,7 @@ $result_check4= mysqli_num_rows($result4);
                     unset($_SESSION['product']);
                      ?>
                      </div>
-                     <div class="col-lg-12 add-new-comment">
+                     <div class="col-lg-6 add-new-comment">
                      <img src=img/projectimg/profilePic.png class='profilePic'>
                      <div class='comment-container new-comment'>
                      <!-- <span class="main-span">Leave a Comment</span> -->
@@ -283,8 +283,8 @@ $result_check4= mysqli_num_rows($result4);
                 </form> 
                 <!-- comment -->
             </div>
-            <!-- <div class="col-lg-6 card shadow-none leica-info">
-                <h2>Leica<h2>
+            <div class="col-lg-4 card shadow-none leica-pic" style="border: 1px solid white;">
+                <!-- <h2>Leica<h2>
                     <h5>The only place you can find the most luxurious clothes, shoes and accessories which specially made in France in the highest quality and the latest models. In addition to:
                         <ol type="1">
                             <li>Free shiping</li>
@@ -292,8 +292,8 @@ $result_check4= mysqli_num_rows($result4);
                             <li>Cash on delivery</li>
                             <li>The best customer service EVER</li>
                         </ol>
-                    </h5>
-                </div>    -->
+                    </h5> -->
+                </div>   
     </div>
 </div>   <div class="clearfix"></div>
 <div class="footer-clean" style="margin-top: 70px;" >

@@ -48,9 +48,10 @@
 .main-span,
 .sub-span{
     display: block;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 800;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    color:#570A57;
 }
 /* .sub-span{
     margin-top: 50px;
@@ -64,9 +65,11 @@ textarea{
     border-color: rgb(181, 181, 181);
 }
 .btn-lg{
-    padding: .75rem 1rem;
-    width: 30%;
-    left: 25%;
+    padding: 0rem 1rem;
+    width: 15%;
+    margin: 30px auto;
+    position: absolute;
+    left: 315px;
 }
 .userName-comment{
     font-weight: 400;
@@ -112,6 +115,8 @@ h4{
     background-color: rgb(237 237 237);
     border-radius: 10px;
     padding: 20px;
+    width: 70%;
+    margin: auto;
 }
 .new-comment{
     width: 79%;
@@ -121,15 +126,16 @@ h4{
     padding-top: 25px;
     padding-bottom: 25px;
     border-radius: 20px;
+    margin: auto;
 }
 .newCommentBtn{
     background-color: #570A57;
     color: white;
     margin: auto;
     text-align: center;
-    margin: 50px 100px;
+    margin: 30px 0px;
     position: relative;
-    left: 25%;
+
 }
 .productDesc{
     margin-top: 50px;
@@ -156,4 +162,17 @@ footer .container{
 }
 .card{
     height: 655px;
+}
+.col-lg-6{
+    width: 100% !important;
+}
+.leica-pic{
+    background-image: url('../img/projectimg/Lecia-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    vertical-align: middle;
+    margin-top: 230px;
+    height: 330px;
+    border: 1px solid white;
 }

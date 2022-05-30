@@ -245,7 +245,7 @@ if($result_check4 > 0){
             <div class="col-lg-4 text-center m-auto" style="margin: 20px auto !important;">
                 <div class="card border-0 bg-light mb-2">
                     <div class="card-body">
-                        <a href="../singleProduct.php?id=<?php echo $row['product_id']?>"><img src="../<?php echo $img ?>" class="img-fluid " alt=""></a>
+                        <a href="../singleProduct.php?id=<?php echo $row['product_id']?>"><img src="../<?php echo $img ?>" height="500px" width="300px" alt=""></a>
                     </div>
                 </div>
                 <h6 style="margin-top: 20px;"><?php  echo $productName ?></h6>
