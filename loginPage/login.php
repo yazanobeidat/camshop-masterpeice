@@ -6,7 +6,7 @@ session_start();
 if(isset($_POST['submit'])){
     $loginEmail=$_POST['loginEmail'];
     $loginPass=$_POST['loginPassword'];
-
+  $loginPass=md5($loginPass);
 
     $stat = "SELECT * FROM  user;";
     $result = mysqli_query($conn,$stat);

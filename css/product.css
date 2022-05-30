@@ -284,6 +284,9 @@ text-align: center;
     font-size: xx-large;
     object-fit: cover;
 }
-
+.card-body .img-fluid{
+    width: 235px !important;
+    height: 200px !important;
+}
 
 

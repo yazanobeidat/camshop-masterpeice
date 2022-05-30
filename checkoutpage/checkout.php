@@ -110,7 +110,15 @@ echo("Error description: " . mysqli_error($conn));
                     <li class="nav-item">
                         <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
-                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.php#contact">
+                            Contact us
+                        </a>
+    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.php#discount">Our discount</a>
+                    </li>
                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -132,8 +140,6 @@ echo("Error description: " . mysqli_error($conn));
                     <!-- profile icon/login/register -->
                     
                 <?php
-                
-        
                           $check=0;
                         
                           if(isset($_SESSION["userID"])){
@@ -287,7 +293,7 @@ echo("Error description: " . mysqli_error($conn));
 				$itemprice=$row['order_price'] * $row['order_quantity'];
 			
 				echo  "<div class='d-flex justify-content-between mt-2'>";
-				echo "<span>".$items. " JOD</span>";
+				echo "<span>".$items. "</span>";
 				echo "<span>".$itemprice. " JOD</span>";
 			
 			
@@ -317,6 +323,7 @@ echo("Error description: " . mysqli_error($conn));
 		<hr class="mb-4">
 		<h6 class="fw-bold">Cash on delivery</h6>
 		<p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+        <br>
 		<button class="btn btn-primary bt-lg btn-block" style="background-color:#570A57; border-color:#570A57;" type="submit" name="submit">PLACE ORDER</button>
       </div>
     </div>

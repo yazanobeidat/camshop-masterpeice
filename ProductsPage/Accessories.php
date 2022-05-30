@@ -249,7 +249,7 @@ if($result_check4 > 0){
             <div class="col-lg-3 text-center m-auto ">
                 <div class="card border-0 bg-light mb-2">
                     <div class="card-body">
-                        <a href="../singleProduct.php?id=<?php echo $row['product_id']?>"><img src="../<?php echo $img ?>" class="img-fluid " alt=""></a>
+                        <a href="../singleProduct.php?id=<?php echo $row['product_id']?>"><img src="../<?php echo $img ?>" height="200px" width="205px" alt=""></a>
                     </div>
                 </div>
                 <h6><?php  echo $productName ?></h6>

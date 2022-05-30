@@ -38,7 +38,7 @@
     margin-top: 70px;
 }
 .commentsSection{
-    border: 1px solid #e1dddd;
+    /* border: 1px solid #e1dddd; */
     margin-top: 100px;
     padding: 50px;
     /*box-shadow: 7px 10px 20px grey;*/
@@ -49,7 +49,7 @@
 .sub-span{
     display: block;
     font-size: 55px;
-    font-weight: lighter;
+    font-weight: 800;
     margin-bottom: 50px;
 }
 /* .sub-span{
@@ -64,9 +64,9 @@ textarea{
     border-color: rgb(181, 181, 181);
 }
 .btn-lg{
-    width: 40%;
-    border-radius: 20px;
-    padding: 10px;
+    padding: .75rem 1rem;
+    width: 30%;
+    left: 25%;
 }
 .userName-comment{
     font-weight: 400;
@@ -75,7 +75,6 @@ textarea{
 }
 .userComment-comment{
     margin-left: 20px;
-    font-style: italic;
 }
 @media(max-width:992px){
     .singleProductDesc{
@@ -130,7 +129,7 @@ h4{
     text-align: center;
     margin: 50px 100px;
     position: relative;
-    left: 15%;
+    left: 25%;
 }
 .productDesc{
     margin-top: 50px;

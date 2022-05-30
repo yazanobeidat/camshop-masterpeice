@@ -182,7 +182,7 @@ $user_id=$_SESSION['userID'];
     <div class="col-lg-4 img">
       <img src="../img/projectimg/thankyou.png" class="img-fluid rounded-start" alt="Thank you">
     </div>
-    <div class=" col-lg-8">
+    <div class=" col-lg-6">
       <div class="card-body">
         <h3 class="card-title">Thank you for visiting us</h3>
         <?php
