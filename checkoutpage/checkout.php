@@ -205,18 +205,18 @@ if(!$sql5)
 			
                 <div class="form-group">
                     <label for="country">Country</label>
-                    <input type="text" class="form-control" name="country" id="country" placeholder="country" required>
+                    <input type="text" class="form-control" name="country" id="country" placeholder="Country" required>
                </div>
 
                <div class="form-group">
                 <label for="city">City</label>
-                <input type="text" class="form-control" name="city" id="city" placeholder="city" required>
+                <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
               </div>
 
               <div class="form-group">
 					<label for="state">State
 					</label>
-					<input type="text" class="form-control" name="state" id="state" placeholder="state" required>
+					<input type="text" class="form-control" name="state" id="state" placeholder="State" required>
 				</div>
 
 				<div class="form-group">
@@ -230,7 +230,7 @@ if(!$sql5)
                 <div class="form-group">
 					<label for="postcode">Postcode
 					</label>
-					<input type="text" class="form-control" name="postcode" id="postcode" placeholder="postcode" required>
+					<input type="text" class="form-control" name="postcode" id="postcode" placeholder="Postcode" required>
 				</div>
 
                 <div class="form-group">
@@ -242,7 +242,7 @@ if(!$sql5)
                 
 				<div class="form-group">
                     <label for="email">Email address </label>
-                    <input type="email" class="form-control" name="emailaddress" id="email" placeholder="you@example.com" required>
+                    <input type="email" class="form-control" name="emailaddress" id="email" placeholder="email-@example.com" required>
             </div>
 	
 		</div>

@@ -131,7 +131,7 @@ if(isset($_POST['submit'])){
                 
                   
                 <label for="loginPassword">Password</label>
-<input type="password" name='loginPassword' placeholder='Passwprd' class="form-control">
+<input type="password" name='loginPassword' placeholder='Password' class="form-control">
 
 <?php if(isset($ERROR)){echo $ERROR;}?>
 

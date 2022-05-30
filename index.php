@@ -293,7 +293,7 @@ if($result_check4 > 0){
                     <div class="banner_item align-item-center"
                         style="background-image:url(./img/projectimg/cate\ 2.jpg) ;">
                         <div>
-                            <a href="./ProductsPage/Suit.php" class="banner_category">Suits</a>
+                            <a href="./ProductsPage/Suit.php" class="banner_category">SUITS</a>
                         </div>
                     </div>
                 </div>
@@ -302,7 +302,7 @@ if($result_check4 > 0){
                     <div class="banner_item align-item-center"
                         style="background-image:url('./img/projectimg/cate\ 5.jpg') ;">
                         <div>
-                            <a href="./ProductsPage/Accessories.php" class="banner_category">Accessories</a>
+                            <a href="./ProductsPage/Accessories.php" class="banner_category">ACCESSORIES</a>
                         </div>
                     </div>
                 </div>
