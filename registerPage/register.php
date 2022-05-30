@@ -68,6 +68,7 @@ if(isset($_POST['submit']))
    ////////////// password
    if(preg_match($password_regex,$password)){
        $password_correct= true;
+
    }
    else{
     $passwordERR="<span style=' color:red; ' >The password should contain <br> uppercase and lowercase <br> letters, numbers,<br> and special characters </span>";
@@ -76,13 +77,15 @@ if(isset($_POST['submit']))
    ////////////// confirm password
    if($password === $confirm_password){
        $confirm_password_correct= true;
+
    }
    else{
     $cpasswordERR="<span style=' color:red; '>Passwords don't match</span>";
     $confirm_password_correct= false;
    }
-   $password=md5($password);
+
   if($firstname_correct && $lastname_correct && $email_correct && $phonenum_correct && $password_correct && $confirm_password_correct &&  $email_correct3){
+    $password=md5($password);
     $sql = "INSERT INTO user (user_first_name, user_last_name, user_email,phone_num,user_password,age,gender)
     VALUES ('$first_name', '$last_name', '$email','$phonenumber','$password','$age','$gender');";
     if ($conn->query($sql) === TRUE) {
@@ -93,7 +96,13 @@ if(isset($_POST['submit']))
   }
   $conn->close();
   header("location:../loginpage/login.php");
-}}
+}
+if(!empty($email)) $x1= $email;
+if(!empty($phonenumber)) $x2= $phonenumber;
+if(!empty($first_name)) $x3= $first_name;
+if(!empty($last_name)) $x4= $last_name;
+if(!empty($age)) $x5= $age;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -151,7 +160,7 @@ if(isset($_POST['submit']))
                    <!-- First Name -->
                     <label for="firstName" class="form-label">First Name</label>
                     <input type="text" name="firstName" placeholder="First Name" id="form3Example1m"
-                      class="form-control form-control-lg">
+                      class="form-control form-control-lg" value="<?php if(isset($x3)) echo $x3; ?>">
                     <?php if(isset( $fnameERR)){echo  $fnameERR;}?>
                   </div>
                 </div>
@@ -160,7 +169,7 @@ if(isset($_POST['submit']))
                     <!-- last name  -->
                     <label for="lastName" class="form-label">Last Name</label>
                     <input type="text" name='lastName' placeholder='Last Name' id="form3Example1n"
-                      class="form-control form-control-lg">
+                      class="form-control form-control-lg" value="<?php if(isset($x4)) echo $x4; ?>">
                     <?php if(isset(  $lnameERR)){echo  $lnameERR;}?>
                   </div>
                 </div>
@@ -171,7 +180,7 @@ if(isset($_POST['submit']))
                     <!-- Email  -->
                     <label for="email" class="form-label">Email</label>
                     <input type="email" name='email' placeholder='Email@...' id="form3Example1m1"
-                      class="form-control form-control-lg">
+                      class="form-control form-control-lg" value="<?php if(isset($x1)) echo $x1; ?>">
                     <?php if(isset( $emailERR)){echo  $emailERR;}?>
                     <?php if(isset( $emailERR2)){echo  $emailERR2;}?>
                   </div>
@@ -181,7 +190,7 @@ if(isset($_POST['submit']))
                     <!-- Phone Number   -->
                     <label for="phoneNum" class="form-label">Phone Number</label>
                     <input type="text" name="phoneNum" placeholder="00962 777 777 777" id="form3Example1n1"
-                      class="form-control form-control-lg">
+                      class="form-control form-control-lg" value="<?php if(isset($x2)) echo $x2; ?>">
                     <?php if(isset( $phoneERR)){echo  $phoneERR;}?>
                   </div>
                 </div>
@@ -207,7 +216,7 @@ if(isset($_POST['submit']))
               <div class="form-outline mb-4">
                 <label for="age" class="form-label">Age</label>
                 <input type="number" name='age' placeholder="Your Age" class="form-control form-control-lg"
-                  id="form3Example8">
+                  id="form3Example8" value="<?php if(isset($x5)) echo $x5; ?>">
               </div>
               <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
                 <!-- Gender  -->

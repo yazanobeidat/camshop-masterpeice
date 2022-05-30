@@ -242,13 +242,13 @@ if($result_check4 > 0){
         if($category ==='Dress'){
 
         ?>
-            <div class="col-lg-3 text-center m-auto ">
+            <div class="col-lg-4 text-center m-auto" style="margin: 20px auto !important;">
                 <div class="card border-0 bg-light mb-2">
                     <div class="card-body">
                         <a href="../singleProduct.php?id=<?php echo $row['product_id']?>"><img src="../<?php echo $img ?>" class="img-fluid " alt=""></a>
                     </div>
                 </div>
-                <h6><?php  echo $productName ?></h6>
+                <h6 style="margin-top: 20px;"><?php  echo $productName ?></h6>
                 <p>$<?php echo $price ?></p>
                 <!-- <form action="" method="post">
 
