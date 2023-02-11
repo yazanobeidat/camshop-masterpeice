@@ -148,7 +148,7 @@ if(!empty($age)) $x5= $age;
       <div class="card card-registration ">
         <div class="row g-0">
           <div class="col-xl-6 d-none d-xl-block ">
-            <img src="../img/projectimg/reg.jpg" alt="Sample photo" class="img-fluid"
+            <img src="../img/projectimg/camera-cover3.jpeg" alt="Sample photo" class="img-fluid"
               style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 100%;" />
           </div>
           <div class="col-xl-6">

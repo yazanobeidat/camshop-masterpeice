@@ -88,11 +88,11 @@ if(isset($_POST['submit']))
                             CATEGORIES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                          <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Sony.php">Dress</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Fujifilm.php">Suits</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Lumix.php">Accessories</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Canon.php">Men Shoes</a></li>
+                          <li><a class="dropdown-item" href="../ProductsPage/Nikon.php">Women Shoes</a></li>
                          
                         </ul>
                       </li>

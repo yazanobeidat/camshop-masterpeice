@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include_once "./connection.php";
 //Bring the product id from database
 session_start();
@@ -67,13 +68,13 @@ $result_check4= mysqli_num_rows($result4);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="../product.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/projectimg/logo.png" width="150px" height="auto" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="./img/projectimg/flat-camera-circle.png" width="150px" height="auto" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -90,11 +91,11 @@ $result_check4= mysqli_num_rows($result4);
                             SHOP
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                        <li><a class="dropdown-item" href="./ProductsPage/Sony.php">Sony</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Fujifilm.php">Fujifilm</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Lumix.php">Lumix</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Canon.php">Canon</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Nikon.php">Nikon</a></li>
 
                         </ul>
                     </li>
@@ -184,26 +185,14 @@ $result_check4= mysqli_num_rows($result4);
                     <form method="post" class="firstForm">
                         <div class="col-lg-12">
                             <label>Quantity</label> <input type='number' name='quantity' value='1' class="quantityInput text-center"> 
-                                <?php if($product_category == "Men's Shoes" || $product_category == "Women's shoes")
+                                <?php if($product_category == "Canon" || $product_category == "Nikon")
                         {?>
-                            <label>Size</label>
-                            <select name="size" class="text-center">
-                                <option value="38">38<option>
-                                <option value="39">39<option>
-                                <option value="49">49<option>
-                                <option value="41">41<option>
-                            </seclect>
+                         
                     <?php
                         }
                         else{
                     ?>
-                            <label>Size</label>
-                            <select name="size" class="text-center">
-                                <option value="S">S<option>
-                                <option value="M">M<option>
-                                <option value="L">L<option>
-                                <option value="XL">XL<option>
-                            </seclect>
+                            
                     <?php }?>
                         </div> 
                         <div class="col-lg-12 btn">
@@ -212,10 +201,9 @@ $result_check4= mysqli_num_rows($result4);
                     <?php
                             if(isset($_POST['submit'])){
                                 if(isset($_SESSION['userID'])){
-                                    if(!empty($_POST['quantity']) && !empty($_POST['size'])){
+                                    if(!empty($_POST['quantity'])){
                                         $updated_quantity=$_POST['quantity'];
-                                        $updated_size=$_POST['size'];
-                                        $quantitySql="INSERT INTO cart (user_id,product_id,product_image ,product_name, product_color, order_price, product_size, order_quantity) VALUES ('$user_id','$product_id','$product_image' ,'$product_name', '$product_color', '$product_price','$updated_size', '$updated_quantity');";
+                                        $quantitySql="INSERT INTO cart (user_id,product_id,product_image ,product_name, product_color, order_price, order_quantity) VALUES ('$user_id','$product_id','$product_image' ,'$product_name', '$product_color', '$product_price', '$updated_quantity');";
                                         $resultQuantity= mysqli_query($conn , $quantitySql);
                                         echo '<br>';
                                         echo '<div class="alert alert-success d-flex justify-content-center" role="alert">
@@ -223,7 +211,7 @@ $result_check4= mysqli_num_rows($result4);
                                     }
                                 }
                                 else{
-                                    header("Location: ./loginPage/login.php");
+                                    header("Location:./loginPage/login.php");
                                 }
                         }
                     ?>
@@ -292,38 +280,39 @@ $result_check4= mysqli_num_rows($result4);
                     </h5> -->
                 </div>   
     </div>
-</div>   <div class="clearfix"></div>
-<div class="footer-clean" style="margin-top: 70px;" >
+</div>      <div class="clearfix"></div>
+    <div class="footer-clean" style="margin-top: 70px;" >
         <footer id="footer">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Our Team</h3>
                         <ul>
-                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
-                            <li><a href="#"> <h6>Raghad</h6> </a></li>
-                            <li><a href="#"> <h6>Hadi</h6> </a></li>
-                            <li><a href="#"> <h6>Aya</h6> </a></li>
+                            <li><a href="#"> <h6>yazan</h6> </a></li>
+                            <li><a href="#"> <h6>Rami</h6> </a></li>
+                            <li><a href="#"> <h6>Ahmad</h6> </a></li>
+                            <li><a href="#"> <h6>khaled</h6> </a></li>
+                          
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
                         <h3 id="contact">Contact US</h3>
                         <ul>
-                            <li><a href="https://Ibrahim Al tameme@gmail.com">Ibrahim Al tameme@gmail.com</a></li>
-                            <li><a href="https://raghad.karasneh@gmail.com">raghad.karasneh@gmail.com</a></li>
-                            <li><a href="hadialsaden@gmail.com">hadialsaden@gmail.com</a></li>
-                            <li><a href="https://ayaalsawa279@gmail.com">ayaalsawa279@gmail.com</a></li>
+                            <li><a href="https://camshop@gmail.com">camshop@gmail.com</a></li>
+                         
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
-                        <h3 style="text-align:center;">STYLE IS A WAY TO SAY WHO YOU ARE WITHOUT HAVING TO SPEAK</h3> 
+                        
+                        <h3 style="text-align:center;">Always make sure that Cam Shop is your best choice</h3>
+                        
                     </div>
                     <div class="col-lg-3 item social">
-                        <a href="https://web.facebook.com/eliesaabworld/?_rdc=1&_rdr" target="_blank"><i class="icon ion-social-facebook"></i></a>
-                        <a href="https://twitter.com/ElieSaabWorld?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="icon ion-social-twitter"></i></a>
-                        <a href="https://www.snapchat.com/add/eliesaablive" target="_blank"><i class="icon ion-social-snapchat"></i></a>
-                        <a href="https://www.instagram.com/accounts/login/?next=/eliesaabworld/" target="_blank"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name Â© 2022</p>
+                        <a href="https://ar-ar.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=ar" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                        <a href="https://accounts.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Camshop© 2023</p>
                     </div>
                 </div>
             </div>

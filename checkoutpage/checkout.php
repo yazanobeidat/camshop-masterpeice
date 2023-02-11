@@ -86,11 +86,11 @@ if(!$sql5)
                             SHOP
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="../ProductsPage/Dress.php">Dress</a></li>
-                            <li><a class="dropdown-item" href="../ProductsPage/Suit.php">Suits</a></li>
-                            <li><a class="dropdown-item" href="../ProductsPage/Accessories.php">Accessories</a></li>
-                            <li><a class="dropdown-item" href="../ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                            <li><a class="dropdown-item" href="../ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Sony.php">Sony</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Fujifilm.php">Fujifilm</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Lumix.php">Lumix</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Canon.php">Canon</a></li>
+                            <li><a class="dropdown-item" href="../ProductsPage/Nikon.php">Nikon</a></li>
 
                         </ul>
                     </li>

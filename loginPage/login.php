@@ -1,5 +1,4 @@
 <?php
-
 include_once '../connection.php';
 session_start();
 
@@ -106,7 +105,7 @@ if(isset($_POST['submit'])){
     <div class="row d-flex justify-content-center align-items-center ">
       <div class="col-lg-8 col-xl-6">
         <div class="card rounded-3">
-          <img src="../img/projectimg/pexels-gustavo-fring-3984871.jpg"
+          <img src="../img/projectimg/Camera-cover.jpg"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;    height: 300px;"
             alt="Sample photo">
           <div class="card-body p-4 p-md-5">

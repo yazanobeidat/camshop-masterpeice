@@ -1,12 +1,13 @@
 <?php
 session_start();
-$sessionUserId = $_SESSION['userID'];
-$arr1 = array();
-$finalTotal=0;
+include_once "../connection.php";
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,12 +30,11 @@ $finalTotal=0;
 
 
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/about.css">
-    
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="../img/projectimg/flat-camera-circle.png" width="150px" height="auto" 
@@ -55,7 +55,7 @@ $finalTotal=0;
                             SHOP
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="../ProductsPage/Sony.php">Sony</a></li>
+                        <li><a class="dropdown-item" href="../ProductsPage/Sony.php">Sony</a></li>
                             <li><a class="dropdown-item" href="../ProductsPage/Fujifilm.php">Fujifilm</a></li>
                             <li><a class="dropdown-item" href="../ProductsPage/Lumix.php">Lumix</a></li>
                             <li><a class="dropdown-item" href="../ProductsPage/Canon.php">Canon</a></li>
@@ -67,7 +67,7 @@ $finalTotal=0;
                         <a class="nav-link " href="../index.php#discount">Our discount</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about_us.php"> About us</a>
+                        <a class="nav-link" href="../about us/about_us.php"> About us</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="#footer">
@@ -75,6 +75,7 @@ $finalTotal=0;
                         </a>
 
                     </li>
+
                 </ul>
                 <form action="" method="post">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
@@ -101,7 +102,7 @@ $finalTotal=0;
                                ?>
                         <form action="" method='post'>
                             <li class="nav_item"><input class="nav-link" type="submit" name="logout" value=" Logout "
-                                    style="border:none; background-color: white; cursor:pointer;">
+                                    style="border:none; background-color: white; cursor:pointer">
                             </li>
                         </form>
 
@@ -110,7 +111,7 @@ $finalTotal=0;
                                     session_destroy();
                                     echo'<script>
                                      setTimeout(() => {
-                                         window.location = "index.php";
+                                         window.location = "../index.php";
                                        })
                                      
                                      </script>';
@@ -147,85 +148,106 @@ $finalTotal=0;
             </div>
         </div>
     </nav>
-    <!-- ====================================== -->
-    <section class="about" id="about">
-            <div class="container">
-                <div class="heading text-center pb-5 mb-5">
-                    <h2>About
-                        <span>Us</span></h2>
-                    <p>If you are looking for a high quality camera and want 
-                        to become a photographer, here is your best place <br>CAMSHOP.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="../img/projectimg/aboutus.jpg" alt="about" class="img-fluid" width="100%">
-                    </div>
-                    <div class="col-lg-6">
-                        <h3>Always make sure that Cam Shop is your best choice</h3>
-                        <p>We are here in this place to provide you with everything you need from camera equipment and exchange to get what you want to photograph and take wonderful pictures. We thank you for choosing us and we hope that you will come back to us again.
-                        </p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h4>
-                                    <i class="far fa-star"></i>Great handling</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <h4>
-                                    <i class="far fa-star"></i>
-                                    High quality</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <h4>
-                                    <i class="far fa-star"></i>Better Client Service</h4>
-                            </div>
-                          
-                            <div class="col-md-6">
-                                <h4>
-                                    <i class="far fa-star"></i>
-                                    Speed And Flexibility</h4>
-                            </div>
-                        </div>
+
+    <!-- ===================================== -->
+
+    <section class="new_arrivals">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="section_title new_arrivals_title">
+                        <h2>
+                           Canon
+                        </h2>
+                        <hr class="mx-auto mb-5 line" style="width: 30px;
+        height: 2px;
+        background-color: #c20f1e95;">
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- =========================================== -->
-        
-<section class="py-5 my-5">
-<div class="container  text-center">
-    <p> <h2 class="mb-5 pb-5">Our Team</h2></p>
-  <div class="row">
+
+            <div class="row align-items-center mb-5 ">
+                <div class="col text-center">
+                    <div class="new_arrivals_sorting">
+                        <ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
+                           <a href="./Sony.php"> <li class="grid_sorting_button buttob d-flex flex-column justify-content-center align-items-center  is-checked"
+                            data-filter="*">  Sony</li></a>
+                           <a href="./Fujifilm.php">  <li class="grid_sorting_button buttob d-flex flex-column justify-content-center align-items-center "
+                            data-filter="">Fujifilm</li></a>
+                           <a href="./Canon.php"> <li class="grid_sorting_button buttob d-flex flex-column justify-content-center align-items-center "
+                            data-filter="*">Canon</li></a>
+                          <a href="./Nikon.php">  <li class="grid_sorting_button buttob d-flex flex-column justify-content-center align-items-center "
+                            data-filter="*">Nikon</li></a>
+                         <a href="./Lumix.php">   <li class="grid_sorting_button buttob d-flex flex-column justify-content-center align-items-center "
+                            data-filter="*">Lumix</li></a>
 
 
-    <div  class="col">
-      <img src="../Timg/person3.jpg" style="width: 150px; border-radius: 50%;" alt="">
-      <p><h3>Yazan</h3></p>
-      
-      <p>member of team</p>
-    </div>
-    <br><br><br>  
-    <div class="col order-5">
-      <img src="../Timg/person3.jpg" style="width: 150px;border-radius: 50%;" alt="">
-      <p><h3>Rami</h3>
-     
-        <p>member of team</p>
-    </div>
-    <div class="col order-1">
-      <img src="../Timg/person2.jpg" style="width: 150px;border-radius: 50%;"  alt="">
-      </p><p><h3>Ahmad</h3></p>
-    
-      <p>member of team</p>
-    </div>
-    <div class="col order-1">
-      <img src="../Timg/person2.jpg" style="width: 150px;border-radius: 50%;"  alt="">
-      </p><p><h3>Khaled</h3>
 
-        <p>member of team</p>
-    </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- ================================================= -->
-    <div class="clearfix"></div>
+    <!-- ======================================= -->
+
+<section class="shop">
+    <div class="container">
+        <div class="row">
+
+        <?php
+
+// select products
+
+$sql_query="SELECT * FROM products ;";
+$result = $conn->query($sql_query);
+$result_check4= mysqli_num_rows($result);
+
+// check result
+if($result_check4 > 0){
+
+    while($row=mysqli_fetch_assoc($result)){
+
+        $img=$row['product_image'];
+        $productName=$row['product_name'];
+        $price=$row['product_price'];
+        $category=$row['product_category'];
+        $product_id=$row['product_id'];
+       
+        // check category
+        if($category ==='Canon'){
+
+        ?>
+            <div class="col-lg-4 text-center m-auto" style="margin: 20px auto !important;">
+                <div class="card border-0 bg-light mb-2" style="width: 72%; margin: auto;">
+                    <div class="card-body">
+                        <a href="../singleProduct.php?id=<?php echo $row['product_id']?>"><img src="../<?php echo $img ?>" height="200px" width="205px" alt=""></a>
+                    </div>
+                </div>
+                <h6 style="margin-top: 20px;"><?php  echo $productName ?></h6>
+                <p>$<?php echo $price ?></p>
+                <!-- <form action="" method="post">
+
+                 <a href='../singleProduct.php?id=<?php echo $row['product_id']?>' > <input type="button" name="view" value="View Product"class="add-to-cart" ></a>
+                 
+                 </form> -->
+
+            </div>
+
+         
+            <?php 
+
+            }
+        }
+    }
+ ?>
+        </div>
+    </div>
+
+</section>
+
+<!-- ================================================ -->
+<div class="clearfix"></div>
     <div class="footer-clean" style="margin-top: 70px;" >
         <footer id="footer">
             <div class="container">
@@ -263,9 +285,6 @@ $finalTotal=0;
             </div>
         </footer>
     </div>
-    </div>
-   
-
-
 </body>
+
 </html>

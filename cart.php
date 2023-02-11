@@ -31,7 +31,7 @@ if(isset($_GET['order_num']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/bootstrap.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./css/bootstrap.csss?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./css/cart.css?v=<?php echo time(); ?>">
     <title>Your Cart</title>
 </head>
@@ -55,11 +55,11 @@ if(isset($_GET['order_num']))
                             SHOP
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                        <li><a class="dropdown-item" href="./ProductsPage/Sony.php">Sony</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Fujifilm.php">Fujifilm</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Lumix.php">Lumix</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Canon.php">Canon</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Nikon.php">Nikon</a></li>
 
                         </ul>
                     </li>
@@ -237,30 +237,30 @@ if(isset($_GET['order_num']))
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Our Team</h3>
                         <ul>
-                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
-                            <li><a href="#"> <h6>Raghad</h6> </a></li>
-                            <li><a href="#"> <h6>Hadi</h6> </a></li>
-                            <li><a href="#"> <h6>Aya</h6> </a></li>
+                        <li><a href="#"> <h6>yazan</h6> </a></li>
+                            <li><a href="#"> <h6>Rami</h6> </a></li>
+                            <li><a href="#"> <h6>Ahmad</h6> </a></li>
+                            <li><a href="#"> <h6>khaled</h6> </a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
                         <h3 id="contact">Contact US</h3>
                         <ul>
-                            <li><a href="https://Ibrahim Al tameme@gmail.com">Ibrahim Al tameme@gmail.com</a></li>
-                            <li><a href="https://raghad.karasneh@gmail.com">raghad.karasneh@gmail.com</a></li>
-                            <li><a href="hadialsaden@gmail.com">hadialsaden@gmail.com</a></li>
-                            <li><a href="https://ayaalsawa279@gmail.com">ayaalsawa279@gmail.com</a></li>
+                            <li><a href="https://camshop@gmail.com">camshop@gmail.com</a></li>
+                         
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
-                        <h3 style="text-align:center;">STYLE IS A WAY TO SAY WHO YOU ARE WITHOUT HAVING TO SPEAK</h3>
+                        
+                        <h3 style="text-align:center;">Always make sure that Cam Shop is your best choice</h3>
+                        
                     </div>
                     <div class="col-lg-3 item social">
-                        <a href="https://web.facebook.com/eliesaabworld/?_rdc=1&_rdr" target="_blank"><i class="icon ion-social-facebook"></i></a>
-                        <a href="https://twitter.com/ElieSaabWorld?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="icon ion-social-twitter"></i></a>
-                        <a href="https://www.snapchat.com/add/eliesaablive" target="_blank"><i class="icon ion-social-snapchat"></i></a>
-                        <a href="https://www.instagram.com/accounts/login/?next=/eliesaabworld/" target="_blank"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name Â© 2022</p>
+                        <a href="https://ar-ar.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=ar" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                        <a href="https://accounts.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Camshop© 2023</p>
                     </div>
                 </div>
             </div>
@@ -269,4 +269,3 @@ if(isset($_GET['order_num']))
    <!--for delete items: <li class='fa fa-xmark'></li> -->
   </body>
 </html>
-

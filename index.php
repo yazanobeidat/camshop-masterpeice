@@ -62,7 +62,7 @@ if($result_check4 > 0){
         <div class="container">
 
 
-            <a class="navbar-brand" href="#"><img src="./img/projectimg/Lecia-logo.png" width="150px" height="auto"  alt=""></a>
+            <a class="navbar-brand" href="#"><img src="./img/projectimg/flat-camera-circle.png" width="150px" height="auto"  alt=""></a>
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -81,11 +81,11 @@ if($result_check4 > 0){
                             SHOP
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./ProductsPage/Dress.php">Dress</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Suit.php">Suits</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Accessories.php">Accessories</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Men_shoes.php">Men Shoes</a></li>
-                            <li><a class="dropdown-item" href="./ProductsPage/Women_shoes.php">Women Shoes</a></li>
+                        <li><a class="dropdown-item" href="./ProductsPage/Sony.php">Sony</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Fujifilm.php">Fujifilm</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Lumix.php">Lumix</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Canon.php">Canon</a></li>
+                            <li><a class="dropdown-item" href="./ProductsPage/Nikon.php">Nikon</a></li>
 
                         </ul>
                     </li>
@@ -180,7 +180,7 @@ if($result_check4 > 0){
         <div class="container py-5">
             <div class="row py-4">
                 <div class="col-lg-7 pt-5 text-center">
-                    <h1 class="pt-5" style="margin-top:25% ;">Luxury is in each detail</h1>
+                    <h1 class="pt-5" style="margin-top:25% ;"></h1>
                 </div>
             </div>
         </div>
@@ -282,27 +282,27 @@ if($result_check4 > 0){
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="banner_item " style="background-image:url('./img/projectimg/cate\ 1.jpg') ;">
+                    <div class="banner_item " style="background-image:url('./img/projectimg/sony.jpg') ;">
                         <div>
-                            <a href="./ProductsPage/Dress.php" class="banner_category">DRESSES</a>
+                            <a href="./ProductsPage/Sony.php" class="banner_category">Sony</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="banner_item align-item-center"
-                        style="background-image:url(./img/projectimg/cate\ 2.jpg) ;">
+                        style="background-image:url(./img/projectimg/Fujifilm.jpeg) ;">
                         <div>
-                            <a href="./ProductsPage/Suit.php" class="banner_category">SUITS</a>
+                            <a href="./ProductsPage/Fujifilm.php" class="banner_category">Fujifilm</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="banner_item align-item-center"
-                        style="background-image:url('./img/projectimg/cate\ 5.jpg') ;">
+                        style="background-image:url('./img/projectimg/lumix.jpeg') ;">
                         <div>
-                            <a href="./ProductsPage/Accessories.php" class="banner_category">ACCESSORIES</a>
+                            <a href="./ProductsPage/Lumix.php" class="banner_category">Lumix</a>
                         </div>
                     </div>
                 </div>
@@ -316,18 +316,18 @@ if($result_check4 > 0){
             <div class="row">
                 <div class="col-md-6 m-auto">
                     <div class="banner_item flex-row align-item-center"
-                        style="background-image:url('./img/projectimg/cate\ 3.jpg') ;">
+                        style="background-image:url('./img/projectimg/nikon.jpg') ;">
                         <div>
-                            <a href="./ProductsPage/Women_shoes.php" class="banner_category">WOMEN's SHOSE</a>
+                            <a href="./ProductsPage/Nikon.php" class="banner_category">Nikon</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="banner_item flex-row align-item-center"
-                        style="background-image:url(./img/projectimg/cate\ 4.jpg) ;">
+                        style="background-image:url(./img/projectimg/Canon.jpeg) ;">
                         <div>
-                            <a href="./ProductsPage/Men_shoes.php" class="banner_category" >MEN's SHOES</a>
+                            <a href="./ProductsPage/Canon.php" class="banner_category" >Canon</a>
                         </div>
                     </div>
                 </div>
@@ -348,8 +348,8 @@ if($result_check4 > 0){
         <div class="container py-5">
             <div class="row py-5 ">
                 <div class="col-lg-5 m-auto text-center">
-                    <h1>COLLECTION 2022</h1>
-                    <h6 style="color: red;">SPRING / SUMMER </h6>
+                    <h1>COLLECTION 2023</h1>
+                    <h6 style="color: red;"></h6>
                 </div>
 
             </div>
@@ -358,53 +358,53 @@ if($result_check4 > 0){
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=4"><img src="img/DRESS/dress 4-1.PNG" height="310px" width="215px" alt=""></a>
+                            <a href="singleProduct.php?id=4"><img src="img/Lumix/panasonic1.jpeg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
-                    <h6><br>LONG BEAD EMBROIDERED RUFFLED DRESS</h6>
-                    <p>17100.00</p>
+                    <h6><br>LUMIX cameras are made for all content creators</h6>
+                    <p>350 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=7"><img src="./img/DRESS/dress 7-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=7"><img src="./img/Canon/Canon1.jpg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>
-                        <br>ONE SHOULDER ELECTRIC-BLUE DRESS</h6>
-                    <p>5,150 JOD</p>
+                        <br> Canon  Mirrorless Camera with RF 24-105mm</h6>
+                    <p>520 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=6"><img src="./img/DRESS/dress 6-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=6"><img src="./img/Sony/Son1.jpeg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>
                         <br>
-                    STRAPLESS EMBROIDERED AND SILK LONG DRESS</h6>
-                    <p>6,350 JOD</p>
+                        Sony has launched its second vlogger friendly camera in its ZV </h6>
+                    <p>260 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                           <a href="singleProduct.php?id=5"><img src="./img/DRESS/dress 5-1.PNG" class="img-fluid " alt=""></a> 
+                           <a href="singleProduct.php?id=5"><img src="./img/Nikon/nikon.jpg" class="img-fluid " alt=""></a> 
                         </div>
                     </div>
                     <h6>
                     <br>    
-                    MULTICOLOR EMBROIDERED LONG DRESS
+                    The Nikon is one of our favorite DSLRs for photography
                 </h6>
-                    <p>8,770 JOD</p>
+                    <p>770 JOD</p>
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 text-center m-auto ">
-                    <a href="./ProductsPage/Dress.php"><button class="btn1" style="cursor:pointer;">
+                    <a href="./ProductsPage/Sony.php"><button class="btn1" style="cursor:pointer;">
                         Click for more
                     </button></a>
 
@@ -428,24 +428,17 @@ if($result_check4 > 0){
 
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="./img/projectimg/pexels-alexandra-maria-318236.jpg" class=" w-100"
+                                    <img src="./img/projectimg/Camera-cover.jpg" class=" w-100"
                                         alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./img/projectimg/pexels-andrea-piacquadio-3755706.jpg" class=" w-100"
+                                    <img src="./img/projectimg/camera-cover2.jpg" class=" w-100"
                                         alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./img/projectimg/pexels-mengliu-di-7179179.jpg" class=" w-100" alt="...">
+                                    <img src="./img/projectimg/camera-cover3.jpeg" class=" w-100" alt="...">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="./img/projectimg/slider 5.jpg" class=" w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/projectimg/cover.jpg" class=" w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/projectimg/slider 3.jpg" class=" w-100" alt="...">
+                                
                                 </div>
                             </div>
                         </div>
@@ -453,8 +446,8 @@ if($result_check4 > 0){
 
                 </div>
                 <div class="col-lg-8 m-auto text-center py-5">
-                    <h3><i class="fa-solid fa-quote-left"></i> STYLE IS A WAY TO SAY WHO YOU ARE WITHOUT HAVING TO
-                        SPEAK <i class="fa-solid fa-quote-right"></i></h3>
+                    <h3><i class="fa-solid fa-quote-left"></i> Always make sure that Cam Shop is your best choice
+ <i class="fa-solid fa-quote-right"></i></h3>
 
                 </div>
             </div>
@@ -478,56 +471,56 @@ if($result_check4 > 0){
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=23"><img src="./img/SUIT/suit 6-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=23"><img src="./img/Sony/sony_ilce_6400m_b_alpha.jpg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>
                         <br>
-                        EXTRA-SLIM-FIT VIRGIN-WOOL SUIT WITH MICRO PATTERN
+                        The sony features the same base image sensor from sony
                     </h6>
-                    <p style="text-decoration: line-through ;">1,434 JOD </p><span>1,195 JOD</span>
+                    <p style="text-decoration: line-through ;">434 JOD </p><span>390 JOD</span>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=14"><img src="./img/DRESS/R dress 3-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=14"><img src="./img/Canon/Canon-eos-r6.jpg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>
                         <br>
-                        DESIGNER ORANGE TULLE VOLUME DRESS
+                        CANON EOS R6 MIRRORLESS CAMERA WITH RF 24 from canon 
                     </h6>
-                    <p style="text-decoration: line-through ;">9,201 JOD</p>
-                    <p>7,668 JOD</p>
+                    <p style="text-decoration: line-through ;">750 JOD</p>
+                    <p>680 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=25"><img src="./img/SUIT/suit 8-1.png" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=25"><img src="./img/Nikon/nikon_1663_z_6ii.jpg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>
                     <br>    
-                    EXTRA-SLIM-FIT SUIT IN PATTERNED STRETCH WOOL
+                    The black COOLPIX B500 Digital Camera from Nikon
                 </h6>
-                    <p style="text-decoration: line-through ;">1,554  JOD</p>
-                    <p>1,295 JOD</p>
+                    <p style="text-decoration: line-through ;">554 JOD</p>
+                    <p>480 JOD</p>
 
                 </div>
                 <div class="col-lg-3 text-center m-auto ">
                     <div class="card border-0 bg-light mb-2">
                         <div class="card-body">
-                            <a href="singleProduct.php?id=12"><img src="./img/DRESS/R dress 1-1.PNG" class="img-fluid " alt=""></a>
+                            <a href="singleProduct.php?id=12"><img src="./img/Lumix/panasonic_dc_s1hbody_lumix.jpg" class="img-fluid " alt=""></a>
                         </div>
                     </div>
                     <h6>
                         <br>
-                        HANDCRAFTED FEATHERED & BEADED TUBINO PARTY DRESS
+                        Panasonic Lumix DMC-FZ300 Digital Camera with Accessories Kit
                     </h6>
-                    <p style="text-decoration: line-through ;">7,639 JOD</p>
-                    <p>6,366 JOD</p>
+                    <p style="text-decoration: line-through ;">639 JOD</p>
+                    <p>566 JOD</p>
 
                 </div>
             </div>
@@ -542,33 +535,31 @@ if($result_check4 > 0){
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Our Team</h3>
                         <ul>
-                            <li><a href="#"> <h6>Ibrahim</h6> </a></li>
-                            <li><a href="#"> <h6>Raghad</h6> </a></li>
-                            <li><a href="#"> <h6>Hadi</h6> </a></li>
-                            <li><a href="#"> <h6>Aya</h6> </a></li>
+                            <li><a href="#"> <h6>yazan</h6> </a></li>
+                            <li><a href="#"> <h6>Rami</h6> </a></li>
+                            <li><a href="#"> <h6>Ahmad</h6> </a></li>
+                            <li><a href="#"> <h6>khaled</h6> </a></li>
                           
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
                         <h3 id="contact">Contact US</h3>
                         <ul>
-                            <li><a href="https://Ibrahim Al tameme@gmail.com">Ibrahim Al tameme@gmail.com</a></li>
-                            <li><a href="https://raghad.karasneh@gmail.com">raghad.karasneh@gmail.com</a></li>
-                            <li><a href="hadialsaden@gmail.com">hadialsaden@gmail.com</a></li>
-                            <li><a href="https://ayaalsawa279@gmail.com">ayaalsawa279@gmail.com</a></li>
+                            <li><a href="https://camshop@gmail.com">camshop@gmail.com</a></li>
+                         
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
                         
-                        <h3 style="text-align:center;">STYLE IS A WAY TO SAY WHO YOU ARE WITHOUT HAVING TO SPEAK</h3>
+                        <h3 style="text-align:center;">Always make sure that Cam Shop is your best choice</h3>
                         
                     </div>
                     <div class="col-lg-3 item social">
-                        <a href="https://web.facebook.com/eliesaabworld/?_rdc=1&_rdr" target="_blank"><i class="icon ion-social-facebook"></i></a>
-                        <a href="https://twitter.com/ElieSaabWorld?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="icon ion-social-twitter"></i></a>
-                        <a href="https://www.snapchat.com/add/eliesaablive" target="_blank"><i class="icon ion-social-snapchat"></i></a>
-                        <a href="https://www.instagram.com/accounts/login/?next=/eliesaabworld/" target="_blank"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name Â© 2022</p>
+                        <a href="https://ar-ar.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=ar" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                        <a href="https://accounts.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Camshop© 2023</p>
                     </div>
                 </div>
             </div>
